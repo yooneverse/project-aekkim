@@ -1,0 +1,461 @@
+﻿{
+    "jobType":  "SERVICE_CATALOG_CRAWL",
+    "mergedAt":  "2026-03-25T15:59:32",
+    "services":  [
+                     {
+                         "name":  "쿠팡플레이",
+                         "code":  "COUPANG_PLAY",
+                         "cancelGuideUrl":  "https://www.coupangplay.com/faq",
+                         "logoUrl":  "/assets/services/COUPANG_PLAY.png",
+                         "contactEmail":  "playrepresent@coupang.com",
+                         "category":  "OTT",
+                         "customerServicePhone":  "1600-9800"
+                     },
+                     {
+                         "name":  "디즈니플러스",
+                         "code":  "DISNEY_PLUS",
+                         "cancelGuideUrl":  "https://help.disneyplus.com/ko/article/disneyplus-cancel",
+                         "logoUrl":  "/assets/services/DISNEY_PLUS.png",
+                         "contactEmail":  "help@disneyplus.kr",
+                         "category":  "OTT",
+                         "customerServicePhone":  "080-822-1416"
+                     },
+                     {
+                         "name":  "넷플릭스",
+                         "code":  "NETFLIX",
+                         "cancelGuideUrl":  "https://help.netflix.com/ko/node/407",
+                         "logoUrl":  "/assets/services/NETFLIX.png",
+                         "contactEmail":  "korea@netflix.com",
+                         "category":  "OTT",
+                         "customerServicePhone":  "308-321-0161"
+                     },
+                     {
+                         "name":  "티빙",
+                         "code":  "TVING",
+                         "cancelGuideUrl":  "https://www.tving.com/help/withdrawal-subscription",
+                         "logoUrl":  "/assets/services/TVING.png",
+                         "contactEmail":  "tving@cj.net",
+                         "category":  "OTT",
+                         "customerServicePhone":  "080-080-0780"
+                     },
+                     {
+                         "name":  "왓챠",
+                         "code":  "WATCHA",
+                         "cancelGuideUrl":  "https://help.watcha.com/hc/ko/articles/31326576396825-TV%EC%97%90%EC%84%9C-%EA%B5%AC%EB%8F%85-%EC%A4%91%EC%9D%B8%EB%8D%B0-%ED%95%B4%EC%A7%80%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%96%B4%EC%9A%94",
+                         "logoUrl":  "/assets/services/WATCHA.png",
+                         "contactEmail":  "cs@watcha.com",
+                         "category":  "OTT",
+                         "customerServicePhone":  "02-515-9985"
+                     },
+                     {
+                         "name":  "wavve",
+                         "code":  "WAVVE",
+                         "cancelGuideUrl":  "https://www.wavve.com/customer/faq?faqId=3872",
+                         "logoUrl":  "/assets/services/WAVVE.png",
+                         "contactEmail":  "helpdesk@wavve.com",
+                         "category":  "OTT",
+                         "customerServicePhone":  null
+                     },
+                     {
+                         "name":  "멜론",
+                         "code":  "MELON",
+                         "cancelGuideUrl":  "https://faqs2.melon.com/customer/faq/informFaq.htm?faqId=2212",
+                         "logoUrl":  "/assets/services/MELON.png",
+                         "contactEmail":  "melon_info@kakaoent.com",
+                         "category":  "MUSIC",
+                         "customerServicePhone":  "1566-7727"
+                     },
+                     {
+                         "name":  "벅스",
+                         "code":  "BUGS",
+                         "cancelGuideUrl":  "https://music.bugs.co.kr/pay/recommend",
+                         "logoUrl":  "/assets/services/BUGS.png",
+                         "contactEmail":  "help@help.bugs.co.kr",
+                         "category":  "MUSIC",
+                         "customerServicePhone":  "1566-4882"
+                     },
+                     {
+                         "name":  "YouTube Music",
+                         "code":  "YOUTUBE_MUSIC",
+                         "cancelGuideUrl":  "https://support.google.com/youtubemusic/answer/6308278?hl=ko",
+                         "logoUrl":  "/assets/services/YOUTUBE_MUSIC.png",
+                         "contactEmail":  null,
+                         "category":  "MUSIC",
+                         "customerServicePhone":  null
+                     },
+                     {
+                         "name":  "Spotify",
+                         "code":  "SPOTIFY",
+                         "cancelGuideUrl":  "https://support.spotify.com/kr-ko/article/cancel-premium/",
+                         "logoUrl":  "/assets/services/SPOTIFY.png",
+                         "contactEmail":  "support@spotify.com",
+                         "category":  "MUSIC",
+                         "customerServicePhone":  "1533-6552"
+                     },
+                     {
+                         "name":  "ChatGPT",
+                         "code":  "CHATGPT",
+                         "cancelGuideUrl":  "https://help.openai.com/ko-kr/articles/7232927-chatgpt-%EA%B5%AC%EB%8F%85%EC%9D%84-%EC%B7%A8%EC%86%8C%ED%95%98%EB%A0%A4%EB%A9%B4-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EC%95%BC-%ED%95%98%EB%82%98%EC%9A%94",
+                         "logoUrl":  "/assets/services/CHATGPT.png",
+                         "contactEmail":  null,
+                         "category":  "AI",
+                         "customerServicePhone":  null
+                     },
+                     {
+                         "name":  "Gemini",
+                         "code":  "GEMINI",
+                         "cancelGuideUrl":  "https://support.google.com/gemini/answer/14517446",
+                         "logoUrl":  "/assets/services/GEMINI.png",
+                         "contactEmail":  null,
+                         "category":  "AI",
+                         "customerServicePhone":  null
+                     },
+                     {
+                         "name":  "Claude",
+                         "code":  "CLAUDE",
+                         "cancelGuideUrl":  "https://support.anthropic.com/en/articles/8325617",
+                         "logoUrl":  "/assets/services/CLAUDE.png",
+                         "contactEmail":  "support@mail.anthropic.com",
+                         "category":  "AI",
+                         "customerServicePhone":  null
+                     }
+                 ],
+    "servicePlans":  [
+                         {
+                             "serviceCode":  "COUPANG_PLAY",
+                             "planName":  "쿠팡와우",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  7890
+                         },
+                         {
+                             "serviceCode":  "DISNEY_PLUS",
+                             "planName":  "디즈니+ 스탠다드",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  9900
+                         },
+                         {
+                             "serviceCode":  "DISNEY_PLUS",
+                             "planName":  "디즈니+ 스탠다드",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  8250
+                         },
+                         {
+                             "serviceCode":  "DISNEY_PLUS",
+                             "planName":  "디즈니+ 프리미엄",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  13900
+                         },
+                         {
+                             "serviceCode":  "DISNEY_PLUS",
+                             "planName":  "디즈니+ 프리미엄",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  11583
+                         },
+                         {
+                             "serviceCode":  "NETFLIX",
+                             "planName":  "광고형 스탠다드",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  7000
+                         },
+                         {
+                             "serviceCode":  "NETFLIX",
+                             "planName":  "스탠다드",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  13500
+                         },
+                         {
+                             "serviceCode":  "NETFLIX",
+                             "planName":  "프리미엄",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  17000
+                         },
+                         {
+                             "serviceCode":  "TVING",
+                             "planName":  "광고형 스탠다드",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  5500
+                         },
+                         {
+                             "serviceCode":  "TVING",
+                             "planName":  "광고형 스탠다드",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  4158
+                         },
+                         {
+                             "serviceCode":  "TVING",
+                             "planName":  "프리미엄",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  17000
+                         },
+                         {
+                             "serviceCode":  "TVING",
+                             "planName":  "프리미엄",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  14083
+                         },
+                         {
+                             "serviceCode":  "TVING",
+                             "planName":  "스탠다드",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  13500
+                         },
+                         {
+                             "serviceCode":  "TVING",
+                             "planName":  "스탠다드",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  11250
+                         },
+                         {
+                             "serviceCode":  "TVING",
+                             "planName":  "베이직",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  9500
+                         },
+                         {
+                             "serviceCode":  "TVING",
+                             "planName":  "베이직",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  7916
+                         },
+                         {
+                             "serviceCode":  "WATCHA",
+                             "planName":  "프리미엄",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  12900
+                         },
+                         {
+                             "serviceCode":  "WATCHA",
+                             "planName":  "베이직",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  7900
+                         },
+                         {
+                             "serviceCode":  "WATCHA",
+                             "planName":  "프리미엄",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  10825
+                         },
+                         {
+                             "serviceCode":  "WATCHA",
+                             "planName":  "베이직",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  6658
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "광고형 스탠다드",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  5500
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "광고형 스탠다드",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  4158
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "베이직",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  7900
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "베이직",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  6583
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "스탠다드",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  10900
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "스탠다드",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  9083
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "프리미엄",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  13900
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "프리미엄",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  11583
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "베이직 X FLO 무제한",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  13750
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "베이직 X 나라사랑카드",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  6700
+                         },
+                         {
+                             "serviceCode":  "WAVVE",
+                             "planName":  "베이직 X Bugs 듣기",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  13750
+                         },
+                         {
+                             "serviceCode":  "MELON",
+                             "planName":  "스트리밍클럽",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  8690
+                         },
+                         {
+                             "serviceCode":  "MELON",
+                             "planName":  "스트리밍 플러스",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  11990
+                         },
+                         {
+                             "serviceCode":  "MELON",
+                             "planName":  "Hi-Fi 스트리밍클럽",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  13200
+                         },
+                         {
+                             "serviceCode":  "MELON",
+                             "planName":  "모바일 스트리밍클럽",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  7590
+                         },
+                         {
+                             "serviceCode":  "BUGS",
+                             "planName":  "무제한 듣기",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  8690
+                         },
+                         {
+                             "serviceCode":  "BUGS",
+                             "planName":  "무제한 듣기+오프라인",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  11990
+                         },
+                         {
+                             "serviceCode":  "SPOTIFY",
+                             "planName":  "베이직",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  8690
+                         },
+                         {
+                             "serviceCode":  "SPOTIFY",
+                             "planName":  "개인",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  11990
+                         },
+                         {
+                             "serviceCode":  "SPOTIFY",
+                             "planName":  "듀오",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  17985
+                         },
+                         {
+                             "serviceCode":  "SPOTIFY",
+                             "planName":  "학생",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  6600
+                         },
+                         {
+                             "serviceCode":  "CHATGPT",
+                             "planName":  "Go",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  13000
+                         },
+                         {
+                             "serviceCode":  "CHATGPT",
+                             "planName":  "Plus",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  29000
+                         },
+                         {
+                             "serviceCode":  "CHATGPT",
+                             "planName":  "Pro",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  299000
+                         },
+                         {
+                             "serviceCode":  "CHATGPT",
+                             "planName":  "Business",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  43900
+                         },
+                         {
+                             "serviceCode":  "CHATGPT",
+                             "planName":  "Business",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  36500
+                         },
+                         {
+                             "serviceCode":  "GEMINI",
+                             "planName":  "Plus",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  11000
+                         },
+                         {
+                             "serviceCode":  "GEMINI",
+                             "planName":  "Pro",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  29000
+                         },
+                         {
+                             "serviceCode":  "GEMINI",
+                             "planName":  "Ultra",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  360000
+                         },
+                         {
+                             "serviceCode":  "CLAUDE",
+                             "planName":  "Pro",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  29000
+                         },
+                         {
+                             "serviceCode":  "CLAUDE",
+                             "planName":  "Pro",
+                             "billingCycle":  "YEARLY",
+                             "monthlyPrice":  24917
+                         },
+                         {
+                             "serviceCode":  "CLAUDE",
+                             "planName":  "Max 5x",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  145000
+                         },
+                         {
+                             "serviceCode":  "CLAUDE",
+                             "planName":  "Max 10x",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  290000
+                         },
+                         {
+                             "serviceCode":  "BUGS",
+                             "planName":  "Premium 무제한 듣기 + 오프라인 재생",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  17600
+                         },
+                         {
+                             "serviceCode":  "BUGS",
+                             "planName":  "모바일 무제한 듣기",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  7590
+                         },
+                         {
+                             "serviceCode":  "BUGS",
+                             "planName":  "프리미엄 무제한 듣기",
+                             "billingCycle":  "MONTHLY",
+                             "monthlyPrice":  13200
+                         }
+                     ]
+}

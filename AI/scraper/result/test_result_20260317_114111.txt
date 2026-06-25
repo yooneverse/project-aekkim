@@ -1,0 +1,1970 @@
+=======================================================
+  테스트 결과 저장 파일
+  실행 시작 : 2026-03-17 11:41:11
+  실행 종료 : 2026-03-17 11:44:36
+  소요 시간 : 204.4초
+  대상 플랫폼: ['tving', 'netflix', 'wavve', 'disneyplus', 'watcha']
+=======================================================
+
+
+=======================================================
+🚀 전 플랫폼 파이프라인 테스트 (비대화형 · 파일 저장 모드)
+   대상: ['tving', 'netflix', 'wavve', 'disneyplus', 'watcha']
+   시작: 2026-03-17 11:41:11
+=======================================================
+  ✅ TvingScraper 로드 완료
+  ✅ NetflixScraper 로드 완료
+  ✅ WavveScraper 로드 완료
+  ✅ DisneyPlusScraper 로드 완료
+  ✅ WatchaScraper 로드 완료
+
+───────────────────────────────────────────────────────
+  LLM 모델 로드 중...
+───────────────────────────────────────────────────────
+  ✅ LLMNormalizer 초기화 완료
+
+
+#######################################################
+  [1/5] TVING
+#######################################################
+
+═══════════════════════════════════════════════════════
+  🌐 [TVING] STEP 1 — RAW 수집
+═══════════════════════════════════════════════════════
+
+──────────────────────────────────────────────────
+  scrap_plans()
+──────────────────────────────────────────────────
+  ✅ scrap_plans() — 17건
+  ✅ 필수 필드 모두 존재 (platform/plan_name/billing_cycle/price/services)
+
+  [전체 RAW 출력 — 17건]
+[
+  {
+    "platform": "tving",
+    "tab": "티빙",
+    "services": [
+      "티빙"
+    ],
+    "plan_name": "광고형 스탠다드",
+    "billing_cycle": "monthly",
+    "price": 5500,
+    "original_price": null,
+    "description": [
+      "동시시청 2대 | 고화질 | 다운로드 15회 | 모든 디바이스 | 광고 포함"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙",
+    "services": [
+      "티빙"
+    ],
+    "plan_name": "광고형 스탠다드",
+    "billing_cycle": "yearly",
+    "price": 49900,
+    "original_price": 66000,
+    "description": [
+      "동시시청 2대 | 고화질 | 다운로드 15회 | 모든 디바이스 | 광고 포함"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙",
+    "services": [
+      "티빙"
+    ],
+    "plan_name": "프리미엄",
+    "billing_cycle": "monthly",
+    "price": 17000,
+    "original_price": null,
+    "description": [
+      "동시시청 4대 | 고화질 | 다운로드 400회 | 모든 디바이스 | Apple TV+ 제공"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙",
+    "services": [
+      "티빙"
+    ],
+    "plan_name": "프리미엄",
+    "billing_cycle": "yearly",
+    "price": 169000,
+    "original_price": 204000,
+    "description": [
+      "동시시청 4대 | 고화질 | 다운로드 400회 | 모든 디바이스 | Apple TV+ 제공"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙",
+    "services": [
+      "티빙"
+    ],
+    "plan_name": "스탠다드",
+    "billing_cycle": "monthly",
+    "price": 13500,
+    "original_price": null,
+    "description": [
+      "동시시청 2대 | 고화질 | 다운로드 300회 | 모든 디바이스"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙",
+    "services": [
+      "티빙"
+    ],
+    "plan_name": "스탠다드",
+    "billing_cycle": "yearly",
+    "price": 135000,
+    "original_price": 162000,
+    "description": [
+      "동시시청 2대 | 고화질 | 다운로드 300회 | 모든 디바이스"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙",
+    "services": [
+      "티빙"
+    ],
+    "plan_name": "베이직",
+    "billing_cycle": "monthly",
+    "price": 9500,
+    "original_price": null,
+    "description": [
+      "동시시청 1대 | 일반화질 | 다운로드 200회 | 모든 디바이스"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙",
+    "services": [
+      "티빙"
+    ],
+    "plan_name": "베이직",
+    "billing_cycle": "yearly",
+    "price": 95000,
+    "original_price": 114000,
+    "description": [
+      "동시시청 1대 | 일반화질 | 다운로드 200회 | 모든 디바이스"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙X웨이브",
+    "services": [
+      "티빙",
+      "웨이브"
+    ],
+    "plan_name": "더블 광고형 스탠다드",
+    "billing_cycle": "monthly",
+    "price": 7000,
+    "original_price": 11000,
+    "description": [
+      "동시시청 2대 | 고화질 | 다운로드 15회 | 모든 디바이스 | 광고 포함",
+      "동시시청 2대 | FHD | 다운로드 15회 | 모든 디바이스 | 광고 포함"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙X웨이브",
+    "services": [
+      "티빙",
+      "웨이브"
+    ],
+    "plan_name": "더블 프리미엄",
+    "billing_cycle": "monthly",
+    "price": 19500,
+    "original_price": 30900,
+    "description": [
+      "동시시청 4대 | 고화질 | 다운로드 400회 | 모든 디바이스 | Apple TV+ 제공",
+      "동시시청 4대 | 최고화질 | 다운로드 무제한 | 모든 디바이스"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙X웨이브",
+    "services": [
+      "티빙",
+      "웨이브"
+    ],
+    "plan_name": "더블 스탠다드",
+    "billing_cycle": "monthly",
+    "price": 15000,
+    "original_price": 24400,
+    "description": [
+      "동시시청 2대 | 고화질 | 다운로드 300회 | 모든 디바이스",
+      "동시시청 2대 | FHD | 다운로드 무제한 | 모든 디바이스"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙X웨이브",
+    "services": [
+      "티빙",
+      "웨이브"
+    ],
+    "plan_name": "더블 베이직",
+    "billing_cycle": "monthly",
+    "price": 13500,
+    "original_price": 17400,
+    "description": [
+      "동시시청 1대 | 일반화질 | 다운로드 200회 | 모든 디바이스",
+      "동시시청 1대 | HD | 다운로드 무제한 | 모바일, 태블릿, PC"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙X웨이브",
+    "services": [
+      "티빙",
+      "웨이브"
+    ],
+    "plan_name": "더블 슬림",
+    "billing_cycle": "monthly",
+    "price": 9500,
+    "original_price": 13400,
+    "description": [
+      "동시시청 2대 | 고화질 | 다운로드 15회 | 모든 디바이스 | 광고 포함",
+      "동시시청 1대 | HD | 다운로드 무제한 | 모바일, 태블릿, PC"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙X디즈니+",
+    "services": [
+      "티빙",
+      "디즈니+",
+      "웨이브"
+    ],
+    "plan_name": "3 PACK",
+    "billing_cycle": "monthly",
+    "price": 21500,
+    "original_price": 34300,
+    "description": [
+      "동시시청 2대 | 고화질 | 다운로드 300회 | 모든 디바이스",
+      "동시시청 2대 | 1080p FHD | 다운로드 무제한 | 모든 디바이스",
+      "동시시청 2대 | FHD | 다운로드 무제한 | 모든 디바이스"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙X디즈니+",
+    "services": [
+      "티빙",
+      "디즈니+"
+    ],
+    "plan_name": "더블 (디즈니+)",
+    "billing_cycle": "monthly",
+    "price": 18000,
+    "original_price": 23400,
+    "description": [
+      "동시시청 2대 | 고화질 | 다운로드 300회 | 모든 디바이스",
+      "동시시청 2대 | 1080p FHD | 다운로드 무제한 | 모든 디바이스"
+    ]
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙플러스",
+    "services": [
+      "Apple TV+"
+    ],
+    "plan_name": "Apple TV 패스",
+    "billing_cycle": "monthly",
+    "price": 4400,
+    "original_price": null,
+    "description": []
+  },
+  {
+    "platform": "tving",
+    "tab": "티빙플러스",
+    "services": [
+      "티빙"
+    ],
+    "plan_name": "추가 계정",
+    "billing_cycle": "monthly",
+    "price": 5000,
+    "original_price": null,
+    "description": []
+  }
+]
+  ℹ️  번들 상품 7건 포함 → LLM에서 PROMOTION_CRAWL 분기 예상
+
+──────────────────────────────────────────────────
+  scrap_cautions()
+──────────────────────────────────────────────────
+  ✅ scrap_cautions() — 8개 섹션
+    [계정 및 결제] 7건
+      • • TVING에서 판매하는 이용권은 만 14세 이상 회원만 구매할 수 있습니다.
+      • • 미성년자가 콘텐츠를 구매할 경우 반드시 법정대리인의 동의가 필요하며, 동의 없이 구매한 경우에는 법정대리인이 취소할 수 있습니다.
+      • • 계정은 회원 본인만 사용할 수 있으며, 예외적으로 같은 가구에 거주하는 가구 구성원에게만 이용이 허용됩니다.
+    [해지 및 환불] 3건
+      • • 자동 결제를 해지하려면 결제 예정일의 전일 내로 신청해야 하며, 그 이후에는 해지를 신청해도 결제가 진행될 수 있습니다.
+      • • 이용권 구매 후 7일 이내에 시청·다운로드 등 사용 이력이 없는 경우 고객센터를 통해 철회할 수 있습니다.
+      • • 이용권 구매 후 7일이 지났거나 사용 이력이 있는 경우, 사용한 일수와 수수료를 제외한 나머지 금액만 환불됩니다.
+    [서비스 이용] 8건
+      • • TVING 서비스(시리즈, 영화, 라이브 등)은 저작권자의 요청으로 인해 해외에서는 이용할 수 없습니다.
+      • • 일부 콘텐츠는 저작권자 등의 사정으로 시청이나 다운로드가 제한될 수 있습니다.
+      • • 4K 화질, 퀵 VOD, 타임머신 기능은 일부 콘텐츠에서만 제공되며, 특히 4K 화질은 이용권 종류, 네트워크 환경, 콘텐츠 계약 조건, 기
+    [서비스 이용 사양] 7건
+      • • 스마트폰·태블릿·TV 기기는 티빙 공식 앱 설치 후 이용할 수 있으며, OS 버전·기기 사양(메모리)·제조사에 따라 일부 기기에서는 서비스가
+      • • PC: Window 7 이상 / Chrome 80, Edge 106 이상 브라우저
+      • • 스마트폰/태블릿: Android OS 9.0 이상 / iOS 16.4 이상(AOS 9.0 / iOS 16.4 미만 버전 APP 이용 불가)
+    [TVING x Wavve 이용권 유의사항] 4건
+      • • TVING × Wavve 이용권은 공통 유의사항과 함께 아래 내용이 적용됩니다.
+      • • TVING × Wavve 이용권으로 Wavve 서비스를 이용하려면 계정 연결이 필요하며, 구매 직후 [연결된 계정보기] 버튼으로 바로 진행할
+      • • Wavve 서비스 이용 주의사항과 권장 사양은 Wavve 이용권 안내 페이지에서 확인할 수 있습니다. (Wavve 바로가기)
+    [TVING x Disney+ 이용권 유의사항] 7건
+      • • TVING × Disney+ 및 TVING × Disney+ × Wavve 이용권(이하 'TVING × Disney+ 이용권')은 공통 유의
+      • • Disney+ 서비스 이용 주의사항과 권장 사양은 Disney+ 이용권 안내 페이지에서 확인할 수 있습니다. (Disney+ 바로가기)
+      • • Disney+ 정책에 따라 19세 미만의 경우 Disney+ 이용이 불가능하며, 이용권이 결제되더라도 Disney+ 연동이 제한될 수 있습니
+    [Apple TV 패스 이용권 유의사항] 8건
+      • • Apple TV 패스 이용권은 공통 유의사항과 함께 아래 내용이 적용됩니다.
+      • • 티빙 월간 및 연간 이용권(광고형 스탠다드, 베이직, 스탠다드) 또는 TVING × Wavve 이용권(더블 광고형 스탠다드, 더블 슬림, 더
+      • • TVING × Disney+ 이용권, 추가 계정 이용권, 쿠폰 및 제휴 이용권(통신사 등)은 Apple TV 패스를 구매할 수 없습니다.
+    [추가 계정 이용권 유의사항] 5건
+      • • 추가 계정 이용권은 공통 유의사항과 함께 아래 내용이 적용됩니다. (자세히 보기)
+      • • 기준 계정의 이용권이 변경 또는 해지되면 연결되어 있던 추가 계정 이용권도 함께 해지되면서 추가 계정 연결이 해제됩니다.
+      • • 추가 계정 연결 해제는 즉시 가능하나, 결제 기간 내 1회만 가능합니다.
+
+──────────────────────────────────────────────────
+  scrap_company_info()
+──────────────────────────────────────────────────
+  ✅ scrap_company_info() — 4줄
+    대표이사 : 최주희
+사업자정보확인
+사업자등록번호 : 188-88-01893
+통신판매신고번호 : 2020-서울마포-3641호
+    사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)
+호스팅사업자 : 아마존웹서비시즈코리아 유한책임회사
+    고객센터 (평일 09시~18시/공휴일 휴무)
+챗봇/채팅 상담
+1:1 게시판 문의
+대표메일 : tving@cj.net
+유료 ARS : 1670-1525 (음성/메시지 안내)
+    ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780
+Mnet 고객센터(방송편성문의) : 1855-1631
+
+──────────────────────────────────────────────────
+  scrap_promotions()
+──────────────────────────────────────────────────
+  ✅ scrap_promotions() — 9건
+    [2026.03.04] 2026 월드 베이스볼 클래식(WBC) 서비스 안내
+      2026 월드 베이스볼 클래식(WBC) 서비스 안내
+등록일 2026.03.04조회수 810
+
+안녕하세요, 티빙입니다.
+
+2026 월드 베이스볼 클래식 경기 일정 관련하여, 아래 내용 참고 부탁드립니다.
+
+ 
+
+[ L...
+    [2026.02.09] 광고형 스탠다드 연간 이용권 한정 판매 프로모션 안내 (2026. 2. 9 ~ 2026. 4. 30)
+      광고형 스탠다드 연간 이용권 한정 판매 프로모션 안내 (2026. 2. 9 ~ 2026. 4. 30)
+등록일 2026.02.09조회수 1,371
+
+안녕하세요. 티빙입니다. 
+2026년 2월 9일 (월) 부터 4월 3...
+    [2026.01.28] Apple TV 패스 상품 런칭 안내
+      Apple TV 패스 상품 런칭 안내
+등록일 2026.01.28조회수 1,041
+
+안녕하세요, 티빙입니다.
+ 
+
+Apple TV 오리지널 콘텐츠만 시청할 수 있는 이용권인 "Apple TV 패스"가 출시되어 안내드립...
+    [2026.01.21] 구글/애플 인앱결제 이용권 신규 구독료 변경 안내 (2026년 2월 23일)
+      구글/애플 인앱결제 이용권 신규 구독료 변경 안내 (2026년 2월 23일)
+등록일 2026.01.21조회수 767
+
+안녕하세요, 티빙입니다. 
+
+티빙을 이용해 주시는 회원님들께 깊은 감사의 말씀을 드립니다. 
+20...
+    [2025.12.10] 연간 이용권 프로모션 변경 안내 (2026. 1. 1 ~ )
+      연간 이용권 프로모션 변경 안내 (2026. 1. 1 ~ )
+등록일 2025.12.10조회수 6,310
+
+안녕하세요. 티빙입니다. 
+
+항상 TVING 서비스를 이용해 주셔서 감사드리며, 
+2025년 3월 1일부터 진...
+    [2025.04.21] 티빙 계정 공유 정책 추가 안내
+      티빙 계정 공유 정책 추가 안내
+등록일 2025.04.21조회수 14,541
+
+안녕하세요, 티빙입니다.
+
+티빙 계정 공유 정책 시행 관련 추가 사항을 안내드립니다.
+
+티빙은 기존 이용자분들의 이용 편의를 고려하여 계...
+    [2025.03.25] 티빙 계정 공유 정책 시행 안내
+      티빙 계정 공유 정책 시행 안내
+등록일 2025.03.25조회수 38,761
+
+안녕하세요, 티빙입니다. 
+
+티빙 계정 공유 정책 시행 및 제한 적용 관련하여 안내드립니다. 
+
+회원님의 계정은 티빙 이용약관에 따라, ...
+    [2024.10.14] 모바일 웹에서 이용권 변경 방법 안내 (PC/모바일웹 결제 회원 대상)
+      모바일 웹에서 이용권 변경 방법 안내 (PC/모바일웹 결제 회원 대상)
+등록일 2024.10.14조회수 5,746
+
+안녕하세요, 티빙입니다.
+
+2024년 10월 14일(월)부터 PC 뿐만 아니라 모바일 기기로 간편하...
+    [2024.03.20] 티빙 이용권 해지 및 철회 방법 안내
+      티빙 이용권 해지 및 철회 방법 안내
+등록일 2024.03.20조회수 24,147
+
+안녕하세요. 티빙입니다. 
+
+티빙에서 구독한 이용권의 해지 및 철회 방법과 관련하여 안내드립니다. 
+
+■ 정기결제 해지 
+1) 정기...
+
+──────────────────────────────────────────────────
+  scrap_logo()
+──────────────────────────────────────────────────
+  ✅ scrap_logo() — 934자
+    <svg viewBox="0 0 93 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[6.216rem] md:w-[7....
+
+  [ [tving] RAW 수집 완료 — 엔터를 누르면 LLM 정규화를 시작합니다 — 자동 진행 ]
+
+═══════════════════════════════════════════════════════
+  🤖 [TVING] STEP 2 — LLM 정규화
+═══════════════════════════════════════════════════════
+  ✅ normalize_plans() — 2건 반환
+
+  jobType: SERVICE_CATALOG_CRAWL
+  ✅ servicePlans 9건
+    {'serviceCode': 'TVING', 'planName': '광고형 스탠다드', 'billingCycle': 'MONTHLY', 'monthlyPrice': 5500}
+  ✅ YEARLY 월환산 정확: 광고형 스탠다드 → 4158원/월 (연 49900÷12)
+    {'serviceCode': 'TVING', 'planName': '광고형 스탠다드', 'billingCycle': 'YEARLY', 'monthlyPrice': 4158}
+    {'serviceCode': 'TVING', 'planName': '프리미엄', 'billingCycle': 'MONTHLY', 'monthlyPrice': 17000}
+  ✅ YEARLY 월환산 정확: 프리미엄 → 14083원/월 (연 169000÷12)
+    {'serviceCode': 'TVING', 'planName': '프리미엄', 'billingCycle': 'YEARLY', 'monthlyPrice': 14083}
+    {'serviceCode': 'TVING', 'planName': '스탠다드', 'billingCycle': 'MONTHLY', 'monthlyPrice': 13500}
+  ✅ YEARLY 월환산 정확: 스탠다드 → 11250원/월 (연 135000÷12)
+    {'serviceCode': 'TVING', 'planName': '스탠다드', 'billingCycle': 'YEARLY', 'monthlyPrice': 11250}
+    {'serviceCode': 'TVING', 'planName': '베이직', 'billingCycle': 'MONTHLY', 'monthlyPrice': 9500}
+  ✅ YEARLY 월환산 정확: 베이직 → 7916원/월 (연 95000÷12)
+    {'serviceCode': 'TVING', 'planName': '베이직', 'billingCycle': 'YEARLY', 'monthlyPrice': 7916}
+    {'serviceCode': 'TVING', 'planName': '추가 계정', 'billingCycle': 'MONTHLY', 'monthlyPrice': 5000}
+
+  jobType: PROMOTION_CRAWL
+  ✅ promotions 7건
+    [BUNDLE] 더블 광고형 스탠다드 | services: ['TVING', 'WAVVE']
+  ✅ BUNDLE services 정상: ['TVING', 'WAVVE']
+    [BUNDLE] 더블 프리미엄 | services: ['TVING', 'WAVVE']
+  ✅ BUNDLE services 정상: ['TVING', 'WAVVE']
+    [BUNDLE] 더블 스탠다드 | services: ['TVING', 'WAVVE']
+  ✅ BUNDLE services 정상: ['TVING', 'WAVVE']
+    [BUNDLE] 더블 베이직 | services: ['TVING', 'WAVVE']
+  ✅ BUNDLE services 정상: ['TVING', 'WAVVE']
+    [BUNDLE] 더블 슬림 | services: ['TVING', 'WAVVE']
+  ✅ BUNDLE services 정상: ['TVING', 'WAVVE']
+    [BUNDLE] 3 PACK | services: ['TVING', 'DISNEY_PLUS', 'WAVVE']
+  ✅ BUNDLE services 정상: ['TVING', 'DISNEY_PLUS', 'WAVVE']
+    [BUNDLE] 더블 (디즈니+) | services: ['TVING', 'DISNEY_PLUS']
+  ✅ BUNDLE services 정상: ['TVING', 'DISNEY_PLUS']
+
+  [전체 LLM 출력]
+[
+  {
+    "jobType": "SERVICE_CATALOG_CRAWL",
+    "collectedAt": "2026-03-17T11:41:55.679814+09:00",
+    "services": [
+      {
+        "code": "TVING",
+        "name": "tving",
+        "category": "OTT",
+        "logoUrl": "/assets/services/TVING.png",
+        "cancelGuideUrl": "https://www.tving.com/help/faq?page=1&categoryCode=FAQN0004",
+        "customerServicePhone": "080-080-0780",
+        "contactEmail": "tving@cj.net"
+      }
+    ],
+    "servicePlans": [
+      {
+        "serviceCode": "TVING",
+        "planName": "광고형 스탠다드",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 5500
+      },
+      {
+        "serviceCode": "TVING",
+        "planName": "광고형 스탠다드",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 4158
+      },
+      {
+        "serviceCode": "TVING",
+        "planName": "프리미엄",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 17000
+      },
+      {
+        "serviceCode": "TVING",
+        "planName": "프리미엄",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 14083
+      },
+      {
+        "serviceCode": "TVING",
+        "planName": "스탠다드",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 13500
+      },
+      {
+        "serviceCode": "TVING",
+        "planName": "스탠다드",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 11250
+      },
+      {
+        "serviceCode": "TVING",
+        "planName": "베이직",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 9500
+      },
+      {
+        "serviceCode": "TVING",
+        "planName": "베이직",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 7916
+      },
+      {
+        "serviceCode": "TVING",
+        "planName": "추가 계정",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 5000
+      }
+    ]
+  },
+  {
+    "jobType": "PROMOTION_CRAWL",
+    "collectedAt": "2026-03-17T11:42:04.644244+09:00",
+    "promotions": [
+      {
+        "promotionType": "BUNDLE",
+        "title": "더블 광고형 스탠다드",
+        "summary": "티빙과 웨이브를 함께 시청할 수 있는 더블 광고형 스탠다드 요금제",
+        "originalPrice": 11000,
+        "discountPrice": 7000,
+        "startsAt": "2026-03-17T11:42:04.644244+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "TVING"
+          },
+          {
+            "serviceCode": "WAVVE"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "더블 프리미엄",
+        "summary": "티빙과 웨이브를 함께 시청할 수 있는 더블 프리미엄 요금제",
+        "originalPrice": 30900,
+        "discountPrice": 19500,
+        "startsAt": "2026-03-17T11:42:04.644244+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "TVING"
+          },
+          {
+            "serviceCode": "WAVVE"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "더블 스탠다드",
+        "summary": "티빙과 웨이브를 함께 시청할 수 있는 더블 스탠다드 요금제",
+        "originalPrice": 24400,
+        "discountPrice": 15000,
+        "startsAt": "2026-03-17T11:42:04.644244+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "TVING"
+          },
+          {
+            "serviceCode": "WAVVE"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "더블 베이직",
+        "summary": "티빙과 웨이브를 함께 시청할 수 있는 더블 베이직 요금제",
+        "originalPrice": 17400,
+        "discountPrice": 13500,
+        "startsAt": "2026-03-17T11:42:04.644244+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "TVING"
+          },
+          {
+            "serviceCode": "WAVVE"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "더블 슬림",
+        "summary": "티빙과 웨이브를 함께 시청할 수 있는 더블 슬림 요금제",
+        "originalPrice": 13400,
+        "discountPrice": 9500,
+        "startsAt": "2026-03-17T11:42:04.644244+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "TVING"
+          },
+          {
+            "serviceCode": "WAVVE"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "3 PACK",
+        "summary": "티빙, 디즈니+, 웨이브를 함께 시청할 수 있는 3 PACK 요금제",
+        "originalPrice": 34300,
+        "discountPrice": 21500,
+        "startsAt": "2026-03-17T11:42:04.644244+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "TVING"
+          },
+          {
+            "serviceCode": "DISNEY_PLUS"
+          },
+          {
+            "serviceCode": "WAVVE"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "더블 (디즈니+)",
+        "summary": "티빙과 디즈니+를 함께 시청할 수 있는 더블 (디즈니+) 요금제",
+        "originalPrice": 23400,
+        "discountPrice": 18000,
+        "startsAt": "2026-03-17T11:42:04.644244+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "TVING"
+          },
+          {
+            "serviceCode": "DISNEY_PLUS"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+  [ [tving] 완료 — 엔터를 누르면 다음 플랫폼 [netflix]으로 넘어갑니다 — 자동 진행 ]
+
+
+#######################################################
+  [2/5] NETFLIX
+#######################################################
+
+═══════════════════════════════════════════════════════
+  🌐 [NETFLIX] STEP 1 — RAW 수집
+═══════════════════════════════════════════════════════
+
+──────────────────────────────────────────────────
+  scrap_plans()
+──────────────────────────────────────────────────
+  ✅ scrap_plans() — 3건
+  ✅ 필수 필드 모두 존재 (platform/plan_name/billing_cycle/price/services)
+
+  [전체 RAW 출력 — 3건]
+[
+  {
+    "platform": "netflix",
+    "tab": null,
+    "services": [
+      "넷플릭스"
+    ],
+    "plan_name": "광고형 스탠다드",
+    "billing_cycle": "monthly",
+    "price": 7000,
+    "original_price": null,
+    "description": [
+      "월 요금: 7,000원",
+      "화질과 음질: 좋음",
+      "해상도: 1080p(풀 HD)",
+      "지원 디바이스: TV, 컴퓨터, 스마트폰, 태블릿",
+      "가구 구성원 간 동시접속자 수: 2",
+      "저장 디바이스: 2",
+      "광고: 생각보다 적은 광고"
+    ]
+  },
+  {
+    "platform": "netflix",
+    "tab": null,
+    "services": [
+      "넷플릭스"
+    ],
+    "plan_name": "스탠다드",
+    "billing_cycle": "monthly",
+    "price": 13500,
+    "original_price": null,
+    "description": [
+      "월 요금: 13,500원",
+      "화질과 음질: 좋음",
+      "해상도: 1080p(풀 HD)",
+      "지원 디바이스: TV, 컴퓨터, 스마트폰, 태블릿",
+      "가구 구성원 간 동시접속자 수: 2",
+      "저장 디바이스: 2",
+      "광고: 광고 없음"
+    ]
+  },
+  {
+    "platform": "netflix",
+    "tab": null,
+    "services": [
+      "넷플릭스"
+    ],
+    "plan_name": "프리미엄",
+    "billing_cycle": "monthly",
+    "price": 17000,
+    "original_price": null,
+    "description": [
+      "월 요금: 17,000원",
+      "화질과 음질: 가장 좋음",
+      "해상도: 4K(UHD) + HDR",
+      "공간 음향(이머시브 사운드): 포함",
+      "지원 디바이스: TV, 컴퓨터, 스마트폰, 태블릿",
+      "가구 구성원 간 동시접속자 수: 4",
+      "저장 디바이스: 6",
+      "광고: 광고 없음"
+    ]
+  }
+]
+
+──────────────────────────────────────────────────
+  scrap_cautions()
+──────────────────────────────────────────────────
+  ✅ scrap_cautions() — 2개 섹션
+    [광고형 멤버십 안내] 1건
+      • 광고형 멤버십으로 대부분의 넷플릭스 시리즈와 영화를 이용할 수 있지만, 라이선스 제한으로 인해 시청할 수 없는 콘텐츠도 일부 있습니다. 광고형 
+    [법적 고지] 4건
+      • 광고형 멤버십을 선택하면, 맞춤형 광고와 Netflix의 개인정보 처리방침에 부합하는 기타 목적을 위해 생년월일을 제공해 주셔야 합니다. 대부분
+      • 풀 HD(1080p), UHD(4K), HDR 화질 제공 여부는 사용하는 인터넷 서비스와 디바이스의 성능에 따라 달라질 수 있습니다. 모든 콘텐
+      • 함께 거주하는 사람들만 계정을 함께 이용할 수 있습니다. 스탠다드 멤버십은 추가 회원을 1명, 프리미엄은 최대 2명까지 등록할 수 있습니다. 자
+
+──────────────────────────────────────────────────
+  scrap_company_info()
+──────────────────────────────────────────────────
+  ✅ scrap_company_info() — 7줄
+    넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 00-308-321-0161 (수신자 부담)
+    대표: 레지널드 숀 톰슨
+    이메일 주소: korea@netflix.com
+    주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161
+    사업자등록번호: 165-87-00119
+    클라우드 호스팅: Amazon Web Services Inc.
+    공정거래위원회 웹사이트
+
+──────────────────────────────────────────────────
+  scrap_promotions()
+──────────────────────────────────────────────────
+  ⚠️  scrap_promotions() 미구현: [netflix] scrap_promotions() 미구현 — 수집 방식 미정, 구현 방식 확정 후 추가 필요
+
+──────────────────────────────────────────────────
+  scrap_logo()
+──────────────────────────────────────────────────
+  ✅ scrap_logo() — 2346자
+    <svg viewBox="0 0 111 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w...
+
+  [ [netflix] RAW 수집 완료 — 엔터를 누르면 LLM 정규화를 시작합니다 — 자동 진행 ]
+
+═══════════════════════════════════════════════════════
+  🤖 [NETFLIX] STEP 2 — LLM 정규화
+═══════════════════════════════════════════════════════
+  ✅ normalize_plans() — 1건 반환
+
+  jobType: SERVICE_CATALOG_CRAWL
+  ✅ servicePlans 3건
+    {'serviceCode': 'NETFLIX', 'planName': '광고형 스탠다드', 'billingCycle': 'MONTHLY', 'monthlyPrice': 7000}
+    {'serviceCode': 'NETFLIX', 'planName': '스탠다드', 'billingCycle': 'MONTHLY', 'monthlyPrice': 13500}
+    {'serviceCode': 'NETFLIX', 'planName': '프리미엄', 'billingCycle': 'MONTHLY', 'monthlyPrice': 17000}
+
+  [전체 LLM 출력]
+[
+  {
+    "jobType": "SERVICE_CATALOG_CRAWL",
+    "collectedAt": "2026-03-17T11:42:34.142899+09:00",
+    "services": [
+      {
+        "code": "NETFLIX",
+        "name": "netflix",
+        "category": "OTT",
+        "logoUrl": "/assets/services/NETFLIX.png",
+        "cancelGuideUrl": "https://help.netflix.com/ko/node/407",
+        "customerServicePhone": "308-321-0161",
+        "contactEmail": "korea@netflix.com"
+      }
+    ],
+    "servicePlans": [
+      {
+        "serviceCode": "NETFLIX",
+        "planName": "광고형 스탠다드",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 7000
+      },
+      {
+        "serviceCode": "NETFLIX",
+        "planName": "스탠다드",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 13500
+      },
+      {
+        "serviceCode": "NETFLIX",
+        "planName": "프리미엄",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 17000
+      }
+    ]
+  }
+]
+
+  [ [netflix] 완료 — 엔터를 누르면 다음 플랫폼 [wavve]으로 넘어갑니다 — 자동 진행 ]
+
+
+#######################################################
+  [3/5] WAVVE
+#######################################################
+
+═══════════════════════════════════════════════════════
+  🌐 [WAVVE] STEP 1 — RAW 수집
+═══════════════════════════════════════════════════════
+
+──────────────────────────────────────────────────
+  scrap_plans()
+──────────────────────────────────────────────────
+  ✅ scrap_plans() — 15건
+  ✅ 필수 필드 모두 존재 (platform/plan_name/billing_cycle/price/services)
+
+  [전체 RAW 출력 — 15건]
+[
+  {
+    "platform": "wavve",
+    "tab": "웨이브 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "광고형 스탠다드",
+    "billing_cycle": "monthly",
+    "price": 5500,
+    "original_price": null,
+    "description": [
+      "동시시청: 2대",
+      "모바일+태블릿+PC: 가능",
+      "TV: 가능",
+      "광고: 가능",
+      "화질: FHD 화질",
+      "모바일 다운로드: 15회",
+      "QVOD 및 타임머신 기능: QVOD Only",
+      "30만편 이상의 VOD: 가능",
+      "100여개 실시간 라이브 채널: 가능",
+      "9천여편의 영화: 가능"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "광고형 스탠다드",
+    "billing_cycle": "yearly",
+    "price": 49900,
+    "original_price": null,
+    "description": [
+      "동시시청: 2대",
+      "모바일+태블릿+PC: 가능",
+      "TV: 가능",
+      "광고: 가능",
+      "화질: FHD 화질",
+      "모바일 다운로드: 15회",
+      "QVOD 및 타임머신 기능: QVOD Only",
+      "30만편 이상의 VOD: 가능",
+      "100여개 실시간 라이브 채널: 가능",
+      "9천여편의 영화: 가능"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "베이직",
+    "billing_cycle": "monthly",
+    "price": 7900,
+    "original_price": null,
+    "description": [
+      "동시시청: 1대",
+      "모바일+태블릿+PC: 가능",
+      "TV: 불가능",
+      "광고: 불가능",
+      "화질: HD 화질",
+      "모바일 다운로드: 무제한",
+      "QVOD 및 타임머신 기능: 가능",
+      "30만편 이상의 VOD: 가능",
+      "100여개 실시간 라이브 채널: 가능",
+      "9천여편의 영화: 가능"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "베이직",
+    "billing_cycle": "yearly",
+    "price": 79000,
+    "original_price": null,
+    "description": [
+      "동시시청: 1대",
+      "모바일+태블릿+PC: 가능",
+      "TV: 불가능",
+      "광고: 불가능",
+      "화질: HD 화질",
+      "모바일 다운로드: 무제한",
+      "QVOD 및 타임머신 기능: 가능",
+      "30만편 이상의 VOD: 가능",
+      "100여개 실시간 라이브 채널: 가능",
+      "9천여편의 영화: 가능"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "스탠다드",
+    "billing_cycle": "monthly",
+    "price": 10900,
+    "original_price": null,
+    "description": [
+      "동시시청: 2대",
+      "모바일+태블릿+PC: 가능",
+      "TV: 가능",
+      "광고: 불가능",
+      "화질: FHD 화질",
+      "모바일 다운로드: 무제한",
+      "QVOD 및 타임머신 기능: 가능",
+      "30만편 이상의 VOD: 가능",
+      "100여개 실시간 라이브 채널: 가능",
+      "9천여편의 영화: 가능"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "스탠다드",
+    "billing_cycle": "yearly",
+    "price": 109000,
+    "original_price": null,
+    "description": [
+      "동시시청: 2대",
+      "모바일+태블릿+PC: 가능",
+      "TV: 가능",
+      "광고: 불가능",
+      "화질: FHD 화질",
+      "모바일 다운로드: 무제한",
+      "QVOD 및 타임머신 기능: 가능",
+      "30만편 이상의 VOD: 가능",
+      "100여개 실시간 라이브 채널: 가능",
+      "9천여편의 영화: 가능"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "프리미엄",
+    "billing_cycle": "monthly",
+    "price": 13900,
+    "original_price": null,
+    "description": [
+      "동시시청: 4대",
+      "모바일+태블릿+PC: 가능",
+      "TV: 가능",
+      "광고: 불가능",
+      "화질: 최고화질",
+      "모바일 다운로드: 무제한",
+      "QVOD 및 타임머신 기능: 가능",
+      "30만편 이상의 VOD: 가능",
+      "100여개 실시간 라이브 채널: 가능",
+      "9천여편의 영화: 가능"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "프리미엄",
+    "billing_cycle": "yearly",
+    "price": 139000,
+    "original_price": null,
+    "description": [
+      "동시시청: 4대",
+      "모바일+태블릿+PC: 가능",
+      "TV: 가능",
+      "광고: 불가능",
+      "화질: 최고화질",
+      "모바일 다운로드: 무제한",
+      "QVOD 및 타임머신 기능: 가능",
+      "30만편 이상의 VOD: 가능",
+      "100여개 실시간 라이브 채널: 가능",
+      "9천여편의 영화: 가능"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 x 티빙 더블 이용권",
+    "services": [
+      "웨이브",
+      "티빙"
+    ],
+    "plan_name": "더블 광고형 스탠다드",
+    "billing_cycle": "monthly",
+    "price": 7000,
+    "original_price": null,
+    "description": [
+      "더블 이용권 구성: wavve 광고형 스탠다드 tving 광고형 스탠다드",
+      "동시 시청: 2대",
+      "모바일 + 태블릿 + PC: 가능",
+      "TV: 가능",
+      "제외 콘텐츠: 티빙 - Apple TV+ 등 일부",
+      "광고: 가능",
+      "화질: 웨이브 - FHD 화질\n티빙 - 고화질",
+      "다운로드: 15회"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 x 티빙 더블 이용권",
+    "services": [
+      "웨이브",
+      "티빙"
+    ],
+    "plan_name": "더블 베이직",
+    "billing_cycle": "monthly",
+    "price": 13500,
+    "original_price": null,
+    "description": [
+      "더블 이용권 구성: wavve 베이직 tving 베이직",
+      "동시 시청: 1대",
+      "모바일 + 태블릿 + PC: 가능",
+      "TV: 티빙 Only",
+      "제외 콘텐츠: 티빙 - Apple TV+",
+      "광고: 불가능",
+      "화질: 웨이브 - HD 화질\n티빙 - 일반화질",
+      "다운로드: 웨이브 - 무제한\n티빙 - 200회"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 x 티빙 더블 이용권",
+    "services": [
+      "웨이브",
+      "티빙"
+    ],
+    "plan_name": "더블 스탠다드",
+    "billing_cycle": "monthly",
+    "price": 15000,
+    "original_price": null,
+    "description": [
+      "더블 이용권 구성: wavve 스탠다드 tving 스탠다드",
+      "동시 시청: 2대",
+      "모바일 + 태블릿 + PC: 가능",
+      "TV: 가능",
+      "제외 콘텐츠: 티빙 - Apple TV+",
+      "광고: 불가능",
+      "화질: 웨이브 - FHD 화질\n티빙 - 고화질",
+      "다운로드: 웨이브 - 무제한\n티빙 - 300회"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "웨이브 x 티빙 더블 이용권",
+    "services": [
+      "웨이브",
+      "티빙"
+    ],
+    "plan_name": "더블 프리미엄",
+    "billing_cycle": "monthly",
+    "price": 19500,
+    "original_price": null,
+    "description": [
+      "더블 이용권 구성: wavve 프리미엄 tving 프리미엄",
+      "동시 시청: 4대",
+      "모바일 + 태블릿 + PC: 가능",
+      "TV: 가능",
+      "제외 콘텐츠: 불가능",
+      "광고: 불가능",
+      "화질: 웨이브 - 최고화질\n티빙 - 고화질 (4K 일부)",
+      "다운로드: 웨이브 - 무제한\n티빙 - 400회"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "제휴 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "베이직 X FLO 무제한",
+    "billing_cycle": "monthly",
+    "price": 13750,
+    "original_price": null,
+    "description": [
+      "동시시청: 1대",
+      "이용기기: 모바일 + 태블릿 + PC (TV 시청 제한)",
+      "화질: HD 화질",
+      "다운로드: 무제한"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "제휴 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "베이직 X 나라사랑카드",
+    "billing_cycle": "monthly",
+    "price": 6700,
+    "original_price": 7900,
+    "description": [
+      "동시시청: 1대",
+      "이용기기: 모바일 + 태블릿 + PC (TV 시청 제한)",
+      "화질: HD 화질",
+      "다운로드: 무제한"
+    ]
+  },
+  {
+    "platform": "wavve",
+    "tab": "제휴 이용권",
+    "services": [
+      "웨이브"
+    ],
+    "plan_name": "베이직 X Bugs 듣기",
+    "billing_cycle": "monthly",
+    "price": 13750,
+    "original_price": null,
+    "description": [
+      "동시시청: 1대",
+      "이용기기: 모바일 + 태블릿 + PC (TV 시청 제한)",
+      "화질: HD 화질",
+      "다운로드: 무제한"
+    ]
+  }
+]
+  ℹ️  번들 상품 4건 포함 → LLM에서 PROMOTION_CRAWL 분기 예상
+
+──────────────────────────────────────────────────
+  scrap_cautions()
+──────────────────────────────────────────────────
+  ✅ scrap_cautions() — 3개 섹션
+    [서비스 이용 주의사항] 16건
+      • 일부 콘텐츠는 저작권자의 요청에 따라 LIVE 및 VOD 서비스가 제공되지 않을 수 있습니다.
+      • 일부 콘텐츠는 콘텐츠 제공사의 요청으로 FHD 화질을 제공하지 않을 수 있습니다.
+      • 콘텐츠에 따라 다운로드를 제공하지 않을 수 있으며, 이용권에 따라 다운로드 횟수가 제한됩니다.
+    [서비스 이용 권장사양] 4건
+      • PC : Windows 10 이상, MacOS 10.12 이상. Chrome/Edge/Safari 등 HTML 5 지원 브라우저 최신 버전
+      • 스마트폰 : Android 11 버전 이상, iOS 15 버전 이상의 국내 출시 모델
+      • 태블릿 : Android 11 버전 이상, iOS 15 버전 이상의 국내 출시 모델
+    [이용권 구매 주의사항] 17건
+      • 모든 이용권은 부가세(VAT)포함 가격입니다.
+      • 상품 가격은 내부 정책으로 인해 변경 될 수 있습니다.
+      • Google Play 결제 금액은 PC/모바일웹 결제 금액과 상이합니다. 자세히보기
+
+──────────────────────────────────────────────────
+  scrap_company_info()
+──────────────────────────────────────────────────
+[ERROR] 사업자 정보 파싱 실패: Page.query_selector: Execution context was destroyed, most likely because of a navigation
+  ✅ scrap_company_info() — 0줄
+
+──────────────────────────────────────────────────
+  scrap_promotions()
+──────────────────────────────────────────────────
+[ERROR] 웨이브 이벤트 목록 수집 실패: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.wavve.com/customer/event_list", waiting until "networkidle"
+
+  ✅ scrap_promotions() — 0건
+
+──────────────────────────────────────────────────
+  scrap_logo()
+──────────────────────────────────────────────────
+  ✅ scrap_logo() — 59자
+    https://www.wavve.com/static/ci-wavve-112-x-24-19271ad2.svg
+
+  [ [wavve] RAW 수집 완료 — 엔터를 누르면 LLM 정규화를 시작합니다 — 자동 진행 ]
+
+═══════════════════════════════════════════════════════
+  🤖 [WAVVE] STEP 2 — LLM 정규화
+═══════════════════════════════════════════════════════
+  ✅ normalize_plans() — 2건 반환
+
+  jobType: SERVICE_CATALOG_CRAWL
+  ✅ servicePlans 11건
+    {'serviceCode': 'WAVVE', 'planName': '광고형 스탠다드', 'billingCycle': 'MONTHLY', 'monthlyPrice': 5500}
+  ✅ YEARLY 월환산 정확: 광고형 스탠다드 → 4158원/월 (연 49900÷12)
+    {'serviceCode': 'WAVVE', 'planName': '광고형 스탠다드', 'billingCycle': 'YEARLY', 'monthlyPrice': 4158}
+    {'serviceCode': 'WAVVE', 'planName': '베이직', 'billingCycle': 'MONTHLY', 'monthlyPrice': 7900}
+  ✅ YEARLY 월환산 정확: 베이직 → 6583원/월 (연 79000÷12)
+    {'serviceCode': 'WAVVE', 'planName': '베이직', 'billingCycle': 'YEARLY', 'monthlyPrice': 6583}
+    {'serviceCode': 'WAVVE', 'planName': '스탠다드', 'billingCycle': 'MONTHLY', 'monthlyPrice': 10900}
+  ✅ YEARLY 월환산 정확: 스탠다드 → 9083원/월 (연 109000÷12)
+    {'serviceCode': 'WAVVE', 'planName': '스탠다드', 'billingCycle': 'YEARLY', 'monthlyPrice': 9083}
+    {'serviceCode': 'WAVVE', 'planName': '프리미엄', 'billingCycle': 'MONTHLY', 'monthlyPrice': 13900}
+  ✅ YEARLY 월환산 정확: 프리미엄 → 11583원/월 (연 139000÷12)
+    {'serviceCode': 'WAVVE', 'planName': '프리미엄', 'billingCycle': 'YEARLY', 'monthlyPrice': 11583}
+    {'serviceCode': 'WAVVE', 'planName': '베이직 X FLO 무제한', 'billingCycle': 'MONTHLY', 'monthlyPrice': 13750}
+    {'serviceCode': 'WAVVE', 'planName': '베이직 X 나라사랑카드', 'billingCycle': 'MONTHLY', 'monthlyPrice': 6700}
+    {'serviceCode': 'WAVVE', 'planName': '베이직 X Bugs 듣기', 'billingCycle': 'MONTHLY', 'monthlyPrice': 13750}
+
+  jobType: PROMOTION_CRAWL
+  ✅ promotions 4건
+    [BUNDLE] 웨이브 x 티빙 더블 이용권 더블 광고형 스탠다드 | services: ['WAVVE', 'TVING']
+  ✅ BUNDLE services 정상: ['WAVVE', 'TVING']
+    [BUNDLE] 웨이브 x 티빙 더블 이용권 더블 베이직 | services: ['WAVVE', 'TVING']
+  ✅ BUNDLE services 정상: ['WAVVE', 'TVING']
+    [BUNDLE] 웨이브 x 티빙 더블 이용권 더블 스탠다드 | services: ['WAVVE', 'TVING']
+  ✅ BUNDLE services 정상: ['WAVVE', 'TVING']
+    [BUNDLE] 웨이브 x 티빙 더블 이용권 더블 프리미엄 | services: ['WAVVE', 'TVING']
+  ✅ BUNDLE services 정상: ['WAVVE', 'TVING']
+
+  [전체 LLM 출력]
+[
+  {
+    "jobType": "SERVICE_CATALOG_CRAWL",
+    "collectedAt": "2026-03-17T11:43:56.838000+09:00",
+    "services": [
+      {
+        "code": "WAVVE",
+        "name": "wavve",
+        "category": "OTT",
+        "logoUrl": "/assets/services/WAVVE.png",
+        "cancelGuideUrl": "https://cs.wavve.com/",
+        "customerServicePhone": null,
+        "contactEmail": null
+      }
+    ],
+    "servicePlans": [
+      {
+        "serviceCode": "WAVVE",
+        "planName": "광고형 스탠다드",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 5500
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "광고형 스탠다드",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 4158
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "베이직",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 7900
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "베이직",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 6583
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "스탠다드",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 10900
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "스탠다드",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 9083
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "프리미엄",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 13900
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "프리미엄",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 11583
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "베이직 X FLO 무제한",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 13750
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "베이직 X 나라사랑카드",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 6700
+      },
+      {
+        "serviceCode": "WAVVE",
+        "planName": "베이직 X Bugs 듣기",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 13750
+      }
+    ]
+  },
+  {
+    "jobType": "PROMOTION_CRAWL",
+    "collectedAt": "2026-03-17T11:44:02.908420+09:00",
+    "promotions": [
+      {
+        "promotionType": "BUNDLE",
+        "title": "웨이브 x 티빙 더블 이용권 더블 광고형 스탠다드",
+        "summary": "웨이브와 티빙의 광고형 스탠다드 요금제를 7,000원에 이용할 수 있는 번들 상품입니다.",
+        "originalPrice": null,
+        "discountPrice": 7000,
+        "startsAt": "2026-03-17T11:44:02.908420+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "WAVVE"
+          },
+          {
+            "serviceCode": "TVING"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "웨이브 x 티빙 더블 이용권 더블 베이직",
+        "summary": "웨이브와 티빙의 베이직 요금제를 13,500원에 이용할 수 있는 번들 상품입니다.",
+        "originalPrice": null,
+        "discountPrice": 13500,
+        "startsAt": "2026-03-17T11:44:02.908420+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "WAVVE"
+          },
+          {
+            "serviceCode": "TVING"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "웨이브 x 티빙 더블 이용권 더블 스탠다드",
+        "summary": "웨이브와 티빙의 스탠다드 요금제를 15,000원에 이용할 수 있는 번들 상품입니다.",
+        "originalPrice": null,
+        "discountPrice": 15000,
+        "startsAt": "2026-03-17T11:44:02.908420+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "WAVVE"
+          },
+          {
+            "serviceCode": "TVING"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "웨이브 x 티빙 더블 이용권 더블 프리미엄",
+        "summary": "웨이브와 티빙의 프리미엄 요금제를 19,500원에 이용할 수 있는 번들 상품입니다.",
+        "originalPrice": null,
+        "discountPrice": 19500,
+        "startsAt": "2026-03-17T11:44:02.908420+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "WAVVE"
+          },
+          {
+            "serviceCode": "TVING"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+  [ [wavve] 완료 — 엔터를 누르면 다음 플랫폼 [disneyplus]으로 넘어갑니다 — 자동 진행 ]
+
+
+#######################################################
+  [4/5] DISNEYPLUS
+#######################################################
+
+═══════════════════════════════════════════════════════
+  🌐 [DISNEYPLUS] STEP 1 — RAW 수집
+═══════════════════════════════════════════════════════
+
+──────────────────────────────────────────────────
+  scrap_plans()
+──────────────────────────────────────────────────
+  ✅ scrap_plans() — 7건
+  ✅ 필수 필드 모두 존재 (platform/plan_name/billing_cycle/price/services)
+
+  [전체 RAW 출력 — 7건]
+[
+  {
+    "platform": "disneyplus",
+    "tab": null,
+    "services": [
+      "디즈니+"
+    ],
+    "plan_name": "디즈니+ 스탠다드",
+    "billing_cycle": "monthly",
+    "price": 9900,
+    "original_price": null,
+    "description": [
+      "광고 없는 스트리밍***",
+      "최대 10대 기기에서 콘텐츠 저장 가능",
+      "지원되는 기기 최대 2대 동시 스트리밍",
+      "SharePlay 지원",
+      "최대 5.1 풍부한 사운드",
+      "최대 1080p Full HD 생생한 화질"
+    ]
+  },
+  {
+    "platform": "disneyplus",
+    "tab": null,
+    "services": [
+      "디즈니+"
+    ],
+    "plan_name": "디즈니+ 스탠다드",
+    "billing_cycle": "yearly",
+    "price": 99000,
+    "original_price": null,
+    "description": [
+      "광고 없는 스트리밍***",
+      "최대 10대 기기에서 콘텐츠 저장 가능",
+      "지원되는 기기 최대 2대 동시 스트리밍",
+      "SharePlay 지원",
+      "최대 5.1 풍부한 사운드",
+      "최대 1080p Full HD 생생한 화질"
+    ]
+  },
+  {
+    "platform": "disneyplus",
+    "tab": null,
+    "services": [
+      "디즈니+"
+    ],
+    "plan_name": "디즈니+ 프리미엄",
+    "billing_cycle": "monthly",
+    "price": 13900,
+    "original_price": null,
+    "description": [
+      "광고 없는 스트리밍***",
+      "최대 10대 기기에서 콘텐츠 저장 가능",
+      "지원되는 기기 최대 4대 동시 스트리밍",
+      "SharePlay 지원",
+      "최대 Dolby Atmos 압도적 몰입",
+      "최대 4K UHD & HDR 놀라운 화질"
+    ]
+  },
+  {
+    "platform": "disneyplus",
+    "tab": null,
+    "services": [
+      "디즈니+"
+    ],
+    "plan_name": "디즈니+ 프리미엄",
+    "billing_cycle": "yearly",
+    "price": 139000,
+    "original_price": null,
+    "description": [
+      "광고 없는 스트리밍***",
+      "최대 10대 기기에서 콘텐츠 저장 가능",
+      "지원되는 기기 최대 4대 동시 스트리밍",
+      "SharePlay 지원",
+      "최대 Dolby Atmos 압도적 몰입",
+      "최대 4K UHD & HDR 놀라운 화질"
+    ]
+  },
+  {
+    "platform": "disneyplus",
+    "tab": null,
+    "services": [
+      "디즈니+"
+    ],
+    "plan_name": "추가 회원",
+    "billing_cycle": "monthly",
+    "price": 4000,
+    "original_price": null,
+    "description": [
+      "함께 거주하는 가구 구성원이 아닌 가족, 친구와 디즈니+ 공유",
+      "동시에 1대의 기기에서 스트리밍",
+      "하나의 프로필만 생성 및 액세스 가능",
+      "계정 소유자의 멤버십에 제공되는 기능 대부분과 콘텐츠를 동일하게 이용",
+      "추가 회원 기능에 관한 자세한 내용은 디즈니+ 홈 페이지의 디즈니+ 이용약관에 안내되어 있습니다"
+    ]
+  },
+  {
+    "platform": "disneyplus",
+    "tab": null,
+    "services": [
+      "디즈니+",
+      "티빙"
+    ],
+    "plan_name": "디즈니+ 티빙 번들",
+    "billing_cycle": "monthly",
+    "price": 18000,
+    "original_price": null,
+    "description": [
+      "디즈니+ 스탠다드",
+      "티빙 스탠다드"
+    ]
+  },
+  {
+    "platform": "disneyplus",
+    "tab": null,
+    "services": [
+      "디즈니+",
+      "티빙",
+      "웨이브"
+    ],
+    "plan_name": "디즈니+ 티빙 웨이브 번들",
+    "billing_cycle": "monthly",
+    "price": 21500,
+    "original_price": null,
+    "description": [
+      "디즈니+ 스탠다드",
+      "티빙 스탠다드",
+      "웨이브 스탠다드"
+    ]
+  }
+]
+  ℹ️  번들 상품 2건 포함 → LLM에서 PROMOTION_CRAWL 분기 예상
+
+──────────────────────────────────────────────────
+  scrap_cautions()
+──────────────────────────────────────────────────
+  ✅ scrap_cautions() — 1개 섹션
+    [이용 안내] 7건
+      • 디즈니+ 구독료는 가입하시는 멤버십 유형에 따라 다릅니다.
+
+
+
+디즈니+ 멤버십
+
+	
+
+제공 사항*
+
+	
+
+구독료**(부가세 포함)
+
+
+
+
+디즈
+      • 구독료 변경 시, 사전 안내와 더불어 기존 멤버십의 새로운 구독료에 대한 동의를 요청드립니다. 기존 멤버십을 취소하거나 변경할 경우, 추후 선택
+      • *영상 화질과 오디오는 멤버십 유형, 지원되는 기기, 인터넷 다운로드 속도, 시청 중인 콘텐츠에 따라 다릅니다. 또한 디즈니+ 스탠다드 멤버십의
+
+──────────────────────────────────────────────────
+  scrap_company_info()
+──────────────────────────────────────────────────
+  ✅ scrap_company_info() — 5줄
+    월트디즈니컴퍼니코리아 유한책임회사
+    대표자: 김소연
+    서울시 강남구 테헤란로 152 7층 06236
+    전화번호: 080-822-1416
+    Email: help@disneyplus.kr
+
+──────────────────────────────────────────────────
+  scrap_promotions()
+──────────────────────────────────────────────────
+  ✅ scrap_promotions() — 1건
+    [2026.03.17] 디즈니+ 홈페이지 '할인' 키워드 감지
+      로그인
+운명전쟁 49
+지금 스트리밍 중
+주토피아 2
+3월 11일 스트리밍
+클라이맥스
+3월 16일 스트리밍
+찬란한 너의 계절에 
+ 지금 스트리밍 중
+21세기 대군부인
+4월 스트리밍
+기간 한정 특별혜택
+디즈니+ 연간 멤...
+
+──────────────────────────────────────────────────
+  scrap_logo()
+──────────────────────────────────────────────────
+  ⚠️  scrap_logo() 미구현: [disneyplus] scrap_logo() 미구현 — 헤더 로고 선택자 확인 후 구현 필요
+
+  [ [disneyplus] RAW 수집 완료 — 엔터를 누르면 LLM 정규화를 시작합니다 — 자동 진행 ]
+
+═══════════════════════════════════════════════════════
+  🤖 [DISNEYPLUS] STEP 2 — LLM 정규화
+═══════════════════════════════════════════════════════
+  ✅ normalize_plans() — 2건 반환
+
+  jobType: SERVICE_CATALOG_CRAWL
+  ✅ servicePlans 4건
+    {'serviceCode': 'DISNEY_PLUS', 'planName': '디즈니+ 스탠다드', 'billingCycle': 'MONTHLY', 'monthlyPrice': 9900}
+  ✅ YEARLY 월환산 정확: 디즈니+ 스탠다드 → 8250원/월 (연 99000÷12)
+    {'serviceCode': 'DISNEY_PLUS', 'planName': '디즈니+ 스탠다드', 'billingCycle': 'YEARLY', 'monthlyPrice': 8250}
+    {'serviceCode': 'DISNEY_PLUS', 'planName': '디즈니+ 프리미엄', 'billingCycle': 'MONTHLY', 'monthlyPrice': 13900}
+  ✅ YEARLY 월환산 정확: 디즈니+ 프리미엄 → 11583원/월 (연 139000÷12)
+    {'serviceCode': 'DISNEY_PLUS', 'planName': '디즈니+ 프리미엄', 'billingCycle': 'YEARLY', 'monthlyPrice': 11583}
+
+  jobType: PROMOTION_CRAWL
+  ✅ promotions 2건
+    [BUNDLE] 디즈니+ 티빙 번들 | services: ['DISNEY_PLUS', 'TVING']
+  ✅ BUNDLE services 정상: ['DISNEY_PLUS', 'TVING']
+    [BUNDLE] 디즈니+ 티빙 웨이브 번들 | services: ['DISNEY_PLUS', 'TVING', 'WAVVE']
+  ✅ BUNDLE services 정상: ['DISNEY_PLUS', 'TVING', 'WAVVE']
+
+  [전체 LLM 출력]
+[
+  {
+    "jobType": "SERVICE_CATALOG_CRAWL",
+    "collectedAt": "2026-03-17T11:44:18.778175+09:00",
+    "services": [
+      {
+        "code": "DISNEY_PLUS",
+        "name": "disneyplus",
+        "category": "OTT",
+        "logoUrl": "/assets/services/DISNEY_PLUS.png",
+        "cancelGuideUrl": "https://help.disneyplus.com/ko/article/disneyplus-cancel",
+        "customerServicePhone": "080-822-1416",
+        "contactEmail": "help@disneyplus.kr"
+      }
+    ],
+    "servicePlans": [
+      {
+        "serviceCode": "DISNEY_PLUS",
+        "planName": "디즈니+ 스탠다드",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 9900
+      },
+      {
+        "serviceCode": "DISNEY_PLUS",
+        "planName": "디즈니+ 스탠다드",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 8250
+      },
+      {
+        "serviceCode": "DISNEY_PLUS",
+        "planName": "디즈니+ 프리미엄",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 13900
+      },
+      {
+        "serviceCode": "DISNEY_PLUS",
+        "planName": "디즈니+ 프리미엄",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 11583
+      }
+    ]
+  },
+  {
+    "jobType": "PROMOTION_CRAWL",
+    "collectedAt": "2026-03-17T11:44:22.447421+09:00",
+    "promotions": [
+      {
+        "promotionType": "BUNDLE",
+        "title": "디즈니+ 티빙 번들",
+        "summary": "디즈니+와 티빙을 함께 즐길 수 있는 번들 상품입니다.",
+        "originalPrice": null,
+        "discountPrice": 18000,
+        "startsAt": "2026-03-17T11:44:22.447421+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "DISNEY_PLUS"
+          },
+          {
+            "serviceCode": "TVING"
+          }
+        ]
+      },
+      {
+        "promotionType": "BUNDLE",
+        "title": "디즈니+ 티빙 웨이브 번들",
+        "summary": "디즈니+, 티빙, 웨이브를 함께 즐길 수 있는 번들 상품입니다.",
+        "originalPrice": null,
+        "discountPrice": 21500,
+        "startsAt": "2026-03-17T11:44:22.447421+09:00",
+        "endsAt": "2099-12-31T23:59:59+09:00",
+        "sourceUrl": null,
+        "services": [
+          {
+            "serviceCode": "DISNEY_PLUS"
+          },
+          {
+            "serviceCode": "TVING"
+          },
+          {
+            "serviceCode": "WAVVE"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+  [ [disneyplus] 완료 — 엔터를 누르면 다음 플랫폼 [watcha]으로 넘어갑니다 — 자동 진행 ]
+
+
+#######################################################
+  [5/5] WATCHA
+#######################################################
+
+═══════════════════════════════════════════════════════
+  🌐 [WATCHA] STEP 1 — RAW 수집
+═══════════════════════════════════════════════════════
+
+──────────────────────────────────────────────────
+  scrap_plans()
+──────────────────────────────────────────────────
+  ✅ scrap_plans() — 4건
+  ✅ 필수 필드 모두 존재 (platform/plan_name/billing_cycle/price/services)
+
+  [전체 RAW 출력 — 4건]
+[
+  {
+    "platform": "watcha",
+    "tab": null,
+    "services": [
+      "왓챠"
+    ],
+    "plan_name": "프리미엄",
+    "billing_cycle": "monthly",
+    "price": 12900,
+    "original_price": null,
+    "description": [
+      "최대 4대 동시 감상",
+      "Ultra HD 4K 지원 (실감나는 화질)",
+      "HDR 10+ 지원 (더 입체감있는 색상)",
+      "비디오 100개 저장"
+    ]
+  },
+  {
+    "platform": "watcha",
+    "tab": null,
+    "services": [
+      "왓챠"
+    ],
+    "plan_name": "베이직",
+    "billing_cycle": "monthly",
+    "price": 7900,
+    "original_price": null,
+    "description": [
+      "오직 1대 감상",
+      "Full HD 지원 (선명한 화질)",
+      "HDR 10+ 미지원 (안정적인 색상)",
+      "비디오 5개 저장"
+    ]
+  },
+  {
+    "platform": "watcha",
+    "tab": null,
+    "services": [
+      "왓챠"
+    ],
+    "plan_name": "프리미엄",
+    "billing_cycle": "yearly",
+    "price": 129900,
+    "original_price": 154800,
+    "description": [
+      "최대 4대 동시 감상",
+      "Ultra HD 4K 지원 (실감나는 화질)",
+      "HDR 10+ 지원 (더 입체감있는 색상)",
+      "비디오 100개 저장"
+    ]
+  },
+  {
+    "platform": "watcha",
+    "tab": null,
+    "services": [
+      "왓챠"
+    ],
+    "plan_name": "베이직",
+    "billing_cycle": "yearly",
+    "price": 79900,
+    "original_price": 94800,
+    "description": [
+      "오직 1대 감상",
+      "Full HD 지원 (선명한 화질)",
+      "HDR 10+ 미지원 (안정적인 색상)",
+      "비디오 5개 저장"
+    ]
+  }
+]
+
+──────────────────────────────────────────────────
+  scrap_cautions()
+──────────────────────────────────────────────────
+  ✅ scrap_cautions() — 1개 섹션
+    [구독 안내] 11건
+      • 결제 금액에는 VAT가 포함되어 있어요.
+      • 정기결제는 이용 기간이 끝나기 24시간 이내에 다음 이용료가 자동으로 결제돼요.
+      • 정기결제는 언제든지 자동 결제를 해지할 수 있어요. 이 경우 다음 결제 예정일부터 결제가 진행되지 않아요.
+
+──────────────────────────────────────────────────
+  scrap_company_info()
+──────────────────────────────────────────────────
+  ✅ scrap_company_info() — 8줄
+    고객센터(이용 및 결제 문의): cs@watcha.com /02-515-9985 (유료)
+    제휴 및 대외 협력: https://watcha.team/contact
+    B2B 구독권 구매 문의: 쿠프마케팅 (jinu1005@coopnc.com)
+    주식회사 왓챠
+    대표 박태훈
+    서울특별시 서초구 강남대로 343 신덕빌딩 3층
+    사업자등록번호 211-88-66013
+    통신판매업 신고번호 제 2019-서울서초-0965호
+
+──────────────────────────────────────────────────
+  scrap_promotions()
+──────────────────────────────────────────────────
+  ✅ scrap_promotions() — 0건
+
+──────────────────────────────────────────────────
+  scrap_logo()
+──────────────────────────────────────────────────
+  ⚠️  scrap_logo() 미구현: [watcha] scrap_logo() 미구현 — 헤더 로고 선택자 확인 후 구현 필요
+
+  [ [watcha] RAW 수집 완료 — 엔터를 누르면 LLM 정규화를 시작합니다 — 자동 진행 ]
+
+═══════════════════════════════════════════════════════
+  🤖 [WATCHA] STEP 2 — LLM 정규화
+═══════════════════════════════════════════════════════
+  ✅ normalize_plans() — 1건 반환
+
+  jobType: SERVICE_CATALOG_CRAWL
+  ✅ servicePlans 4건
+    {'serviceCode': 'WATCHA', 'planName': '프리미엄', 'billingCycle': 'MONTHLY', 'monthlyPrice': 12900}
+    {'serviceCode': 'WATCHA', 'planName': '베이직', 'billingCycle': 'MONTHLY', 'monthlyPrice': 7900}
+  ✅ YEARLY 월환산 정확: 프리미엄 → 10825원/월 (연 129900÷12)
+    {'serviceCode': 'WATCHA', 'planName': '프리미엄', 'billingCycle': 'YEARLY', 'monthlyPrice': 10825}
+  ✅ YEARLY 월환산 정확: 베이직 → 6658원/월 (연 79900÷12)
+    {'serviceCode': 'WATCHA', 'planName': '베이직', 'billingCycle': 'YEARLY', 'monthlyPrice': 6658}
+
+  [전체 LLM 출력]
+[
+  {
+    "jobType": "SERVICE_CATALOG_CRAWL",
+    "collectedAt": "2026-03-17T11:44:36.233693+09:00",
+    "services": [
+      {
+        "code": "WATCHA",
+        "name": "watcha",
+        "category": "OTT",
+        "logoUrl": "/assets/services/WATCHA.png",
+        "cancelGuideUrl": "https://help.watcha.com/hc/ko/articles/900004021863",
+        "customerServicePhone": "02-515-9985",
+        "contactEmail": "cs@watcha.com"
+      }
+    ],
+    "servicePlans": [
+      {
+        "serviceCode": "WATCHA",
+        "planName": "프리미엄",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 12900
+      },
+      {
+        "serviceCode": "WATCHA",
+        "planName": "베이직",
+        "billingCycle": "MONTHLY",
+        "monthlyPrice": 7900
+      },
+      {
+        "serviceCode": "WATCHA",
+        "planName": "프리미엄",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 10825
+      },
+      {
+        "serviceCode": "WATCHA",
+        "planName": "베이직",
+        "billingCycle": "YEARLY",
+        "monthlyPrice": 6658
+      }
+    ]
+  }
+]
+
+=======================================================
+📋 전체 테스트 결과 요약
+=======================================================
+
+  ✅ tving
+     OK:6  FAIL:0  SKIP:0  WARN:0  / 총6건
+
+  ✅ netflix
+     OK:5  FAIL:0  SKIP:1  WARN:0  / 총6건
+     SKIP scrap_promotions
+
+  ✅ wavve
+     OK:6  FAIL:0  SKIP:0  WARN:0  / 총6건
+
+  ✅ disneyplus
+     OK:5  FAIL:0  SKIP:1  WARN:0  / 총6건
+     SKIP scrap_logo
+
+  ✅ watcha
+     OK:5  FAIL:0  SKIP:1  WARN:0  / 총6건
+     SKIP scrap_logo
+
+───────────────────────────────────────────────────────
+  전체 테스트 통과 ✅
+=======================================================
+

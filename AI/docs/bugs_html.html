@@ -1,0 +1,775 @@
+<article id="container" class="mnTicket pgNewBasic">
+
+	<header class="sectionPadding pgTitle">
+		<div class="innerContainer">
+			<h1>이용권 구매</h1>
+		</div>
+	</header>
+
+	<nav class="sectionPadding lnb">
+		<div class="innerContainer">
+		<ul class="main">
+			<li><a href="https://music.bugs.co.kr/pay/recommend" class="recommend"><span>추천</span></a></li>
+			<li><a href="https://music.bugs.co.kr/pay/partner" class="partner"><span>제휴</span></a></li>
+			<li><a href="https://music.bugs.co.kr/pay/public" class="basic"><span>일반</span></a></li>
+			<li><a href="https://music.bugs.co.kr/pay/crew" class="crew"><span>크루</span></a></li>
+		</ul>
+
+		<ul class="sub">
+			<li><a href="https://music.bugs.co.kr/pay/chargecash" class="cash">캐시 충전</a></li>
+			<li><a href="https://music.bugs.co.kr/pay/offlineCoupon" class="coupon">상품권 등록</a></li>
+		</ul>
+		</div>
+	</nav>
+
+<script>
+	$(document).ready(function () {
+		if(g_isGuest){
+			bugs.promotion.hangame.alertHangameRestriction();
+			return;
+		}
+	});
+
+	var closeLayer = function(obj){
+		$(obj).hide();
+		bugs.ui.modalLayer.hide();
+	};
+
+	var showLayer = function(obj, caller){
+		var cWin = $(window);
+		var layer = $(obj);
+		layer.css({left:(cWin.scrollLeft() + ((cWin.width() - layer.width()) >> 1))+"px",
+										top:(cWin.scrollTop() + ((cWin.height() - layer.height()) >> 1))+"px"}).show();
+		bugs.ui.modalLayer.show();
+	};
+</script>
+  <div class="contents">
+    <section class="productSection">
+     <h2 class="blind">듣기 이용권</h2>
+
+
+        <div class="productListWrapper">
+        <h2 class="sectionTitle">데이터 걱정 없이 오프라인 재생</h2>
+        <ul class="productList offlineStreaming">
+      <li>
+        <div class="productItem">
+          <div class="productItem__wrap">
+            <div class="productItem__info">
+              <div class="productItem__name">
+                <strong>무제한 듣기+오프라인 재생</strong>
+              </div>
+              <div class="productItem__description">
+                <span><em>오프라인에서도 데이터 걱정없이 재생</em></span>
+              </div>
+            </div>
+
+            <ul class="productItem__options">
+              <li>
+                <div class="productItem__subscription">
+                    <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            자동결제
+                          </span>
+                      <strong class="productItem__totalPrice">11,990원</strong>
+                    </div>
+
+                    <div class="productItem__btns">
+                      <button type="button" class="btnPay btnPay-accent" data-button-size="wide" onclick="javascript:buyTicket(17763,'alertOfflineCoupon','Y','','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_무제한 듣기+오프라인 재생_auto_구매', null);">구매하기</button>
+                    </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="productItem__subscription">
+                  <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            30일
+                          </span>
+                    <strong class="productItem__totalPrice">11,990원</strong>
+                  </div>
+
+                    <div class="productItem__btns" data-btns-type="paired">
+                      <button type="button" class="btnPay btnPay-primary" data-button-type="paired" onclick="javascript:buyTicket(17764,'alertOfflineCoupon2','Y','f1UjhYsId-d05S0c9GAeNQ2zoY8pTOB9V','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_무제한 듣기+오프라인 재생_day30_구매', null);">구매</button>
+                      <button type="button" class="btnPay btnPay-secondary" data-button-type="paired" onclick="javascript:buyTicket(17764,'alertOfflineCoupon2','N','f1UjhYsId-d05S0c9GAeNQ2zoY8pTOB9V','gift'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_무제한 듣기+오프라인 재생_day30_선물', null);">선물</button>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <details class="productItem__supportInfo">
+            <summary class="supportInfo__title" onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_무제한 듣기+오프라인 재생_기능기기', null);">
+              <span>지원기능&amp;기기</span>
+            </summary>
+
+            <div class="supportInfo__content">
+		<div class="supportInfo__features">
+			<ul>
+				<li class="emphasis"><em>PC, 모바일, 스마트 가전 등 모든 기기 재생</em></li>
+				<li class="emphasis"><em>데이터 걱정없이 오프라인 재생</em></li>
+				<li>essential; 재생 모드&amp;플리 지원</li>
+				<li>FLAC(무손실), AAC 320 음질 지원</li>
+				<li>이퀄라이저, 음량 자동 조절 지원</li>
+				<li>Favorite 투표 핑크하트 3배 제공</li>
+			</ul>
+		</div>
+		<div class="supportInfo__devices">
+			<table>
+				<thead>
+				<tr>
+					<th scope="row" class="device">기기</th>
+					<th scope="col">스마트폰</th>
+					<th scope="col">태블릿</th>
+					<th scope="col">PC</th>
+					<th scope="col">스마트 가전</th>
+					<th scope="col">AI 스피커</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">무제한 듣기</th>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+				</tr>
+				<tr>
+					<th scope="row">오프라인 재생</th>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+            </div>
+          </details>
+        </div>
+      </li>
+      <li>
+        <div class="productItem">
+          <div class="productItem__wrap">
+            <div class="productItem__info">
+              <div class="productItem__name">
+                <strong>Premium 무제한 듣기 + 오프라인 재생</strong>
+              </div>
+              <div class="productItem__description">
+                <span><em>오프라인 재생과 Premium FLAC 음원 추가 지원</em></span>
+              </div>
+            </div>
+
+            <ul class="productItem__options">
+              <li>
+                <div class="productItem__subscription">
+                    <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            자동결제
+                          </span>
+                      <strong class="productItem__totalPrice">17,600원</strong>
+                    </div>
+
+                    <div class="productItem__btns">
+                      <button type="button" class="btnPay btnPay-accent" data-button-size="wide" onclick="javascript:buyTicket(18222,'alertPremiumOfflineCoupon','Y','g9VC21b_ngQamC5gX4yTSp-7CKDRbrpHB','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_Premium 무제한 듣기 + 오프라인 재생_auto_구매', null);">구매하기</button>
+                    </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="productItem__subscription">
+                  <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            30일
+                          </span>
+                    <strong class="productItem__totalPrice">17,600원</strong>
+                  </div>
+
+                    <div class="productItem__btns" data-btns-type="paired">
+                      <button type="button" class="btnPay btnPay-primary" data-button-type="paired" onclick="javascript:buyTicket(18223,'alertPremiumOfflineCoupon2','Y','IM0O0BATe9rBZO06yaGQ_K-AKlAZ3w69x','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_Premium 무제한 듣기 + 오프라인 재생_day30_구매', null);">구매</button>
+                      <button type="button" class="btnPay btnPay-secondary" data-button-type="paired" onclick="javascript:buyTicket(18223,'alertPremiumOfflineCoupon2','N','IM0O0BATe9rBZO06yaGQ_K-AKlAZ3w69x','gift'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_Premium 무제한 듣기 + 오프라인 재생_day30_선물', null);">선물</button>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <details class="productItem__supportInfo">
+            <summary class="supportInfo__title" onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_Premium 무제한 듣기 + 오프라인 재생_기능기기', null);">
+              <span>지원기능&amp;기기</span>
+            </summary>
+
+            <div class="supportInfo__content">
+		<div class="supportInfo__features">
+			<ul>
+				<li class="emphasis"><em>PC, 모바일, 스마트 가전 등 모든 기기 재생</em></li>
+				<li class="emphasis"><em>데이터 걱정없이 오프라인 재생</em></li>
+				<li>essential; 재생 모드&amp;플리 지원</li>
+				<li class="emphasis"><em>Premium 전용 FLAC 음원 추가 지원</em></li>
+				<li>FLAC(무손실), AAC 320 음질 지원</li>
+				<li>이퀄라이저, 음량 자동 조절 지원</li>
+				<li>Favorite 투표 핑크하트 3배 제공</li>
+			</ul>
+		</div>
+		<div class="supportInfo__devices">
+			<table>
+				<thead>
+				<tr>
+					<th scope="row" class="device">기기</th>
+					<th scope="col">스마트폰</th>
+					<th scope="col">태블릿</th>
+					<th scope="col">PC</th>
+					<th scope="col">스마트 가전</th>
+					<th scope="col">AI 스피커</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">무제한 듣기</th>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+				</tr>
+				<tr>
+					<th scope="row">오프라인 재생</th>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+            </div>
+          </details>
+        </div>
+      </li>
+            </ul>
+        </div>
+
+
+        <div class="productListWrapper">
+        <h2 class="sectionTitle">심플하게 무제한 듣기</h2>
+        <ul class="productList streaming">
+      <li>
+        <div class="productItem">
+          <div class="productItem__wrap">
+            <div class="productItem__info">
+              <div class="productItem__name">
+                <strong>무제한 듣기</strong>
+              </div>
+              <div class="productItem__description">
+                <span><em>모든 기기에서 마음 편히 재생</em></span>
+              </div>
+            </div>
+
+            <ul class="productItem__options">
+              <li>
+                <div class="productItem__subscription">
+                    <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            자동결제
+                          </span>
+                      <strong class="productItem__totalPrice">8,690원</strong>
+                    </div>
+
+                    <div class="productItem__btns">
+                      <button type="button" class="btnPay btnPay-accent" data-button-size="wide" onclick="javascript:buyTicket(17692,'','N','wEI5aTxq8dmaAXBSDCzanx9YdzwAq37zB','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_무제한 듣기_auto_구매', null);">구매하기</button>
+                    </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="productItem__subscription">
+                  <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            30일
+                          </span>
+                    <strong class="productItem__totalPrice">8,690원</strong>
+                  </div>
+
+                    <div class="productItem__btns" data-btns-type="paired">
+                      <button type="button" class="btnPay btnPay-primary" data-button-type="paired" onclick="javascript:buyTicket(17691,'','N','-gjF44Uhr1xcCVOjJAP5PrQy9VL4cMn_m','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_무제한 듣기_day30_구매', null);">구매</button>
+                      <button type="button" class="btnPay btnPay-secondary" data-button-type="paired" onclick="javascript:buyTicket(17691,'','N','-gjF44Uhr1xcCVOjJAP5PrQy9VL4cMn_m','gift'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_무제한 듣기_day30_선물', null);">선물</button>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <details class="productItem__supportInfo">
+            <summary class="supportInfo__title" onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_무제한 듣기_기능기기', null);">
+              <span>지원기능&amp;기기</span>
+            </summary>
+
+            <div class="supportInfo__content">
+		<div class="supportInfo__features">
+			<ul>
+				<li class="emphasis"><em>PC, 모바일, 스마트 가전 등 모든 기기 재생</em></li>
+				<li>essential; 재생 모드&amp;플리 지원</li>
+				<li>FLAC(무손실), AAC 320 음질 지원</li>
+				<li>이퀄라이저, 음량 자동 조절 지원</li>
+				<li>Favorite 투표 핑크하트 3배 제공</li>
+			</ul>
+		</div>
+		<div class="supportInfo__devices">
+			<table>
+				<thead>
+				<tr>
+					<th scope="row" class="device">기기</th>
+					<th scope="col">스마트폰</th>
+					<th scope="col">태블릿</th>
+					<th scope="col">PC</th>
+					<th scope="col">스마트 가전</th>
+					<th scope="col">AI 스피커</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">무제한 듣기</th>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+            </div>
+          </details>
+        </div>
+      </li>
+      <li>
+        <div class="productItem">
+          <div class="productItem__wrap">
+            <div class="productItem__info">
+              <div class="productItem__name">
+                <strong>모바일 무제한 듣기</strong>
+              </div>
+              <div class="productItem__description">
+                <span><em>알뜰하게 모바일 기기에서만 재생</em></span>
+              </div>
+            </div>
+
+            <ul class="productItem__options">
+              <li>
+                <div class="productItem__subscription">
+                    <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            자동결제
+                          </span>
+                      <strong class="productItem__totalPrice">7,590원</strong>
+                    </div>
+
+                    <div class="productItem__btns">
+                      <button type="button" class="btnPay btnPay-accent" data-button-size="wide" onclick="javascript:buyTicket(17689,'','N','yVsGByDPobp8ePCe5ZOt8BFdWugt0US5V','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_모바일 무제한 듣기_auto_구매', null);">구매하기</button>
+                    </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="productItem__subscription">
+                  <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            30일
+                          </span>
+                    <strong class="productItem__totalPrice">7,590원</strong>
+                  </div>
+
+                    <div class="productItem__btns" data-btns-type="paired">
+                      <button type="button" class="btnPay btnPay-primary" data-button-type="paired" onclick="javascript:buyTicket(17688,'','N','Ey9KYFN6W7s3OdofnEIw0VbR0FQLVNE7K','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_모바일 무제한 듣기_day30_구매', null);">구매</button>
+                      <button type="button" class="btnPay btnPay-secondary" data-button-type="paired" onclick="javascript:buyTicket(17688,'','N','Ey9KYFN6W7s3OdofnEIw0VbR0FQLVNE7K','gift'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_모바일 무제한 듣기_day30_선물', null);">선물</button>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <details class="productItem__supportInfo">
+            <summary class="supportInfo__title" onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_모바일 무제한 듣기_기능기기', null);">
+              <span>지원기능&amp;기기</span>
+            </summary>
+
+            <div class="supportInfo__content">
+		<div class="supportInfo__features">
+			<ul>
+				<li>벅스 모바일 앱 지원 스마트폰/태블릿 재생</li>
+				<li>essential; 재생 모드&amp;플리 지원</li>
+				<li>FLAC(무손실), AAC 320 음질 지원</li>
+				<li>이퀄라이저, 음량 자동 조절 지원</li>
+				<li>Favorite 투표 핑크하트 3배 제공</li>
+			</ul>
+		</div>
+		<div class="supportInfo__devices">
+			<table>
+				<thead>
+				<tr>
+					<th scope="row" class="device">기기</th>
+					<th scope="col">스마트폰</th>
+					<th scope="col">태블릿</th>
+					<th scope="col">PC</th>
+					<th scope="col">스마트 가전</th>
+					<th scope="col">AI 스피커</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">무제한 듣기</th>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+            </div>
+          </details>
+        </div>
+      </li>
+      <li>
+        <div class="productItem">
+          <div class="productItem__wrap">
+            <div class="productItem__info">
+              <div class="productItem__name">
+                <strong>Premium 무제한 듣기</strong>
+              </div>
+              <div class="productItem__description">
+                <span><em>모든 기기 재생과  Premium FLAC 음원 추가 지원</em></span>
+              </div>
+            </div>
+
+            <ul class="productItem__options">
+              <li>
+                <div class="productItem__subscription">
+                    <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            자동결제
+                          </span>
+                      <strong class="productItem__totalPrice">13,200원</strong>
+                    </div>
+
+                    <div class="productItem__btns">
+                      <button type="button" class="btnPay btnPay-accent" data-button-size="wide" onclick="javascript:buyTicket(17695,'','N','Yt-sZRGE2NZ6hj6_i4ywswJtsgZM7_xFZ','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_Premium 무제한 듣기_auto_구매', null);">구매하기</button>
+                    </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="productItem__subscription">
+                  <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            30일
+                          </span>
+                    <strong class="productItem__totalPrice">13,200원</strong>
+                  </div>
+
+                    <div class="productItem__btns" data-btns-type="paired">
+                      <button type="button" class="btnPay btnPay-primary" data-button-type="paired" onclick="javascript:buyTicket(17694,'','N','XYXl4Typhqd18-JFRyYydss4w7P5P0Xmk','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_Premium 무제한 듣기_day30_구매', null);">구매</button>
+                      <button type="button" class="btnPay btnPay-secondary" data-button-type="paired" onclick="javascript:buyTicket(17694,'','N','XYXl4Typhqd18-JFRyYydss4w7P5P0Xmk','gift'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_Premium 무제한 듣기_day30_선물', null);">선물</button>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <details class="productItem__supportInfo">
+            <summary class="supportInfo__title" onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_Premium 무제한 듣기_기능기기', null);">
+              <span>지원기능&amp;기기</span>
+            </summary>
+
+            <div class="supportInfo__content">
+		<div class="supportInfo__features">
+			<ul>
+				<li class="emphasis"><em>PC, 모바일, 스마트 가전 등 모든 기기 재생</em></li>
+				<li>essential; 재생 모드&amp;플리 지원</li>
+				<li class="emphasis"><em>Premium 전용 FLAC 음원 추가 지원</em></li>
+				<li>FLAC(무손실), AAC 320 음질 지원</li>
+				<li>이퀄라이저, 음량 자동 조절 지원</li>
+				<li>Favorite 투표 핑크하트 3배 제공</li>
+			</ul>
+		</div>
+		<div class="supportInfo__devices">
+			<table>
+				<thead>
+				<tr>
+					<th scope="row" class="device">기기</th>
+					<th scope="col">스마트폰</th>
+					<th scope="col">태블릿</th>
+					<th scope="col">PC</th>
+					<th scope="col">스마트 가전</th>
+					<th scope="col">AI 스피커</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">무제한 듣기</th>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+            </div>
+          </details>
+        </div>
+      </li>
+            </ul>
+        </div>
+
+          </section>
+	<section class="bugsFeaturesAndBenefit subscriptionBenefit">
+		<h2 class="sectionTitle">이용권 구독하면 다 드려요!</h2>
+
+		<ul>
+			<li onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_페이버릿', null);">
+				<a href="http://bugs.kr/!ticket_favorite" class="subscriptionBenefit__favorite">
+					<p>유료 회원은 Favorite 핑크하트<br>매일 3배 충전하고 최애에게 투표</p>
+				</a>
+			</li>
+			<li onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_페이코', null);">
+				<a href="http://bugs.kr/!ticket_payco" class="subscriptionBenefit__payco">
+					<p>PAYCO 정상가 결제 시 매월 적립</p>
+				</a>
+			</li>
+			<li onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_카드포인트', null);">
+				<a href="http://bugs.kr/!ticket_cardpoint" class="subscriptionBenefit__cardPoint">
+					<p>카드사 포인트로<br>알뜰하게 이용권 결제</p>
+				</a>
+			</li>
+		</ul>
+	</section>
+          <section class="productSection">
+           <h2 class="blind">다운로드 이용권</h2>
+
+        <div class="productListWrapper">
+        <h2 class="sectionTitle">다운로드만 원한다면</h2>
+        <ul class="productList mp3Download">
+      <li>
+        <div class="productItem">
+          <div class="productItem__wrap">
+            <div class="productItem__info">
+              <div class="productItem__name">
+                <strong>MP3 5곡 다운</strong>
+              </div>
+              <div class="productItem__description">
+                <span><em>다운로드한 MP3 파일 평생 소장</em></span>
+              </div>
+            </div>
+
+            <ul class="productItem__options">
+              <li>
+                <div class="productItem__subscription">
+                    <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            
+                          </span>
+                      <strong class="productItem__totalPrice"></strong>
+                    </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="productItem__subscription">
+                  <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            30일
+                          </span>
+                    <strong class="productItem__totalPrice">3,300원</strong>
+                  </div>
+
+                    <div class="productItem__btns" data-btns-type="paired">
+                      <button type="button" class="btnPay btnPay-primary" data-button-type="paired" onclick="javascript:buyTicket(18104,'','N','Q_A5CVWiO4kEDVWq5vrBpBGG_i8LSlLQp','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_MP3 5곡 다운_day30_구매', null);">구매</button>
+                      <button type="button" class="btnPay btnPay-secondary" data-button-type="paired" onclick="javascript:buyTicket(18104,'','N','Q_A5CVWiO4kEDVWq5vrBpBGG_i8LSlLQp','gift'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_MP3 5곡 다운_day30_선물', null);">선물</button>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <details class="productItem__supportInfo">
+            <summary class="supportInfo__title" onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_MP3 5곡 다운_기능기기', null);">
+              <span>지원기능&amp;기기</span>
+            </summary>
+
+            <div class="supportInfo__content">
+		<div class="supportInfo__features">
+			<ul>
+				<li>다운로드한 MP3 평생 소장</li>
+				<li>Favorite 투표 핑크하트 3배 제공</li>
+			</ul>
+		</div>
+		<div class="supportInfo__devices">
+			<table>
+				<thead>
+				<tr>
+					<th scope="row" class="device">기기</th>
+					<th scope="col">스마트폰</th>
+					<th scope="col">태블릿</th>
+					<th scope="col">PC</th>
+					<th scope="col">스마트 가전</th>
+					<th scope="col">AI 스피커</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">MP3 다운로드</th>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+            </div>
+          </details>
+        </div>
+      </li>
+      <li>
+        <div class="productItem">
+          <div class="productItem__wrap">
+            <div class="productItem__info">
+              <div class="productItem__name">
+                <strong>MP3 10곡 다운</strong>
+              </div>
+              <div class="productItem__description">
+                <span><em>다운로드한 MP3 파일 평생 소장</em></span>
+              </div>
+            </div>
+
+            <ul class="productItem__options">
+              <li>
+                <div class="productItem__subscription">
+                    <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            
+                          </span>
+                      <strong class="productItem__totalPrice"></strong>
+                    </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="productItem__subscription">
+                  <div class="productItem__price">
+                          <span class="productItem__subscriptionType">
+                            30일
+                          </span>
+                    <strong class="productItem__totalPrice">6,050원</strong>
+                  </div>
+
+                    <div class="productItem__btns" data-btns-type="paired">
+                      <button type="button" class="btnPay btnPay-primary" data-button-type="paired" onclick="javascript:buyTicket(18105,'','N','eIYvNZUn1vZKyD3yEGWCbjdI3dY8rrMcs','coupon'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_MP3 10곡 다운_day30_구매', null);">구매</button>
+                      <button type="button" class="btnPay btnPay-secondary" data-button-type="paired" onclick="javascript:buyTicket(18105,'','N','eIYvNZUn1vZKyD3yEGWCbjdI3dY8rrMcs','gift'); sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_MP3 10곡 다운_day30_선물', null);">선물</button>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <details class="productItem__supportInfo">
+            <summary class="supportInfo__title" onclick="sendGoogleAnalyticsEventForBilling('이용권구매_PC웹', '일반_MP3 10곡 다운_기능기기', null);">
+              <span>지원기능&amp;기기</span>
+            </summary>
+
+            <div class="supportInfo__content">
+		<div class="supportInfo__features">
+			<ul>
+				<li>다운로드한 MP3 평생 소장</li>
+				<li>Favorite 투표 핑크하트 3배 제공</li>
+			</ul>
+		</div>
+		<div class="supportInfo__devices">
+			<table>
+				<thead>
+				<tr>
+					<th scope="row" class="device">기기</th>
+					<th scope="col">스마트폰</th>
+					<th scope="col">태블릿</th>
+					<th scope="col">PC</th>
+					<th scope="col">스마트 가전</th>
+					<th scope="col">AI 스피커</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">MP3 다운로드</th>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-supported">지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+					<td><span class="payIcon payIcon-unsupported">미지원</span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+            </div>
+          </details>
+        </div>
+      </li>
+    </ul></div></section>
+
+	<section class="bugsFeaturesAndBenefit promotionFeatures">
+		<h2 class="sectionTitle">벅스에서 누리세요!</h2>
+
+		<ul>
+			<li>
+				<div class="promotionFeatures__songs">
+					<p>검증된 고음질로 감상하는<br>전 세계 6,000만 곡+</p>
+				</div>
+			</li>
+			<li>
+				<div class="promotionFeatures__essential">
+					<p>전문가가 선곡한<br>감각적인 무드의 플리 essential;</p>
+				</div>
+			</li>
+			<li>
+				<div class="promotionFeatures__device">
+					<p>모바일, PC부터 스마트 가전,<br>AI 스피커까지 벅스 하나로 감상</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+      <section class="guide">
+        <h2 class="sectionTitle">이용안내</h2>
+          <h3>이용권 상품 안내</h3>
+          <ul>
+          <li>이용권 금액은 부가세 10% 포함입니다.</li>
+          <li>자동결제 이용권은 매달 결제되는 상품입니다.</li>
+          <li>각 할인 및 포인트 혜택은 사전 예고 없이 종료될 수 있습니다.</li>
+          <li>결제일 기준 7일 이내 사용이력이 없는 경우, 고객센터 1566-4882 또는 1:1 문의를 통해 청약철회 신청 가능하며 전액 환불됩니다.</li>
+          <li>청약철회가능기간(서비스 사용이력 없이 이용권 결제일로부터 7일 이내) 이후 또는 청약철회가능기간 중 서비스 사용 이력이 있는 경우, 고객센터 1566-4882 또는 1:1 문의를 통해 이용권 해지 및 환불이 진행됩니다. (단, 자동결제 유지 조건 약정 할인 상품 구매 시, 약정기간 경과 후 중도해지 및 환불이 가능합니다.)</li>
+          <li>중도해지 시, 할인 상품의 경우 실 사용금액은 정상가를 기준으로 산정됩니다.</li>
+          <li>일부 제휴 결합 이용권의 환불은 제휴사 정책에 따릅니다.</li>
+          <li>인앱 결제로 구매한 이용권의 환불은 Apple 혹은 Google 정책에 따릅니다.</li>
+          <li>자동결제 해지예약은 PC로 벅스&gt;내 정보&gt;이용권 관리에서, 모바일로 벅스&gt;이용권 구매&gt;MY 탭에서 가능합니다.</li>
+          <li>벅스캐시로 사용 시, 부가세 10%가 적용되어 결제됩니다. (ex, 1,000캐시 사용 -&gt; 1,100원 결제)</li>
+          </ul>
+          <h3>이용권 사용 안내</h3>
+          <ul>
+          <li>무제한 듣기+오프라인 재생과 Premium 무제한 듣기 + 오프라인 재생의 '스마트폰 저장' 기능은 벅스 모바일 앱 5.0 이상 버전(Android OS 8.0, iOS 15.0 이상)에서 사용할 수 있습니다.</li>
+          <li>오프라인 재생을 위한 스마트폰 저장 및 기기 등록은 계정 당 1대까지 가능합니다.</li>
+          <li>모바일 무제한 듣기 이용권은 벅스 모바일앱(Apple 앱스토어 및 Google 플레이스토어에서 다운로드)을 지원하는 스마트폰 및 태블릿에서 사용하실 수 있습니다.</li>
+          <li>FLAC 음원 재생은 16bit으로 제공되며, 모바일 iOS / Android 앱과 PC 벅스 플레이어에서 바로 감상할 수 있습니다.</li>
+          <li>모바일 3G/LTE 네트워크 환경에서 FLAC 음원 청취 시 과도한 데이터 요금이 부과될 수 있습니다.</li>
+          <li>스마트폰, 태블릿PC에서 벅스 앱을 통해 저장한 곡은 다른 매체 (PC, 스마트폰, 태블릿PC)로의 이동이 불가능합니다.</li>
+          <li>음원 권리사의 요청으로 특정 음원의 경우 음악 듣기, 저장, 다운로드 서비스 이용이 제한될 수 있습니다.</li>
+          <li>다운로드 이용권은 전곡듣기를 지원하지 않으며, 이용기간 내 사용하지 못한 MP3 잔여곡은 소멸되어 이월되지 않습니다.</li>
+          </ul>
+      </section>
+  </div>
+	<aside class="floatingBanner" id="buyTicketFloating" style="display: none;"><a href="https://music.bugs.co.kr/favorite" target="_self" onclick="bugs.logging.banner(112917)"><img src="//image.bugsm.co.kr/banner/images/original/917/112/0/112917.jpg" alt="Favorite - 비로그인"></a><button type="button" onclick="javascript:$(&quot;#buyTicketFloating&quot;).hide();">배너닫기</button></aside></article>

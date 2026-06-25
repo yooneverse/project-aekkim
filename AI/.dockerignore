@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+docs/
+scraper/dlq/
+scraper/test_result_*.txt
+scraper/.env

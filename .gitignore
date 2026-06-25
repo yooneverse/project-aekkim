@@ -1,0 +1,48 @@
+### Environment ###
+.env
+.env.*
+!.env.example
+!INFRA/.env.*.example
+!infra/.env.*.example
+
+### IDE ###
+.idea/
+!.idea/
+.idea/*
+!.idea/encodings.xml
+!FE/.idea/
+FE/.idea/*
+.editorconfig
+
+### AI / IDE ###
+.claude/
+.cursor/
+.vscode/
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### OpenCode ###
+.opencode/
+.sisyphus/
+/\ .sisyphus/
+AGENTS.md
+nul
+.mcp.json
+
+### Local Build Cache ###
+.android/
+/.android-home/
+**/.gradle/
+**/.gradle-*/
+**/.gradle-home/
+**/.gradle-user/
+**/.gradle-cache/
+**/.gradle-user/
+**/.gradle-user-home/
+**/.gradle-final-verify/
+**/.gradle-test-user/
+**/.gradle-user-verify/
+**/.kotlin/
+**/build/

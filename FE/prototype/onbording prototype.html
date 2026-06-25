@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애낌(AEKKIM) 온보딩 및 동의 화면 목업</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #E5E8EB; 
+            padding: 40px;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        /* 스마트폰 디바이스 프레임 */
+        .device {
+            width: 375px;
+            height: 812px;
+            border-radius: 36px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== 테마 변수 ===== */
+        .light {
+            background-color: #FFFFFF;
+            --bg-color: #FFFFFF;
+            --text-main: #191F28;
+            --text-sub: #8B95A1;
+            --accent: #3182F6;
+            --btn-disabled: #E5E8EB;
+            --btn-disabled-text: #B0B8C1;
+            --check-bg: #F2F4F6;
+            --check-border: #D1D6DB;
+            --divider: #F2F4F6;
+        }
+
+        .dark {
+            background-color: #101010;
+            --bg-color: #101010;
+            --text-main: #F9FAFB;
+            --text-sub: #8B95A1;
+            --accent: #3182F6;
+            --btn-disabled: #2C2C2E;
+            --btn-disabled-text: #6B7684;
+            --check-bg: #2C2C2E;
+            --check-border: #3A3A3C;
+            --divider: #2C2C2E;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* 상단 스와이프 영역 */
+        .carousel-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-top: 60px;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Firefox */
+            height: 100%;
+        }
+        
+        .carousel::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        .slide {
+            min-width: 100%;
+            scroll-snap-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 32px 60px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .slide-emoji {
+            font-size: 80px;
+            margin-bottom: 24px;
+        }
+
+        .slide-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+
+        .slide-desc {
+            font-size: 16px;
+            color: var(--text-sub);
+            margin: 0;
+            line-height: 1.5;
+            word-break: keep-all;
+        }
+
+        .indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--check-border);
+            transition: background-color 0.3s;
+        }
+        
+        .dot.active {
+            background-color: var(--accent);
+        }
+
+        /* 하단 동의 영역 */
+        .consent-area {
+            background-color: var(--bg-color);
+            padding: 24px 24px 32px;
+            border-top: 1px solid var(--divider);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .consent-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            gap: 12px;
+        }
+
+        .consent-item.all-agree {
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--divider);
+            margin-bottom: 4px;
+        }
+
+        .consent-item.all-agree .label-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--check-bg);
+            border: 1px solid var(--check-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            box-sizing: border-box;
+        }
+
+        /* 체크 마크 (SVG) */
+        .checkbox::after {
+            content: '';
+            width: 10px;
+            height: 6px;
+            border-left: 2px solid white;
+            border-bottom: 2px solid white;
+            transform: rotate(-45deg) translateY(-1px);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        /* 체크되었을 때의 상태 */
+        .consent-item input[type="checkbox"]:checked + .checkbox {
+            background-color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .consent-item input[type="checkbox"]:checked + .checkbox::after {
+            opacity: 1;
+        }
+
+        .consent-item input[type="checkbox"] {
+            display: none;
+        }
+
+        .label-text {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-main);
+            flex: 1;
+        }
+
+        .label-sub {
+            color: var(--text-sub);
+        }
+
+        .arrow {
+            color: var(--text-sub);
+            font-size: 14px;
+            padding: 4px;
+        }
+
+        /* CTA 버튼 */
+        .cta-btn {
+            width: 100%;
+            height: 56px;
+            border-radius: 16px;
+            border: none;
+            background-color: var(--accent);
+            color: white;
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 12px;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+
+        .cta-btn:active:not(:disabled) {
+            transform: scale(0.98);
+        }
+
+        .cta-btn:disabled {
+            background-color: var(--btn-disabled);
+            color: var(--btn-disabled-text);
+            cursor: not-allowed;
+        }
+
+        .device-label {
+            position: absolute;
+            top: -40px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="position: relative;">
+        <div class="device-label">Light Mode</div>
+        <div class="device light" id="device-light">
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <div class="slide">
+                        <div class="slide-emoji">💸</div>
+                        <h2 class="slide-title">내 OTT 구독료,<br>한 달에 얼마일까?</h2>
+                        <p class="slide-desc">여기저기 흩어진 결제 내역을<br>애낌이 한 번에 찾아드릴게요.</p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-emoji">✂️</div>
+                        <h2 class="slide-title">안 보는 구독은<br>바로바로 해지해요</h2>
+                        <p class="slide-desc">결제일 알림을 받고<br>클릭 한 번에 해지 화면으로 가요.</p>
+                    </div>
+                </div>
+                <div class="indicators">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+            <div class="consent-area">
+                <label class="consent-item all-agree">
+                    <input type="checkbox" id="light-all">
+                    <div class="checkbox"></div>
+                    <span class="label-text">약관에 모두 동의</span>
+                </label>
+                
+                <label class="consent-item req-item">
+                    <input type="checkbox" class="light-req">
+                    <div class="checkbox"></div>
+                    <span class="label-text"><span class="label-sub">[필수]</span> 마이데이터 서비스 이용 약관</span>
+                    <span class="arrow">›</span>
+                </label>
+
+                <label class="consent-item req-item">
+                    <input type="checkbox" class="light-req">
+                    <div class="checkbox"></div>
+                    <span class="label-text"><span class="label-sub">[필수]</span> 개인정보 수집 및 이용 동의</span>
+                    <span class="arrow">›</span>
+                </label>
+
+                <label class="consent-item">
+                    <input type="checkbox" class="light-opt">
+                    <div class="checkbox"></div>
+                    <span class="label-text"><span class="label-sub">[선택]</span> 절약 프로모션 알림 수신</span>
+                    <span class="arrow">›</span>
+                </label>
+
+                <button class="cta-btn" id="light-btn">시작하기</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="position: relative;">
+        <div class="device-label">Dark Mode</div>
+        <div class="device dark" id="device-dark">
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <div class="slide">
+                        <div class="slide-emoji">💸</div>
+                        <h2 class="slide-title">내 OTT 구독료,<br>한 달에 얼마일까?</h2>
+                        <p class="slide-desc">여기저기 흩어진 결제 내역을<br>애낌이 한 번에 찾아드릴게요.</p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-emoji">✂️</div>
+                        <h2 class="slide-title">안 보는 구독은<br>바로바로 해지해요</h2>
+                        <p class="slide-desc">결제일 알림을 받고<br>클릭 한 번에 해지 화면으로 가요.</p>
+                    </div>
+                </div>
+                <div class="indicators">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+            <div class="consent-area">
+                <label class="consent-item all-agree">
+                    <input type="checkbox" id="dark-all">
+                    <div class="checkbox"></div>
+                    <span class="label-text">약관에 모두 동의</span>
+                </label>
+                
+                <label class="consent-item req-item">
+                    <input type="checkbox" class="dark-req">
+                    <div class="checkbox"></div>
+                    <span class="label-text"><span class="label-sub">[필수]</span> 마이데이터 서비스 이용 약관</span>
+                    <span class="arrow">›</span>
+                </label>
+
+                <label class="consent-item req-item">
+                    <input type="checkbox" class="dark-req">
+                    <div class="checkbox"></div>
+                    <span class="label-text"><span class="label-sub">[필수]</span> 개인정보 수집 및 이용 동의</span>
+                    <span class="arrow">›</span>
+                </label>
+
+                <label class="consent-item">
+                    <input type="checkbox" class="dark-opt">
+                    <div class="checkbox"></div>
+                    <span class="label-text"><span class="label-sub">[선택]</span> 절약 프로모션 알림 수신</span>
+                    <span class="arrow">›</span>
+                </label>
+
+                <button class="cta-btn" id="dark-btn">시작하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 체크박스 동작 로직 셋업 (Light / Dark 모드 각각 적용)
+        function setupConsentLogic(mode) {
+            const allCheckbox = document.getElementById(`${mode}-all`);
+            const reqCheckboxes = document.querySelectorAll(`.${mode}-req`);
+            const optCheckboxes = document.querySelectorAll(`.${mode}-opt`);
+            const submitBtn = document.getElementById(`${mode}-btn`);
+            const allBoxes = [...reqCheckboxes, ...optCheckboxes];
+
+            // 1. 전체 동의 클릭 시
+            allCheckbox.addEventListener('change', (e) => {
+                const isChecked = e.target.checked;
+                allBoxes.forEach(box => box.checked = isChecked);
+                updateButtonState();
+            });
+
+            // 2. 개별 항목 클릭 시 전체동의 체크박스 및 버튼 상태 업데이트
+            allBoxes.forEach(box => {
+                box.addEventListener('change', () => {
+                    const allChecked = allBoxes.every(b => b.checked);
+                    allCheckbox.checked = allChecked;
+                    updateButtonState();
+                });
+            });
+
+            // 3. 필수 항목이 모두 체크되었는지 확인하여 '시작하기' 버튼 활성화
+            function updateButtonState() {
+                const reqsChecked = Array.from(reqCheckboxes).every(box => box.checked);
+                submitBtn.disabled = !reqsChecked;
+            }
+        }
+
+        setupConsentLogic('light');
+        setupConsentLogic('dark');
+        const nextOnboardingPage = 'onbording2 prototype logo.html';
+        const lightStartBtn = document.getElementById('light-btn');
+        const darkStartBtn = document.getElementById('dark-btn');
+
+        if (lightStartBtn) {
+            lightStartBtn.addEventListener('click', () => {
+                window.location.href = nextOnboardingPage;
+            });
+        }
+
+        if (darkStartBtn) {
+            darkStartBtn.addEventListener('click', () => {
+                window.location.href = nextOnboardingPage;
+            });
+        }
+
+        // (참고) 캐러셀 dot 인디케이터 동작은 실제 구현 시 Scroll 이벤트를 연동하여 처리합니다.
+        // 현재는 CSS scroll-snap으로 부드럽게 넘어가도록 UI만 잡아두었습니다.
+    </script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애낌(AEKKIM) 로딩 및 구독 확인 화면 목업</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #E5E8EB; 
+            padding: 40px;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        .device {
+            width: 375px;
+            height: 812px;
+            border-radius: 36px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== 라이트 모드 테마 ===== */
+        .light {
+            background-color: #F2F4F6;
+            color: #191F28;
+            --bg-color: #F2F4F6;
+            --card-bg: #FFFFFF;
+            --text-main: #191F28;
+            --text-sub: #8B95A1;
+            --accent: #3182F6;
+            --border: #F2F4F6;
+            --remove-bg: #F2F4F6;
+            --remove-text: #6B7684;
+        }
+
+        /* ===== 다크 모드 테마 ===== */
+        .dark {
+            background-color: #101010;
+            color: #F9FAFB;
+            --bg-color: #101010;
+            --card-bg: #1C1C1E;
+            --text-main: #F9FAFB;
+            --text-sub: #8B95A1;
+            --accent: #3182F6;
+            --border: #2C2C2E;
+            --remove-bg: #2C2C2E;
+            --remove-text: #8B95A1;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* 화면 공통 */
+        .screen {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            transition: opacity 0.5s ease;
+        }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* =========================================
+           1. 로딩 화면 (SCR-002) 스타일
+           ========================================= */
+        .loading-screen {
+            background-color: var(--card-bg); /* 로딩은 깔끔하게 단색 배경 */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 10;
+        }
+
+        /* 토스 느낌의 로딩 스피너 */
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--border);
+            border-top: 4px solid var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 32px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            transition: opacity 0.3s ease;
+        }
+
+        /* =========================================
+           2. 구독 확인 화면 스타일
+           ========================================= */
+        .confirm-screen {
+            background-color: var(--bg-color);
+            z-index: 5;
+        }
+
+        .header {
+            padding: 24px 24px 12px;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--text-main);
+            display: flex;
+            justify-content: space-between;
+        }
+        .brand-logo {
+            width: 92px;
+            height: auto;
+            display: block;
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px 20px 100px;
+        }
+        .content::-webkit-scrollbar { display: none; }
+
+        .title-area {
+            margin-bottom: 32px;
+            padding: 0 4px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        .list-card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 8px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .list-item:not(:last-child) {
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* 아이템 삭제 시 애니메이션 */
+        .list-item.removing {
+            opacity: 0;
+            transform: translateX(20px);
+            padding: 0 20px;
+            height: 0;
+            border: none;
+            overflow: hidden;
+        }
+
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            margin-right: 16px;
+        }
+        .logo-n { background-color: #E50914; }
+        .logo-t { background-color: #FF153C; }
+        .logo-c { background-color: #00A6FF; font-size: 14px; } /* 쿠팡플레이 */
+
+        .item-info {
+            flex: 1;
+        }
+        .item-info .name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+        .item-info .price {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* 제외 버튼 */
+        .remove-btn {
+            background-color: var(--remove-bg);
+            color: var(--remove-text);
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .remove-btn:active {
+            opacity: 0.8;
+        }
+
+        /* 하단 고정 버튼 영역 */
+        .bottom-fixed {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 16px 20px 32px;
+            box-sizing: border-box;
+            background: linear-gradient(to top, var(--bg-color) 80%, transparent);
+        }
+
+        .cta-btn {
+            width: 100%;
+            height: 56px;
+            border-radius: 16px;
+            border: none;
+            background-color: var(--accent);
+            color: white;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .cta-btn:active {
+            transform: scale(0.98);
+        }
+
+        .device-label {
+            position: absolute;
+            top: -40px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="position: relative;">
+        <div class="device-label">Light Mode</div>
+        <div class="device light" id="device-light">
+            
+            <div class="screen loading-screen" id="light-loading">
+                <div class="spinner"></div>
+                <div class="loading-text" id="light-loading-text">결제데이터를 받아오는 중입니다</div>
+            </div>
+
+            <div class="screen confirm-screen hidden" id="light-confirm">
+                <div class="header"><img class="brand-logo" src="file:///C:/Users/SSAFY/Desktop/워크스페이스/SSAFY/싸피%20프로젝트/특화PJT/S14P21E106/FE/prototype/화면%20캡처%202026-03-03%20152858.png" alt="애낌 로고"></div>
+                <div class="content">
+                    <div class="title-area">
+                        <h2 class="title">애낌님님이 구독 중인<br>서비스들입니다.</h2>
+                        <div class="subtitle">실제로 구독하고 있는 서비스인지 확인해주세요.</div>
+                    </div>
+
+                    <div class="list-card">
+                        <div class="list-item">
+                            <div class="logo-circle logo-n">N</div>
+                            <div class="item-info">
+                                <div class="name">넷플릭스</div>
+                                <div class="price">13,500원</div>
+                            </div>
+                            <button class="remove-btn">구독 아님</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="logo-circle logo-t">T</div>
+                            <div class="item-info">
+                                <div class="name">티빙</div>
+                                <div class="price">9,500원</div>
+                            </div>
+                            <button class="remove-btn">구독 아님</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="logo-circle logo-c">Coupang</div>
+                            <div class="item-info">
+                                <div class="name">쿠팡플레이 (와우)</div>
+                                <div class="price">7,890원</div>
+                            </div>
+                            <button class="remove-btn">구독 아님</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-fixed">
+                    <button class="cta-btn">확인 완료</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="position: relative;">
+        <div class="device-label">Dark Mode</div>
+        <div class="device dark" id="device-dark">
+            
+            <div class="screen loading-screen" id="dark-loading">
+                <div class="spinner"></div>
+                <div class="loading-text" id="dark-loading-text">결제데이터를 받아오는 중입니다</div>
+            </div>
+
+            <div class="screen confirm-screen hidden" id="dark-confirm">
+                <div class="header"><img class="brand-logo" src="file:///C:/Users/SSAFY/Desktop/워크스페이스/SSAFY/싸피%20프로젝트/특화PJT/S14P21E106/FE/prototype/화면%20캡처%202026-03-03%20152858.png" alt="애낌 로고"></div>
+                <div class="content">
+                    <div class="title-area">
+                        <h2 class="title">애낌님이 구독 중인<br>서비스들입니다.</h2>
+                        <div class="subtitle">실제로 구독하고 있는 서비스인지 확인해주세요.</div>
+                    </div>
+
+                    <div class="list-card">
+                        <div class="list-item">
+                            <div class="logo-circle logo-n">N</div>
+                            <div class="item-info">
+                                <div class="name">넷플릭스</div>
+                                <div class="price">13,500원</div>
+                            </div>
+                            <button class="remove-btn">구독 아님</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="logo-circle logo-t">T</div>
+                            <div class="item-info">
+                                <div class="name">티빙</div>
+                                <div class="price">9,500원</div>
+                            </div>
+                            <button class="remove-btn">구독 아님</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="logo-circle logo-c">Coupang</div>
+                            <div class="item-info">
+                                <div class="name">쿠팡플레이 (와우)</div>
+                                <div class="price">7,890원</div>
+                            </div>
+                            <button class="remove-btn">구독 아님</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-fixed">
+                    <button class="cta-btn">확인 완료</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // 로딩 텍스트 배열
+        const loadingTexts = [
+            "결제데이터를 받아오는 중입니다...",
+            "AI가 구독 정보를 살펴보고 있습니다...",
+            "애낌님의 구독데이터를 정리하고 있습니다..."
+        ];
+
+        function runAppFlow(mode) {
+            const textElement = document.getElementById(`${mode}-loading-text`);
+            const loadingScreen = document.getElementById(`${mode}-loading`);
+            const confirmScreen = document.getElementById(`${mode}-confirm`);
+            
+            let textIndex = 0;
+
+            // 1. 2초마다 텍스트 변경
+            const textInterval = setInterval(() => {
+                textIndex++;
+                if (textIndex < loadingTexts.length) {
+                    textElement.style.opacity = 0; // 페이드 아웃
+                    setTimeout(() => {
+                        textElement.innerText = loadingTexts[textIndex];
+                        textElement.style.opacity = 1; // 페이드 인
+                    }, 300);
+                } else {
+                    clearInterval(textInterval);
+                }
+            }, 2000);
+
+            // 2. 6.5초 후 로딩 화면 숨기고 확인 화면 표시
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                confirmScreen.classList.remove('hidden');
+            }, 6500);
+
+            // 3. '구독 아님' 버튼 클릭 시 리스트에서 제외하는 이벤트
+            const removeBtns = confirmScreen.querySelectorAll('.remove-btn');
+            removeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const listItem = this.closest('.list-item');
+                    // 스르륵 사라지는 애니메이션 클래스 추가
+                    listItem.classList.add('removing');
+                    // 애니메이션 끝난 후 DOM에서 완전히 제거
+                    setTimeout(() => {
+                        listItem.remove();
+                    }, 300);
+                });
+            });
+        }
+
+        // 라이트 모드, 다크 모드 각각 실행
+        runAppFlow('light');
+        runAppFlow('dark');
+        const nextDashboardPage = 'dashboard prototype logo.html';
+        document.querySelectorAll('.confirm-screen .cta-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                window.location.href = nextDashboardPage;
+            });
+        });
+    </script>
+
+</body>
+</html>

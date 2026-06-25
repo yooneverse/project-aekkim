@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: e106
+
+  profiles:
+    active: ${APP_PROFILE:local}
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOSTNAME:localhost}:${DB_PORT:3306}/${MYSQL_DB:E106}?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:ssafy}
+
+  data:
+    redis:
+      host: ${REDIS_HOSTNAME:localhost}
+      port: ${REDIS_PORT:6379}
+
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: ${BATCH_SCHEMA_INIT:always}
+
+  jpa:
+    hibernate:
+      ddl-auto: ${DDL_AUTO:update}
+    show-sql: ${JPA_SHOW_SQL:true}
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+        jdbc:
+          time_zone: Asia/Seoul
+
+
+jwt:
+  secret: ${JWT_SECRET:defaultSecretKeyForLocalDev32Chars!!}
+  issuer: ${JWT_ISSUER:e106}
+  access-token-ttl: ${JWT_ACCESS_TTL:900}
+  refresh-token-ttl: ${JWT_REFRESH_TTL:1209600}
+
+google:
+  client-id: ${GOOGLE_CLIENT_ID:}
+
+kakao:
+  admin-key: ${KAKAO_ADMIN_KEY:}
+
+firebase:
+  service-account-json-base64: ${FIREBASE_SERVICE_ACCOUNT_JSON_BASE64:}
+
+finance:
+  api-key: ${FINANCE_API_KEY:}
+  base-url: ${FINANCE_BASE_URL:https://finance-api.example.com}
+  institution-code: ${FINANCE_INSTITUTION_CODE:00100}
+  fintech-app-no: ${FINANCE_FINTECH_APP_NO:001}

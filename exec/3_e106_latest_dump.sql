@@ -1,0 +1,652 @@
+-- MySQL dump 10.13  Distrib 8.4.8, for Linux (x86_64)
+--
+-- Host: localhost    Database: E106
+-- ------------------------------------------------------
+-- Server version	8.4.8
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `E106`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `E106` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+USE `E106`;
+
+--
+-- Table structure for table `BATCH_JOB_EXECUTION`
+--
+
+DROP TABLE IF EXISTS `BATCH_JOB_EXECUTION`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `BATCH_JOB_EXECUTION` (
+  `JOB_EXECUTION_ID` bigint NOT NULL,
+  `VERSION` bigint DEFAULT NULL,
+  `JOB_INSTANCE_ID` bigint NOT NULL,
+  `CREATE_TIME` datetime(6) NOT NULL,
+  `START_TIME` datetime(6) DEFAULT NULL,
+  `END_TIME` datetime(6) DEFAULT NULL,
+  `STATUS` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `EXIT_CODE` varchar(2500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `EXIT_MESSAGE` varchar(2500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `LAST_UPDATED` datetime(6) DEFAULT NULL,
+  PRIMARY KEY (`JOB_EXECUTION_ID`),
+  KEY `JOB_INST_EXEC_FK` (`JOB_INSTANCE_ID`),
+  CONSTRAINT `JOB_INST_EXEC_FK` FOREIGN KEY (`JOB_INSTANCE_ID`) REFERENCES `BATCH_JOB_INSTANCE` (`JOB_INSTANCE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BATCH_JOB_EXECUTION`
+--
+
+LOCK TABLES `BATCH_JOB_EXECUTION` WRITE;
+/*!40000 ALTER TABLE `BATCH_JOB_EXECUTION` DISABLE KEYS */;
+INSERT INTO `BATCH_JOB_EXECUTION` VALUES (1,2,1,'2026-03-23 09:36:03.242848','2026-03-23 09:36:03.333362','2026-03-23 09:36:03.651851','COMPLETED','COMPLETED','','2026-03-23 09:36:03.653727'),(2,2,2,'2026-03-23 09:54:23.481285','2026-03-23 09:54:23.516532','2026-03-23 09:54:23.673582','COMPLETED','COMPLETED','','2026-03-23 09:54:23.674497'),(3,2,3,'2026-03-23 15:33:09.110141','2026-03-23 15:33:09.134769','2026-03-23 15:33:09.305838','COMPLETED','COMPLETED','','2026-03-23 15:33:09.306240'),(4,2,4,'2026-03-23 15:42:34.545671','2026-03-23 15:42:34.562516','2026-03-23 15:42:34.623452','COMPLETED','COMPLETED','','2026-03-23 15:42:34.623945'),(5,2,5,'2026-03-24 23:05:10.659369','2026-03-24 23:05:10.688239','2026-03-24 23:05:10.826192','COMPLETED','COMPLETED','','2026-03-24 23:05:10.826775'),(6,2,6,'2026-03-24 23:06:39.676265','2026-03-24 23:06:39.692312','2026-03-24 23:06:39.754675','COMPLETED','COMPLETED','','2026-03-24 23:06:39.755414'),(7,2,7,'2026-03-25 02:47:03.172758','2026-03-25 02:47:03.196758','2026-03-25 02:47:03.316006','COMPLETED','COMPLETED','','2026-03-25 02:47:03.316591'),(8,2,8,'2026-03-25 02:56:43.554720','2026-03-25 02:56:43.569777','2026-03-25 02:56:43.628165','COMPLETED','COMPLETED','','2026-03-25 02:56:43.630041'),(9,2,9,'2026-03-25 06:05:10.274156','2026-03-25 06:05:10.286324','2026-03-25 06:05:10.364007','COMPLETED','COMPLETED','','2026-03-25 06:05:10.364611'),(10,2,10,'2026-03-25 06:14:30.120364','2026-03-25 06:14:30.155159','2026-03-25 06:14:30.247123','COMPLETED','COMPLETED','','2026-03-25 06:14:30.248008'),(11,2,11,'2026-03-25 12:29:31.113625','2026-03-25 12:29:31.182557','2026-03-25 12:29:31.423280','COMPLETED','COMPLETED','','2026-03-25 12:29:31.424202'),(12,2,12,'2026-03-25 12:39:32.859202','2026-03-25 12:39:32.887838','2026-03-25 12:39:33.016109','COMPLETED','COMPLETED','','2026-03-25 12:39:33.017427'),(13,2,13,'2026-03-27 11:41:10.567411','2026-03-27 11:41:10.664762','2026-03-27 11:41:10.837829','COMPLETED','COMPLETED','','2026-03-27 11:41:10.838410'),(14,2,14,'2026-03-27 11:51:10.542117','2026-03-27 11:51:10.556875','2026-03-27 11:51:10.618935','COMPLETED','COMPLETED','','2026-03-27 11:51:10.619359'),(15,2,15,'2026-03-27 22:25:21.363051','2026-03-27 22:25:21.396545','2026-03-27 22:25:21.574884','COMPLETED','COMPLETED','','2026-03-27 22:25:21.576921'),(16,2,16,'2026-03-27 22:35:22.250287','2026-03-27 22:35:22.286477','2026-03-27 22:35:22.410665','COMPLETED','COMPLETED','','2026-03-27 22:35:22.411487');
+/*!40000 ALTER TABLE `BATCH_JOB_EXECUTION` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `BATCH_JOB_EXECUTION_CONTEXT`
+--
+
+DROP TABLE IF EXISTS `BATCH_JOB_EXECUTION_CONTEXT`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `BATCH_JOB_EXECUTION_CONTEXT` (
+  `JOB_EXECUTION_ID` bigint NOT NULL,
+  `SHORT_CONTEXT` varchar(2500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `SERIALIZED_CONTEXT` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`JOB_EXECUTION_ID`),
+  CONSTRAINT `JOB_EXEC_CTX_FK` FOREIGN KEY (`JOB_EXECUTION_ID`) REFERENCES `BATCH_JOB_EXECUTION` (`JOB_EXECUTION_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BATCH_JOB_EXECUTION_CONTEXT`
+--
+
+LOCK TABLES `BATCH_JOB_EXECUTION_CONTEXT` WRITE;
+/*!40000 ALTER TABLE `BATCH_JOB_EXECUTION_CONTEXT` DISABLE KEYS */;
+INSERT INTO `BATCH_JOB_EXECUTION_CONTEXT` VALUES (1,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(2,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(3,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(4,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(5,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(6,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(7,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(8,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(9,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(10,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(11,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(12,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(13,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(14,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(15,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL),(16,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAABdAANYmF0Y2gudmVyc2lvbnQABTUuMi40eA==',NULL);
+/*!40000 ALTER TABLE `BATCH_JOB_EXECUTION_CONTEXT` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `BATCH_JOB_EXECUTION_PARAMS`
+--
+
+DROP TABLE IF EXISTS `BATCH_JOB_EXECUTION_PARAMS`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `BATCH_JOB_EXECUTION_PARAMS` (
+  `JOB_EXECUTION_ID` bigint NOT NULL,
+  `PARAMETER_NAME` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `PARAMETER_TYPE` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `PARAMETER_VALUE` varchar(2500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `IDENTIFYING` char(1) COLLATE utf8mb4_unicode_ci NOT NULL,
+  KEY `JOB_EXEC_PARAMS_FK` (`JOB_EXECUTION_ID`),
+  CONSTRAINT `JOB_EXEC_PARAMS_FK` FOREIGN KEY (`JOB_EXECUTION_ID`) REFERENCES `BATCH_JOB_EXECUTION` (`JOB_EXECUTION_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BATCH_JOB_EXECUTION_PARAMS`
+--
+
+LOCK TABLES `BATCH_JOB_EXECUTION_PARAMS` WRITE;
+/*!40000 ALTER TABLE `BATCH_JOB_EXECUTION_PARAMS` DISABLE KEYS */;
+INSERT INTO `BATCH_JOB_EXECUTION_PARAMS` VALUES (1,'runAt','java.lang.Long','1774226163097','Y'),(2,'runAt','java.lang.Long','1774227263427','Y'),(3,'runAt','java.lang.Long','1774247589072','Y'),(4,'runAt','java.lang.Long','1774248154515','Y'),(5,'runAt','java.lang.Long','1774361110579','Y'),(6,'runAt','java.lang.Long','1774361199649','Y'),(7,'runAt','java.lang.Long','1774374423128','Y'),(8,'runAt','java.lang.Long','1774375003529','Y'),(9,'runAt','java.lang.Long','1774386310260','Y'),(10,'runAt','java.lang.Long','1774386870105','Y'),(11,'runAt','java.lang.Long','1774409371011','Y'),(12,'runAt','java.lang.Long','1774409972801','Y'),(13,'runAt','java.lang.Long','1774579270472','Y'),(14,'runAt','java.lang.Long','1774579870513','Y'),(15,'runAt','java.lang.Long','1774617921283','Y'),(16,'runAt','java.lang.Long','1774618522183','Y');
+/*!40000 ALTER TABLE `BATCH_JOB_EXECUTION_PARAMS` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `BATCH_JOB_EXECUTION_SEQ`
+--
+
+DROP TABLE IF EXISTS `BATCH_JOB_EXECUTION_SEQ`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `BATCH_JOB_EXECUTION_SEQ` (
+  `ID` bigint NOT NULL,
+  `UNIQUE_KEY` char(1) COLLATE utf8mb4_unicode_ci NOT NULL,
+  UNIQUE KEY `UNIQUE_KEY_UN` (`UNIQUE_KEY`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BATCH_JOB_EXECUTION_SEQ`
+--
+
+LOCK TABLES `BATCH_JOB_EXECUTION_SEQ` WRITE;
+/*!40000 ALTER TABLE `BATCH_JOB_EXECUTION_SEQ` DISABLE KEYS */;
+INSERT INTO `BATCH_JOB_EXECUTION_SEQ` VALUES (16,'0');
+/*!40000 ALTER TABLE `BATCH_JOB_EXECUTION_SEQ` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `BATCH_JOB_INSTANCE`
+--
+
+DROP TABLE IF EXISTS `BATCH_JOB_INSTANCE`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `BATCH_JOB_INSTANCE` (
+  `JOB_INSTANCE_ID` bigint NOT NULL,
+  `VERSION` bigint DEFAULT NULL,
+  `JOB_NAME` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `JOB_KEY` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`JOB_INSTANCE_ID`),
+  UNIQUE KEY `JOB_INST_UN` (`JOB_NAME`,`JOB_KEY`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BATCH_JOB_INSTANCE`
+--
+
+LOCK TABLES `BATCH_JOB_INSTANCE` WRITE;
+/*!40000 ALTER TABLE `BATCH_JOB_INSTANCE` DISABLE KEYS */;
+INSERT INTO `BATCH_JOB_INSTANCE` VALUES (1,0,'checkinTargetSelectionJob','e6797bb9c4a51b04ecb8462fc74e9b13'),(2,0,'promoTargetSelectionJob','c838f1cb00e3216c23f9c866f769f1af'),(3,0,'checkinNotificationSendJob','3055e7d045bcf09503c4494411b4295f'),(4,0,'promoNotificationSendJob','60ff38df7b079480e503c43c85132092'),(5,0,'checkinTargetSelectionJob','26b9dbccb677a32e36f764f75174d5fa'),(6,0,'promoTargetSelectionJob','1c493bf973fae6be05f302e878ec52b8'),(7,0,'checkinNotificationSendJob','4d9aec04085117afe07060b7c6ed9dcc'),(8,0,'promoNotificationSendJob','03fc4a7ea5230397421eec2181e512bd'),(9,0,'checkinTargetSelectionJob','5dcbb2793a7e6e88e6a0d6ac58ddf8ed'),(10,0,'promoTargetSelectionJob','f97f7d0af9479256e267a8936bc217df'),(11,0,'checkinNotificationSendJob','63f238465595030a7e23fded69de7374'),(12,0,'promoNotificationSendJob','ba2dcbd192a1d3687e22ba2ba3192d8b'),(13,0,'checkinTargetSelectionJob','8a781ee89b8854e99293d063b860e3aa'),(14,0,'promoTargetSelectionJob','fd8f5245afe9fc5d660deaebcf81c6c6'),(15,0,'checkinNotificationSendJob','8d1bded2b2f1da55dbc5f3113d99e5aa'),(16,0,'promoNotificationSendJob','d7e0550790654093c52ce3eed60dbf77');
+/*!40000 ALTER TABLE `BATCH_JOB_INSTANCE` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `BATCH_JOB_SEQ`
+--
+
+DROP TABLE IF EXISTS `BATCH_JOB_SEQ`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `BATCH_JOB_SEQ` (
+  `ID` bigint NOT NULL,
+  `UNIQUE_KEY` char(1) COLLATE utf8mb4_unicode_ci NOT NULL,
+  UNIQUE KEY `UNIQUE_KEY_UN` (`UNIQUE_KEY`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BATCH_JOB_SEQ`
+--
+
+LOCK TABLES `BATCH_JOB_SEQ` WRITE;
+/*!40000 ALTER TABLE `BATCH_JOB_SEQ` DISABLE KEYS */;
+INSERT INTO `BATCH_JOB_SEQ` VALUES (16,'0');
+/*!40000 ALTER TABLE `BATCH_JOB_SEQ` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `BATCH_STEP_EXECUTION`
+--
+
+DROP TABLE IF EXISTS `BATCH_STEP_EXECUTION`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `BATCH_STEP_EXECUTION` (
+  `STEP_EXECUTION_ID` bigint NOT NULL,
+  `VERSION` bigint NOT NULL,
+  `STEP_NAME` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `JOB_EXECUTION_ID` bigint NOT NULL,
+  `CREATE_TIME` datetime(6) NOT NULL,
+  `START_TIME` datetime(6) DEFAULT NULL,
+  `END_TIME` datetime(6) DEFAULT NULL,
+  `STATUS` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `COMMIT_COUNT` bigint DEFAULT NULL,
+  `READ_COUNT` bigint DEFAULT NULL,
+  `FILTER_COUNT` bigint DEFAULT NULL,
+  `WRITE_COUNT` bigint DEFAULT NULL,
+  `READ_SKIP_COUNT` bigint DEFAULT NULL,
+  `WRITE_SKIP_COUNT` bigint DEFAULT NULL,
+  `PROCESS_SKIP_COUNT` bigint DEFAULT NULL,
+  `ROLLBACK_COUNT` bigint DEFAULT NULL,
+  `EXIT_CODE` varchar(2500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `EXIT_MESSAGE` varchar(2500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `LAST_UPDATED` datetime(6) DEFAULT NULL,
+  PRIMARY KEY (`STEP_EXECUTION_ID`),
+  KEY `JOB_EXEC_STEP_FK` (`JOB_EXECUTION_ID`),
+  CONSTRAINT `JOB_EXEC_STEP_FK` FOREIGN KEY (`JOB_EXECUTION_ID`) REFERENCES `BATCH_JOB_EXECUTION` (`JOB_EXECUTION_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BATCH_STEP_EXECUTION`
+--
+
+LOCK TABLES `BATCH_STEP_EXECUTION` WRITE;
+/*!40000 ALTER TABLE `BATCH_STEP_EXECUTION` DISABLE KEYS */;
+INSERT INTO `BATCH_STEP_EXECUTION` VALUES (1,3,'checkinTargetSelectionStep',1,'2026-03-23 09:36:03.375278','2026-03-23 09:36:03.399994','2026-03-23 09:36:03.622360','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-23 09:36:03.627999'),(2,3,'promoTargetSelectionStep',2,'2026-03-23 09:54:23.540556','2026-03-23 09:54:23.568864','2026-03-23 09:54:23.640469','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-23 09:54:23.646490'),(3,3,'checkinNotificationSendStep',3,'2026-03-23 15:33:09.155784','2026-03-23 15:33:09.167684','2026-03-23 15:33:09.292338','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-23 15:33:09.295509'),(4,3,'promoNotificationSendStep',4,'2026-03-23 15:42:34.572340','2026-03-23 15:42:34.583079','2026-03-23 15:42:34.608965','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-23 15:42:34.611816'),(5,3,'checkinTargetSelectionStep',5,'2026-03-24 23:05:10.704116','2026-03-24 23:05:10.718185','2026-03-24 23:05:10.807663','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-24 23:05:10.811452'),(6,3,'promoTargetSelectionStep',6,'2026-03-24 23:06:39.701813','2026-03-24 23:06:39.712754','2026-03-24 23:06:39.743208','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-24 23:06:39.745702'),(7,3,'checkinNotificationSendStep',7,'2026-03-25 02:47:03.212861','2026-03-25 02:47:03.226001','2026-03-25 02:47:03.299838','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-25 02:47:03.303432'),(8,3,'promoNotificationSendStep',8,'2026-03-25 02:56:43.580018','2026-03-25 02:56:43.589495','2026-03-25 02:56:43.614476','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-25 02:56:43.617169'),(9,3,'checkinTargetSelectionStep',9,'2026-03-25 06:05:10.299122','2026-03-25 06:05:10.309986','2026-03-25 06:05:10.338874','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-25 06:05:10.343328'),(10,3,'promoTargetSelectionStep',10,'2026-03-25 06:14:30.169278','2026-03-25 06:14:30.182434','2026-03-25 06:14:30.214285','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-25 06:14:30.218424'),(11,3,'checkinNotificationSendStep',11,'2026-03-25 12:29:31.223893','2026-03-25 12:29:31.265810','2026-03-25 12:29:31.390932','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-25 12:29:31.397237'),(12,3,'promoNotificationSendStep',12,'2026-03-25 12:39:32.909309','2026-03-25 12:39:32.935678','2026-03-25 12:39:32.983068','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-25 12:39:32.989882'),(13,3,'checkinTargetSelectionStep',13,'2026-03-27 11:41:10.705099','2026-03-27 11:41:10.716245','2026-03-27 11:41:10.824691','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-27 11:41:10.828413'),(14,3,'promoTargetSelectionStep',14,'2026-03-27 11:51:10.567370','2026-03-27 11:51:10.577588','2026-03-27 11:51:10.607596','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-27 11:51:10.610110'),(15,3,'checkinNotificationSendStep',15,'2026-03-27 22:25:21.414457','2026-03-27 22:25:21.430754','2026-03-27 22:25:21.544776','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-27 22:25:21.548879'),(16,3,'promoNotificationSendStep',16,'2026-03-27 22:35:22.314023','2026-03-27 22:35:22.334921','2026-03-27 22:35:22.386077','COMPLETED',1,0,0,0,0,0,0,0,'COMPLETED','','2026-03-27 22:35:22.391273');
+/*!40000 ALTER TABLE `BATCH_STEP_EXECUTION` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `BATCH_STEP_EXECUTION_CONTEXT`
+--
+
+DROP TABLE IF EXISTS `BATCH_STEP_EXECUTION_CONTEXT`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `BATCH_STEP_EXECUTION_CONTEXT` (
+  `STEP_EXECUTION_ID` bigint NOT NULL,
+  `SHORT_CONTEXT` varchar(2500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `SERIALIZED_CONTEXT` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`STEP_EXECUTION_ID`),
+  CONSTRAINT `STEP_EXEC_CTX_FK` FOREIGN KEY (`STEP_EXECUTION_ID`) REFERENCES `BATCH_STEP_EXECUTION` (`STEP_EXECUTION_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BATCH_STEP_EXECUTION_CONTEXT`
+--
+
+LOCK TABLES `BATCH_STEP_EXECUTION_CONTEXT` WRITE;
+/*!40000 ALTER TABLE `BATCH_STEP_EXECUTION_CONTEXT` DISABLE KEYS */;
+INSERT INTO `BATCH_STEP_EXECUTION_CONTEXT` VALUES (1,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMi40dAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==',NULL),(2,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMi40dAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==',NULL),(3,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAA3Y2hlY2tpblBlbmRpbmdOb3RpZmljYXRpb25SZWFkZXIubGFzdFJlYWROb3RpZmljYXRpb25JZHNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgABSgAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAAAAAAAHQADWJhdGNoLnZlcnNpb250AAU1LjIuNHQADmJhdGNoLnN0ZXBUeXBldAA3b3JnLnNwcmluZ2ZyYW1ld29yay5iYXRjaC5jb3JlLnN0ZXAudGFza2xldC5UYXNrbGV0U3RlcHg=',NULL),(4,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAA1cHJvbW9QZW5kaW5nTm90aWZpY2F0aW9uUmVhZGVyLmxhc3RSZWFkTm90aWZpY2F0aW9uSWRzcgAOamF2YS5sYW5nLkxvbmc7i+SQzI8j3wIAAUoABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAAAAAAAB0AA1iYXRjaC52ZXJzaW9udAAFNS4yLjR0AA5iYXRjaC5zdGVwVHlwZXQAN29yZy5zcHJpbmdmcmFtZXdvcmsuYmF0Y2guY29yZS5zdGVwLnRhc2tsZXQuVGFza2xldFN0ZXB4',NULL),(5,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMi40dAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==',NULL),(6,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMi40dAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==',NULL),(7,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAA3Y2hlY2tpblBlbmRpbmdOb3RpZmljYXRpb25SZWFkZXIubGFzdFJlYWROb3RpZmljYXRpb25JZHNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgABSgAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAAAAAAAHQADWJhdGNoLnZlcnNpb250AAU1LjIuNHQADmJhdGNoLnN0ZXBUeXBldAA3b3JnLnNwcmluZ2ZyYW1ld29yay5iYXRjaC5jb3JlLnN0ZXAudGFza2xldC5UYXNrbGV0U3RlcHg=',NULL),(8,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAA1cHJvbW9QZW5kaW5nTm90aWZpY2F0aW9uUmVhZGVyLmxhc3RSZWFkTm90aWZpY2F0aW9uSWRzcgAOamF2YS5sYW5nLkxvbmc7i+SQzI8j3wIAAUoABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAAAAAAAB0AA1iYXRjaC52ZXJzaW9udAAFNS4yLjR0AA5iYXRjaC5zdGVwVHlwZXQAN29yZy5zcHJpbmdmcmFtZXdvcmsuYmF0Y2guY29yZS5zdGVwLnRhc2tsZXQuVGFza2xldFN0ZXB4',NULL),(9,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMi40dAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==',NULL),(10,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMi40dAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==',NULL),(11,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAA3Y2hlY2tpblBlbmRpbmdOb3RpZmljYXRpb25SZWFkZXIubGFzdFJlYWROb3RpZmljYXRpb25JZHNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgABSgAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAAAAAAAHQADWJhdGNoLnZlcnNpb250AAU1LjIuNHQADmJhdGNoLnN0ZXBUeXBldAA3b3JnLnNwcmluZ2ZyYW1ld29yay5iYXRjaC5jb3JlLnN0ZXAudGFza2xldC5UYXNrbGV0U3RlcHg=',NULL),(12,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAA1cHJvbW9QZW5kaW5nTm90aWZpY2F0aW9uUmVhZGVyLmxhc3RSZWFkTm90aWZpY2F0aW9uSWRzcgAOamF2YS5sYW5nLkxvbmc7i+SQzI8j3wIAAUoABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAAAAAAAB0AA1iYXRjaC52ZXJzaW9udAAFNS4yLjR0AA5iYXRjaC5zdGVwVHlwZXQAN29yZy5zcHJpbmdmcmFtZXdvcmsuYmF0Y2guY29yZS5zdGVwLnRhc2tsZXQuVGFza2xldFN0ZXB4',NULL),(13,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMi40dAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==',NULL),(14,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAANYmF0Y2gudmVyc2lvbnQABTUuMi40dAAOYmF0Y2guc3RlcFR5cGV0ADdvcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC50YXNrbGV0LlRhc2tsZXRTdGVweA==',NULL),(15,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAA3Y2hlY2tpblBlbmRpbmdOb3RpZmljYXRpb25SZWFkZXIubGFzdFJlYWROb3RpZmljYXRpb25JZHNyAA5qYXZhLmxhbmcuTG9uZzuL5JDMjyPfAgABSgAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAAAAAAAHQADWJhdGNoLnZlcnNpb250AAU1LjIuNHQADmJhdGNoLnN0ZXBUeXBldAA3b3JnLnNwcmluZ2ZyYW1ld29yay5iYXRjaC5jb3JlLnN0ZXAudGFza2xldC5UYXNrbGV0U3RlcHg=',NULL),(16,'rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAEdAARYmF0Y2gudGFza2xldFR5cGV0AD1vcmcuc3ByaW5nZnJhbWV3b3JrLmJhdGNoLmNvcmUuc3RlcC5pdGVtLkNodW5rT3JpZW50ZWRUYXNrbGV0dAA1cHJvbW9QZW5kaW5nTm90aWZpY2F0aW9uUmVhZGVyLmxhc3RSZWFkTm90aWZpY2F0aW9uSWRzcgAOamF2YS5sYW5nLkxvbmc7i+SQzI8j3wIAAUoABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAAAAAAAB0AA1iYXRjaC52ZXJzaW9udAAFNS4yLjR0AA5iYXRjaC5zdGVwVHlwZXQAN29yZy5zcHJpbmdmcmFtZXdvcmsuYmF0Y2guY29yZS5zdGVwLnRhc2tsZXQuVGFza2xldFN0ZXB4',NULL);
+/*!40000 ALTER TABLE `BATCH_STEP_EXECUTION_CONTEXT` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `BATCH_STEP_EXECUTION_SEQ`
+--
+
+DROP TABLE IF EXISTS `BATCH_STEP_EXECUTION_SEQ`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `BATCH_STEP_EXECUTION_SEQ` (
+  `ID` bigint NOT NULL,
+  `UNIQUE_KEY` char(1) COLLATE utf8mb4_unicode_ci NOT NULL,
+  UNIQUE KEY `UNIQUE_KEY_UN` (`UNIQUE_KEY`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BATCH_STEP_EXECUTION_SEQ`
+--
+
+LOCK TABLES `BATCH_STEP_EXECUTION_SEQ` WRITE;
+/*!40000 ALTER TABLE `BATCH_STEP_EXECUTION_SEQ` DISABLE KEYS */;
+INSERT INTO `BATCH_STEP_EXECUTION_SEQ` VALUES (16,'0');
+/*!40000 ALTER TABLE `BATCH_STEP_EXECUTION_SEQ` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `checkin_records`
+--
+
+DROP TABLE IF EXISTS `checkin_records`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `checkin_records` (
+  `checkin_record_id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `cycle_ym` varchar(7) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `responded_at` datetime(6) NOT NULL,
+  `response` enum('BAD','GOOD','UNKNOWN') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `service_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
+  PRIMARY KEY (`checkin_record_id`),
+  UNIQUE KEY `uk_checkin_records_user_service_cycle_ym` (`user_id`,`service_id`,`cycle_ym`),
+  KEY `FKlk65o7uocax4f8wjyt8xr59jh` (`service_id`),
+  CONSTRAINT `FK9p8ey91jj5xr1r3vsspurwh9q` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  CONSTRAINT `FKlk65o7uocax4f8wjyt8xr59jh` FOREIGN KEY (`service_id`) REFERENCES `services` (`service_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `checkin_records`
+--
+
+LOCK TABLES `checkin_records` WRITE;
+/*!40000 ALTER TABLE `checkin_records` DISABLE KEYS */;
+/*!40000 ALTER TABLE `checkin_records` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `fcm_tokens`
+--
+
+DROP TABLE IF EXISTS `fcm_tokens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `fcm_tokens` (
+  `fcm_token_id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `fcm_token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` bigint NOT NULL,
+  PRIMARY KEY (`fcm_token_id`),
+  UNIQUE KEY `UKtgq9e1yv7gjnen5k9mbo2u9v` (`fcm_token`),
+  KEY `FKj2kob865pl9dv5vwrs2pmshjv` (`user_id`),
+  CONSTRAINT `FKj2kob865pl9dv5vwrs2pmshjv` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fcm_tokens`
+--
+
+LOCK TABLES `fcm_tokens` WRITE;
+/*!40000 ALTER TABLE `fcm_tokens` DISABLE KEYS */;
+INSERT INTO `fcm_tokens` VALUES (1,'2026-03-26 11:16:11.548278','2026-03-26 11:16:11.548278','MASKED_FCM_TOKEN_1',1),(3,'2026-03-27 10:39:40.940087','2026-03-27 10:39:40.940087','MASKED_FCM_TOKEN_2',3);
+/*!40000 ALTER TABLE `fcm_tokens` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `merchant_service_map`
+--
+
+DROP TABLE IF EXISTS `merchant_service_map`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `merchant_service_map` (
+  `merchant_service_map_id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `hit_count` int NOT NULL,
+  `merchant_raw` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `service_id` bigint NOT NULL,
+  PRIMARY KEY (`merchant_service_map_id`),
+  UNIQUE KEY `uk_merchant_raw` (`merchant_raw`),
+  KEY `FKo0l6fjhds1d6kyscpoid28ven` (`service_id`),
+  CONSTRAINT `FKo0l6fjhds1d6kyscpoid28ven` FOREIGN KEY (`service_id`) REFERENCES `services` (`service_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `merchant_service_map`
+--
+
+LOCK TABLES `merchant_service_map` WRITE;
+/*!40000 ALTER TABLE `merchant_service_map` DISABLE KEYS */;
+/*!40000 ALTER TABLE `merchant_service_map` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `notifications`
+--
+
+DROP TABLE IF EXISTS `notifications`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `notifications` (
+  `notification_id` bigint NOT NULL AUTO_INCREMENT,
+  `body` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `read_at` datetime(6) DEFAULT NULL,
+  `reference_id` bigint DEFAULT NULL,
+  `sent_at` datetime(6) DEFAULT NULL,
+  `title` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` enum('CHECKIN','CHURN_REVIEW','PROMO') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` bigint NOT NULL,
+  PRIMARY KEY (`notification_id`),
+  KEY `FK9y21adhxn0ayjhfocscqox7bh` (`user_id`),
+  CONSTRAINT `FK9y21adhxn0ayjhfocscqox7bh` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `notifications`
+--
+
+LOCK TABLES `notifications` WRITE;
+/*!40000 ALTER TABLE `notifications` DISABLE KEYS */;
+/*!40000 ALTER TABLE `notifications` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `payment_history`
+--
+
+DROP TABLE IF EXISTS `payment_history`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `payment_history` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `amount` int NOT NULL,
+  `category` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `merchant_raw` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payment_date` date NOT NULL,
+  `payment_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` bigint NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_payment_history_payment_id` (`payment_id`),
+  KEY `FKdpjqqi1cejff8ipc1q314fuxd` (`user_id`),
+  CONSTRAINT `FKdpjqqi1cejff8ipc1q314fuxd` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payment_history`
+--
+
+LOCK TABLES `payment_history` WRITE;
+/*!40000 ALTER TABLE `payment_history` DISABLE KEYS */;
+/*!40000 ALTER TABLE `payment_history` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `promotion_services`
+--
+
+DROP TABLE IF EXISTS `promotion_services`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `promotion_services` (
+  `promotion_service_id` bigint NOT NULL AUTO_INCREMENT,
+  `promotion_id` bigint NOT NULL,
+  `service_id` bigint NOT NULL,
+  PRIMARY KEY (`promotion_service_id`),
+  UNIQUE KEY `uk_promotion_service` (`promotion_id`,`service_id`),
+  KEY `FKmohfbbf6sb5axr1dryo8b4xhh` (`service_id`),
+  CONSTRAINT `FKdlf0p8maouuqqb1yts4pm2tmd` FOREIGN KEY (`promotion_id`) REFERENCES `promotions` (`promotion_id`),
+  CONSTRAINT `FKmohfbbf6sb5axr1dryo8b4xhh` FOREIGN KEY (`service_id`) REFERENCES `services` (`service_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `promotion_services`
+--
+
+LOCK TABLES `promotion_services` WRITE;
+/*!40000 ALTER TABLE `promotion_services` DISABLE KEYS */;
+/*!40000 ALTER TABLE `promotion_services` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `promotions`
+--
+
+DROP TABLE IF EXISTS `promotions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `promotions` (
+  `promotion_id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `discount_price` int DEFAULT NULL,
+  `ends_at` datetime(6) NOT NULL,
+  `original_price` int DEFAULT NULL,
+  `promotion_type` enum('BUNDLE','CARD_BENEFIT','PROMO') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `source_url` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `starts_at` datetime(6) NOT NULL,
+  `summary` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image_url` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`promotion_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `promotions`
+--
+
+LOCK TABLES `promotions` WRITE;
+/*!40000 ALTER TABLE `promotions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `promotions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `service_plans`
+--
+
+DROP TABLE IF EXISTS `service_plans`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `service_plans` (
+  `service_plan_id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `billing_cycle` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `monthly_price` int NOT NULL,
+  `plan_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `service_id` bigint NOT NULL,
+  PRIMARY KEY (`service_plan_id`),
+  KEY `FK5p1wait61klif627ro7ya97j9` (`service_id`),
+  CONSTRAINT `FK5p1wait61klif627ro7ya97j9` FOREIGN KEY (`service_id`) REFERENCES `services` (`service_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `service_plans`
+--
+
+LOCK TABLES `service_plans` WRITE;
+/*!40000 ALTER TABLE `service_plans` DISABLE KEYS */;
+INSERT INTO `service_plans` VALUES (1,'2026-03-23 01:46:14.002519','2026-03-23 01:46:14.002519','MONTHLY',7890,'쿠팡와우',1),(2,'2026-03-23 01:46:14.020214','2026-03-23 01:46:14.020214','MONTHLY',9900,'디즈니+ 스탠다드',2),(3,'2026-03-23 01:46:14.033925','2026-03-23 01:46:14.033925','YEARLY',8250,'디즈니+ 스탠다드',2),(4,'2026-03-23 01:46:14.044621','2026-03-23 01:46:14.044621','MONTHLY',13900,'디즈니+ 프리미엄',2),(5,'2026-03-23 01:46:14.055477','2026-03-23 01:46:14.055477','YEARLY',11583,'디즈니+ 프리미엄',2),(6,'2026-03-23 01:46:14.066322','2026-03-23 01:46:14.066322','MONTHLY',7000,'광고형 스탠다드',3),(7,'2026-03-23 01:46:14.078121','2026-03-23 01:46:14.078121','MONTHLY',13500,'스탠다드',3),(8,'2026-03-23 01:46:14.090426','2026-03-23 01:46:14.090426','MONTHLY',17000,'프리미엄',3),(9,'2026-03-23 01:46:14.100869','2026-03-23 01:46:14.100869','MONTHLY',5500,'광고형 스탠다드',4),(10,'2026-03-23 01:46:14.110407','2026-03-23 01:46:14.110407','YEARLY',4158,'광고형 스탠다드',4),(11,'2026-03-23 01:46:14.119630','2026-03-23 01:46:14.119630','MONTHLY',17000,'프리미엄',4),(12,'2026-03-23 01:46:14.128890','2026-03-23 01:46:14.128890','YEARLY',14083,'프리미엄',4),(13,'2026-03-23 01:46:14.136739','2026-03-23 01:46:14.136739','MONTHLY',13500,'스탠다드',4),(14,'2026-03-23 01:46:14.146113','2026-03-23 01:46:14.146113','YEARLY',11250,'스탠다드',4),(15,'2026-03-23 01:46:14.155815','2026-03-23 01:46:14.155815','MONTHLY',9500,'베이직',4),(16,'2026-03-23 01:46:14.162038','2026-03-23 01:46:14.162038','YEARLY',7916,'베이직',4),(17,'2026-03-23 01:46:14.169469','2026-03-23 01:46:14.169469','MONTHLY',12900,'프리미엄',5),(18,'2026-03-23 01:46:14.176008','2026-03-23 01:46:14.176008','MONTHLY',7900,'베이직',5),(19,'2026-03-23 01:46:14.183706','2026-03-23 01:46:14.183706','YEARLY',10825,'프리미엄',5),(20,'2026-03-23 01:46:14.193077','2026-03-23 01:46:14.193077','YEARLY',6658,'베이직',5),(21,'2026-03-23 01:46:14.200126','2026-03-23 01:46:14.200126','MONTHLY',5500,'광고형 스탠다드',6),(22,'2026-03-23 01:46:14.205936','2026-03-23 01:46:14.205936','YEARLY',4158,'광고형 스탠다드',6),(23,'2026-03-23 01:46:14.211791','2026-03-23 01:46:14.211791','MONTHLY',7900,'베이직',6),(24,'2026-03-23 01:46:14.217378','2026-03-23 01:46:14.217378','YEARLY',6583,'베이직',6),(25,'2026-03-23 01:46:14.224099','2026-03-23 01:46:14.224099','MONTHLY',10900,'스탠다드',6),(26,'2026-03-23 01:46:14.230516','2026-03-23 01:46:14.230516','YEARLY',9083,'스탠다드',6),(27,'2026-03-23 01:46:14.238835','2026-03-23 01:46:14.238835','MONTHLY',13900,'프리미엄',6),(28,'2026-03-23 01:46:14.246640','2026-03-23 01:46:14.246640','YEARLY',11583,'프리미엄',6),(29,'2026-03-23 01:46:14.255771','2026-03-23 01:46:14.255771','MONTHLY',13750,'베이직 X FLO 무제한',6),(30,'2026-03-23 01:46:14.263066','2026-03-23 01:46:14.263066','MONTHLY',6700,'베이직 X 나라사랑카드',6),(31,'2026-03-23 01:46:14.271655','2026-03-23 01:46:14.271655','MONTHLY',13750,'베이직 X Bugs 듣기',6);
+/*!40000 ALTER TABLE `service_plans` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `services`
+--
+
+DROP TABLE IF EXISTS `services`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `services` (
+  `service_id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `cancel_guide_url` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `category` enum('OTT') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contact_email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_service_phone` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `logo_url` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`service_id`),
+  UNIQUE KEY `UK3ff0vue74scb6a5dbic1yj2ip` (`code`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `services`
+--
+
+LOCK TABLES `services` WRITE;
+/*!40000 ALTER TABLE `services` DISABLE KEYS */;
+INSERT INTO `services` VALUES (1,'2026-03-23 01:46:13.876134','2026-03-23 01:46:13.876134','https://www.coupangplay.com/faq','OTT','COUPANG_PLAY','playrepresent@coupang.com','1600–9800','/assets/services/COUPANG_PLAY.png','쿠팡'),(2,'2026-03-23 01:46:13.934435','2026-03-23 01:46:13.934435','https://help.disneyplus.com/ko/article/disneyplus-cancel','OTT','DISNEY_PLUS','help@disneyplus.kr','080-822-1416','/assets/services/DISNEY_PLUS.png','디즈니플러스'),(3,'2026-03-23 01:46:13.943473','2026-03-23 01:46:13.943473','https://help.netflix.com/ko/node/407','OTT','NETFLIX','korea@netflix.com','308-321-0161','/assets/services/NETFLIX.png','넷플릭스'),(4,'2026-03-23 01:46:13.950951','2026-03-23 01:46:13.950951','https://www.tving.com/help/notice/137039?page=1','OTT','TVING','tving@cj.net','080-080-0780','/assets/services/TVING.png','티빙'),(5,'2026-03-23 01:46:13.958324','2026-03-23 01:46:13.958324','https://help.watcha.com/hc/ko/articles/31326576396825-TV%EC%97%90%EC%84%9C-%EA%B5%AC%EB%8F%85-%EC%A4%91%EC%9D%B8%EB%8D%B0-%ED%95%B4%EC%A7%80%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%96%B4%EC%9A%94','OTT','WATCHA','cs@watcha.com','02-515-9985','/assets/services/WATCHA.png','왓챠'),(6,'2026-03-23 01:46:13.966587','2026-03-23 01:46:13.966587','https://www.wavve.com/customer/faq?faqId=3872','OTT','WAVVE','helpdesk@wavve.com',NULL,'/assets/services/WAVVE.png','wavve');
+/*!40000 ALTER TABLE `services` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `subscriptions`
+--
+
+DROP TABLE IF EXISTS `subscriptions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `subscriptions` (
+  `subscription_id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `next_billing_date` date DEFAULT NULL,
+  `service_id` bigint NOT NULL,
+  `service_plan_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
+  `low_usage_cycle_ym` varchar(7) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `low_usage_detected` bit(1) NOT NULL,
+  PRIMARY KEY (`subscription_id`),
+  UNIQUE KEY `uk_subscriptions_user_service` (`user_id`,`service_id`),
+  KEY `FKn3qm9el6cgrglwc9rmd37d1n1` (`service_id`),
+  KEY `FKec9yhjp1tom67djkl3wfqk58x` (`service_plan_id`),
+  CONSTRAINT `FKec9yhjp1tom67djkl3wfqk58x` FOREIGN KEY (`service_plan_id`) REFERENCES `service_plans` (`service_plan_id`),
+  CONSTRAINT `FKhro52ohfqfbay9774bev0qinr` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  CONSTRAINT `FKn3qm9el6cgrglwc9rmd37d1n1` FOREIGN KEY (`service_id`) REFERENCES `services` (`service_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `subscriptions`
+--
+
+LOCK TABLES `subscriptions` WRITE;
+/*!40000 ALTER TABLE `subscriptions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `subscriptions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `user_id` bigint NOT NULL AUTO_INCREMENT,
+  `created_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL,
+  `checkin_alert_enabled` bit(1) NOT NULL,
+  `connected_at` datetime(6) NOT NULL,
+  `display_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_login_at` datetime(6) DEFAULT NULL,
+  `optional_consent_agreed` bit(1) NOT NULL,
+  `profile_image_url` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `promo_alert_enabled` bit(1) NOT NULL,
+  `provider` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'GOOGLE',
+  `provider_user_id` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `finance_user_key` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_synced_at` datetime(6) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `uk_users_provider_provider_user_id` (`provider`,`provider_user_id`),
+  UNIQUE KEY `uk_users_finance_user_key` (`finance_user_key`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'2026-03-26 11:16:10.932317','2026-03-26 11:16:10.932317',_binary '\0','2026-03-26 11:16:10.850542','박규빈','dreaer189@gmail.com','2026-03-26 11:16:10.850542',_binary '\0','https://lh3.googleusercontent.com/a/ACg8ocIbtL0n9REZF7PzOPiIt3wXO8oTm47Rgbpd3LnYkmVJWWqqqVhQ=s96-c',_binary '\0','GOOGLE','110539894329754809731',NULL,NULL),(3,'2026-03-27 10:39:40.874401','2026-03-27 11:05:10.057385',_binary '\0','2026-03-27 10:39:40.869592','사용자','usb1960@naver.com','2026-03-27 11:05:10.050313',_binary '\0','http://k.kakaocdn.net/dn/bWAHEq/dJMcag49lHm/6XeLqxvvVnswB7FKHGctnK/img_640x640.jpg',_binary '\0','KAKAO','4816098176',NULL,NULL);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'E106'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-03-30 10:47:12

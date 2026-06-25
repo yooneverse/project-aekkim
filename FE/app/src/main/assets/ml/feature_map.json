@@ -1,0 +1,23 @@
+{
+  "f0": "fasttext_sub_prob",
+  "f1": "has_subscription_token",
+  "f2": "has_english_chars",
+  "f3": "is_generic_gateway",
+  "f4": "is_pay_gateway",
+  "f5": "catalog_alias_score",
+  "f6": "catalog_hint_count",
+  "f7": "generic_subscription_token_score",
+  "f8": "amount",
+  "f9": "min_diff_to_catalog_price",
+  "f10": "plan_price_hint_score",
+  "f11": "is_installment",
+  "f12": "offline_penalty_score",
+  "f13": "repeat_merchant_score",
+  "f14": "recurrence_is_monthly",
+  "f15": "candidate_score_total",
+  "f16": "usage_7d_ms",
+  "f17": "usage_30d_ms",
+  "f18": "usage_permission_granted",
+  "f19": "batch_lookup_matched",
+  "f20": "batch_lookup_hit_count"
+}

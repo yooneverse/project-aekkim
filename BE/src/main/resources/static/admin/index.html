@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E106 Demo Admin</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Pretendard", "Noto Sans KR", sans-serif;
+            background: #f5efe4;
+            color: #1f1b18;
+        }
+        .page {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        .hero, .card {
+            background: #fffaf2;
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+        }
+        .hero {
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        .card {
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        h1, h2, h3 {
+            margin: 0 0 8px;
+        }
+        p {
+            margin: 0;
+            color: #655d57;
+            line-height: 1.5;
+        }
+        .tab-list, .actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .tab-list {
+            margin-top: 18px;
+        }
+        button {
+            border: 0;
+            border-radius: 999px;
+            padding: 10px 14px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+        .primary {
+            background: #bc4c04;
+            color: white;
+        }
+        .secondary {
+            background: rgba(0, 0, 0, .08);
+            color: #1f1b18;
+        }
+        .tab-button {
+            background: rgba(0, 0, 0, .06);
+            color: #1f1b18;
+        }
+        .tab-button.active {
+            background: #1f1b18;
+            color: #fffaf2;
+        }
+        .tab-panel {
+            display: none;
+            margin-top: 20px;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+        .status {
+            display: none;
+            margin-bottom: 16px;
+            padding: 12px 14px;
+            border-radius: 14px;
+        }
+        .status.ok {
+            display: block;
+            background: rgba(12, 122, 67, .12);
+            color: #0b6a3b;
+        }
+        .status.error {
+            display: block;
+            background: rgba(165, 27, 12, .12);
+            color: #8c190e;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, .12);
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 96px;
+            resize: vertical;
+        }
+        .endpoint {
+            padding: 10px 12px;
+            border-radius: 14px;
+            background: rgba(0, 0, 0, .04);
+            font-family: Consolas, monospace;
+            font-size: 13px;
+        }
+        .button-stack {
+            display: grid;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(0, 0, 0, .08);
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: rgba(0, 0, 0, .04);
+        }
+        .table-wrap {
+            overflow-x: auto;
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 16px;
+            margin-top: 16px;
+        }
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <section class="hero">
+        <h1>E106 Demo Admin Console</h1>
+        <p>서비스, 사용자, 구독, 번들, 프로모션 데이터를 조회하고 seed import를 확인할 수 있는 개발용 관리자 페이지입니다.</p>
+        <div class="tab-list">
+            <button class="tab-button active" data-tab="service-tab" type="button">서비스</button>
+            <button class="tab-button" data-tab="user-tab" type="button">사용자</button>
+            <button class="tab-button" data-tab="subscription-tab" type="button">구독</button>
+            <button class="tab-button" data-tab="bundle-tab" type="button">번들</button>
+            <button class="tab-button" data-tab="promotion-tab" type="button">프로모션</button>
+            <button class="tab-button" data-tab="usage-tab" type="button">사용량</button>
+            <button class="tab-button" data-tab="payment-tab" type="button">결제내역</button>
+            <button class="tab-button" data-tab="notification-tab" type="button">알림</button>
+            <button class="tab-button" data-tab="batch-tab" type="button">배치</button>
+        </div>
+    </section>
+
+    <div id="status" class="status"></div>
+
+    <section id="service-tab" class="tab-panel active">
+        <div class="grid">
+            <section class="card">
+                <h2>서비스 / 요금제 JSON Import</h2>
+                <p>서비스 카탈로그 JSON 1개를 업로드해 서비스와 요금제를 함께 upsert합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">POST /api/v1/dev/admin/imports/service-catalog</div>
+                <form id="service-catalog-import-form">
+                    <input id="service-catalog-file" type="file" accept=".json,application/json" required>
+                    <div class="actions">
+                        <button class="primary" type="submit">서비스 / 요금제 Import</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>서비스 / 요금제 조회</h2>
+                <p>현재 저장된 서비스와 요금제 목록을 조회합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">GET /api/v1/dev/admin/services</div>
+                <div class="actions" style="margin-top: 14px;">
+                    <button class="secondary" type="button" onclick="loadServices()">서비스 / 요금제 조회</button>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>code</th>
+                            <th>name</th>
+                            <th>category</th>
+                            <th>plans</th>
+                        </tr>
+                        </thead>
+                        <tbody id="services-table"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="user-tab" class="tab-panel">
+        <section class="card">
+            <h2>사용자 조회</h2>
+            <p>현재 저장된 사용자 목록을 조회합니다.</p>
+            <div class="endpoint" style="margin-top: 14px;">GET /api/v1/dev/admin/users</div>
+            <div class="actions" style="margin-top: 14px;">
+                <button class="secondary" type="button" onclick="loadUsers()">사용자 조회</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>provider</th>
+                        <th>providerUserId</th>
+                        <th>email</th>
+                        <th>displayName</th>
+                        <th>alerts</th>
+                        <th>optionalConsent</th>
+                        <th>connectedAt</th>
+                        <th>lastLoginAt</th>
+                    </tr>
+                    </thead>
+                    <tbody id="users-table"></tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+
+    <section id="subscription-tab" class="tab-panel">
+        <section class="card">
+            <h2>구독 조회</h2>
+            <p>현재 저장된 구독을 userId 기준으로 조회합니다.</p>
+            <div class="endpoint" style="margin-top: 14px;">GET /api/v1/dev/admin/subscriptions?userId=1</div>
+            <form id="subscription-query-form">
+                <input id="subscription-query-user-id" type="number" min="1" placeholder="userId (비우면 전체 조회)">
+                <div class="actions">
+                    <button class="secondary" type="submit">구독 조회</button>
+                </div>
+            </form>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>userId</th>
+                        <th>type</th>
+                        <th>service</th>
+                        <th>plan</th>
+                        <th>bundle</th>
+                        <th>nextBillingDate</th>
+                    </tr>
+                    </thead>
+                    <tbody id="subscriptions-table"></tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+
+    <section id="bundle-tab" class="tab-panel">
+        <div class="grid">
+            <section class="card">
+                <h2>번들 JSON Import</h2>
+                <p>번들 카탈로그 JSON 1개를 업로드해 번들과 포함 서비스를 upsert합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">POST /api/v1/dev/admin/imports/bundles</div>
+                <form id="bundle-import-form">
+                    <input id="bundle-file" type="file" accept=".json,application/json" required>
+                    <div class="actions">
+                        <button class="primary" type="submit">번들 Import</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>번들 조회</h2>
+                <p>현재 저장된 번들 마스터와 포함 서비스 목록을 조회합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">GET /api/v1/dev/admin/bundles</div>
+                <div class="actions" style="margin-top: 14px;">
+                    <button class="secondary" type="button" onclick="loadBundles()">번들 조회</button>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>code</th>
+                            <th>name</th>
+                            <th>planName</th>
+                            <th>price</th>
+                            <th>services</th>
+                        </tr>
+                        </thead>
+                        <tbody id="bundles-table"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="promotion-tab" class="tab-panel">
+        <div class="grid">
+            <section class="card">
+                <h2>프로모션 JSON Import</h2>
+                <p>프로모션 JSON 파일을 여러 개 업로드해 일반 프로모션과 카드 혜택을 함께 upsert합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">POST /api/v1/dev/admin/imports/promotions</div>
+                <form id="promotion-import-form">
+                    <input id="promotion-files" type="file" accept=".json,application/json" multiple required>
+                    <div class="actions">
+                        <button class="primary" type="submit">프로모션 Import</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>프로모션 조회</h2>
+                <p>현재 저장된 프로모션과 연결 서비스 목록을 조회합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">GET /api/v1/dev/admin/promotions</div>
+                <div class="actions" style="margin-top: 14px;">
+                    <button class="secondary" type="button" onclick="loadPromotions()">프로모션 조회</button>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>type</th>
+                            <th>title</th>
+                            <th>billingCycle</th>
+                            <th>period</th>
+                            <th>services</th>
+                        </tr>
+                        </thead>
+                        <tbody id="promotions-table"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="usage-tab" class="tab-panel">
+        <div class="grid">
+            <section class="card">
+                <h2>구독 사용량 JSON Import</h2>
+                <p>서비스 코드, 사용일, 사용분이 담긴 JSON 1개를 업로드해 일별 사용량 데이터를 upsert합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">POST /api/v1/dev/admin/imports/subscription-usages</div>
+                <form id="usage-import-form">
+                    <input id="usage-file" type="file" accept=".json,application/json" required>
+                    <div class="actions">
+                        <button class="primary" type="submit">구독 사용량 Import</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>구독 사용량 조회</h2>
+                <p>현재 저장된 일별 사용량 원자료를 조회합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">GET /api/v1/dev/admin/subscription-usages</div>
+                <div class="actions" style="margin-top: 14px;">
+                    <button class="secondary" type="button" onclick="loadSubscriptionUsages()">구독 사용량 조회</button>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>userId</th>
+                            <th>service</th>
+                            <th>usageDate</th>
+                            <th>usedMinutes</th>
+                        </tr>
+                        </thead>
+                        <tbody id="usage-table"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="payment-tab" class="tab-panel">
+        <div class="grid">
+            <section class="card">
+                <h2>결제내역 JSON Import</h2>
+                <p>사용자 결제내역 JSON 1개를 업로드해 결제 데이터를 저장합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">POST /api/v1/dev/admin/payment-histories</div>
+                <form id="payment-import-form">
+                    <input id="payment-import-file" type="file" accept=".json,application/json" required>
+                    <div class="actions">
+                        <button class="primary" type="submit">결제내역 Import</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>결제내역 조회</h2>
+                <p>현재 저장된 결제내역 목록을 조회합니다.</p>
+                <div class="endpoint" style="margin-top: 14px;">GET /api/v1/dev/admin/payment-histories</div>
+                <form id="payment-query-form">
+                    <div class="actions">
+                        <button class="secondary" type="submit">결제내역 조회</button>
+                    </div>
+                </form>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>paymentId</th>
+                            <th>merchantRaw</th>
+                            <th>amount</th>
+                            <th>paymentDate</th>
+                            <th>category</th>
+                        </tr>
+                        </thead>
+                        <tbody id="payment-table"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="notification-tab" class="tab-panel">
+        <section class="card">
+            <h2>알림 전송 테스트</h2>
+            <p>FCM 알림 전송 API를 직접 호출해 CHECKIN, PROMO, CHURN_REVIEW 알림을 테스트합니다.</p>
+            <div class="endpoint" style="margin-top: 14px;">POST /api/v1/dev/admin/notifications</div>
+            <form id="notification-form">
+                <input id="notification-user-id" type="number" min="1" placeholder="userId" required>
+                <select id="notification-type">
+                    <option value="CHECKIN">CHECKIN</option>
+                    <option value="PROMO">PROMO</option>
+                    <option value="CHURN_REVIEW">CHURN_REVIEW</option>
+                </select>
+                <input id="notification-reference-id" type="number" min="1" placeholder="referenceId (선택)">
+                <input id="notification-title" placeholder="알림 제목" required>
+                <textarea id="notification-body" placeholder="알림 내용" required></textarea>
+                <div class="actions">
+                    <button class="primary" type="submit">알림 전송</button>
+                </div>
+            </form>
+        </section>
+    </section>
+
+    <section id="batch-tab" class="tab-panel">
+        <section class="card">
+            <h2>배치 실행</h2>
+            <p>타겟 선정과 알림 전송 배치를 직접 실행합니다.</p>
+            <div class="button-stack">
+                <button class="secondary" type="button" onclick="runBatch('checkin-target-selection')">CHECKIN 타겟 선정 실행</button>
+                <button class="secondary" type="button" onclick="runBatch('checkin-notification-send')">CHECKIN 알림 전송 실행</button>
+                <button class="secondary" type="button" onclick="runBatch('promo-target-selection')">PROMO 타겟 선정 실행</button>
+                <button class="secondary" type="button" onclick="runBatch('promo-notification-send')">PROMO 알림 전송 실행</button>
+            </div>
+        </section>
+    </section>
+</div>
+
+<script>
+    function bindTabs() {
+        const buttons = document.querySelectorAll('.tab-button');
+        const panels = document.querySelectorAll('.tab-panel');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(item => item.classList.remove('active'));
+                panels.forEach(panel => panel.classList.remove('active'));
+                button.classList.add('active');
+                document.getElementById(button.dataset.tab).classList.add('active');
+            });
+        });
+    }
+
+    function showStatus(message, error = false) {
+        const el = document.getElementById('status');
+        el.className = 'status ' + (error ? 'error' : 'ok');
+        el.textContent = message;
+    }
+
+    async function api(url, options = {}) {
+        const res = await fetch(url, {
+            headers: options.skipJsonHeaders
+                ? { ...(options.headers || {}) }
+                : { 'Content-Type': 'application/json', ...(options.headers || {}) },
+            ...options
+        });
+        const body = await res.json().catch(() => null);
+        if (!res.ok || !body?.success) {
+            throw new Error(body?.message || '요청 처리 중 오류가 발생했습니다.');
+        }
+        return body.data;
+    }
+
+    async function runBatch(jobName) {
+        try {
+            const data = await api(`/api/v1/dev/admin/batch-executions/${jobName}`, { method: 'POST' });
+            showStatus(`${data.jobName} 실행 완료 (executionId=${data.jobExecutionId}, status=${data.status})`);
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    }
+
+    async function loadServices() {
+        try {
+            const services = await api('/api/v1/dev/admin/services');
+            document.getElementById('services-table').innerHTML = services.map(service => `
+                <tr>
+                    <td>${service.serviceId}</td>
+                    <td>${service.code}</td>
+                    <td>${service.name}</td>
+                    <td>${service.category}</td>
+                    <td>${service.plans.map(plan =>
+                        `${plan.planName} (${plan.billingCycle} / ${plan.monthlyPrice})`).join('<br>') || '-'}
+                    </td>
+                </tr>
+            `).join('');
+            showStatus(`서비스 / 요금제 조회 완료: ${services.length}건`);
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    }
+
+    async function loadUsers() {
+        try {
+            const users = await api('/api/v1/dev/admin/users');
+            document.getElementById('users-table').innerHTML = users.map(user => `
+                <tr>
+                    <td>${user.userId}</td>
+                    <td>${user.provider}</td>
+                    <td>${user.providerUserId}</td>
+                    <td>${user.email ?? '-'}</td>
+                    <td>${user.displayName}</td>
+                    <td>checkin=${user.checkinAlertEnabled}, promo=${user.promoAlertEnabled}</td>
+                    <td>${user.optionalConsentAgreed}</td>
+                    <td>${user.connectedAt ?? '-'}</td>
+                    <td>${user.lastLoginAt ?? '-'}</td>
+                </tr>
+            `).join('');
+            showStatus(`사용자 조회 완료: ${users.length}건`);
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    }
+
+    async function loadBundles() {
+        try {
+            const bundles = await api('/api/v1/dev/admin/bundles');
+            document.getElementById('bundles-table').innerHTML = bundles.map(bundle => `
+                <tr>
+                    <td>${bundle.bundleId}</td>
+                    <td>${bundle.code}</td>
+                    <td>${bundle.name}</td>
+                    <td>${bundle.planName}</td>
+                    <td>${bundle.monthlyPrice}${bundle.originalPrice ? ` / ${bundle.originalPrice}` : ''}</td>
+                    <td>${bundle.services.map(service => service.serviceCode).join(', ') || '-'}</td>
+                </tr>
+            `).join('');
+            showStatus(`번들 조회 완료: ${bundles.length}건`);
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    }
+
+    async function loadSubscriptions(userId = null) {
+        try {
+            const url = userId ? `/api/v1/dev/admin/subscriptions?userId=${encodeURIComponent(userId)}` : '/api/v1/dev/admin/subscriptions';
+            const subscriptions = await api(url);
+            document.getElementById('subscriptions-table').innerHTML = subscriptions.map(subscription => `
+                <tr>
+                    <td>${subscription.subscriptionId}</td>
+                    <td>${subscription.userId}</td>
+                    <td>${subscription.subscriptionType}</td>
+                    <td>${subscription.serviceCode ? `${subscription.serviceCode}<br>${subscription.serviceName}` : '-'}</td>
+                    <td>${subscription.servicePlanName ? `${subscription.servicePlanName} (${subscription.billingCycle ?? '-'})` : '-'}</td>
+                    <td>${subscription.bundleCode ? `${subscription.bundleCode}<br>${subscription.bundleName}` : '-'}</td>
+                    <td>${subscription.nextBillingDate ?? '-'}</td>
+                </tr>
+            `).join('');
+            showStatus(`구독 조회 완료: ${subscriptions.length}건`);
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    }
+
+    async function loadPromotions() {
+        try {
+            const promotions = await api('/api/v1/dev/admin/promotions');
+            document.getElementById('promotions-table').innerHTML = promotions.map(promotion => `
+                <tr>
+                    <td>${promotion.promotionId}</td>
+                    <td>${promotion.promotionType}</td>
+                    <td>${promotion.title}</td>
+                    <td>${promotion.billingCycle ?? '-'}</td>
+                    <td>${promotion.startsAt} ~ ${promotion.endsAt}</td>
+                    <td>${promotion.services.map(service => service.serviceCode).join(', ') || '-'}</td>
+                </tr>
+            `).join('');
+            showStatus(`프로모션 조회 완료: ${promotions.length}건`);
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    }
+
+    async function loadSubscriptionUsages() {
+        try {
+            const usages = await api('/api/v1/dev/admin/subscription-usages');
+            document.getElementById('usage-table').innerHTML = usages.map(usage => `
+                <tr>
+                    <td>${usage.usageId}</td>
+                    <td>${usage.userId}</td>
+                    <td>${usage.serviceName} (${usage.serviceCode})</td>
+                    <td>${usage.usageDate}</td>
+                    <td>${usage.usedMinutes}</td>
+                </tr>
+            `).join('');
+            showStatus(`구독 사용량 조회 완료: ${usages.length}건`);
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    }
+
+    document.getElementById('notification-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        try {
+            const request = {
+                userId: Number(document.getElementById('notification-user-id').value),
+                type: document.getElementById('notification-type').value,
+                referenceId: document.getElementById('notification-reference-id').value
+                    ? Number(document.getElementById('notification-reference-id').value)
+                    : null,
+                title: document.getElementById('notification-title').value,
+                body: document.getElementById('notification-body').value
+            };
+            const data = await api('/api/v1/dev/admin/notifications', {
+                method: 'POST',
+                body: JSON.stringify(request)
+            });
+            showStatus(`알림 전송 완료 (notificationId=${data.notificationId})`);
+            event.target.reset();
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    });
+
+    document.getElementById('service-catalog-import-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        try {
+            const file = document.getElementById('service-catalog-file').files[0];
+            if (!file) {
+                throw new Error('서비스 카탈로그 JSON 파일을 선택해주세요.');
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const data = await api('/api/v1/dev/admin/imports/service-catalog', {
+                method: 'POST',
+                body: formData,
+                skipJsonHeaders: true
+            });
+            showStatus(`${data.importType} import 완료: ${data.processedCount}건 처리`);
+            event.target.reset();
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    });
+
+    document.getElementById('bundle-import-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        try {
+            const file = document.getElementById('bundle-file').files[0];
+            if (!file) {
+                throw new Error('번들 JSON 파일을 선택해주세요.');
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const data = await api('/api/v1/dev/admin/imports/bundles', {
+                method: 'POST',
+                body: formData,
+                skipJsonHeaders: true
+            });
+            showStatus(`${data.importType} import 완료: ${data.processedCount}건 처리`);
+            event.target.reset();
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    });
+
+    document.getElementById('subscription-query-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const userId = document.getElementById('subscription-query-user-id').value;
+        await loadSubscriptions(userId || null);
+    });
+
+    document.getElementById('promotion-import-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        try {
+            const files = Array.from(document.getElementById('promotion-files').files);
+            if (files.length === 0) {
+                throw new Error('프로모션 JSON 파일을 하나 이상 선택해주세요.');
+            }
+
+            const formData = new FormData();
+            files.forEach(file => formData.append('files', file));
+
+            const data = await api('/api/v1/dev/admin/imports/promotions', {
+                method: 'POST',
+                body: formData,
+                skipJsonHeaders: true
+            });
+            showStatus(`${data.importType} import 완료: ${data.processedCount}건 처리`);
+            event.target.reset();
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    });
+
+    document.getElementById('usage-import-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        try {
+            const file = document.getElementById('usage-file').files[0];
+            if (!file) {
+                throw new Error('구독 사용량 JSON 파일을 선택해주세요.');
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const data = await api('/api/v1/dev/admin/imports/subscription-usages', {
+                method: 'POST',
+                body: formData,
+                skipJsonHeaders: true
+            });
+            showStatus(`${data.importType} import 완료: ${data.processedCount}건 처리`);
+            event.target.reset();
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    });
+
+    document.getElementById('payment-import-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        try {
+            const file = document.getElementById('payment-import-file').files[0];
+            if (!file) {
+                throw new Error('결제내역 JSON 파일을 선택해주세요.');
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const data = await api('/api/v1/dev/admin/payment-histories', {
+                method: 'POST',
+                body: formData,
+                skipJsonHeaders: true
+            });
+            showStatus(`결제내역 import 완료: ${data.savedCount}건 저장, ${data.skippedCount}건 건너뜀`);
+            event.target.reset();
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    });
+
+    document.getElementById('payment-query-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        try {
+            const data = await api('/api/v1/dev/admin/payment-histories');
+            document.getElementById('payment-table').innerHTML = data.payments.map(payment => `
+                <tr>
+                    <td>${payment.paymentHistoryId}</td>
+                    <td>${payment.paymentId}</td>
+                    <td>${payment.merchantRaw}</td>
+                    <td>${payment.amount}</td>
+                    <td>${payment.paymentDate}</td>
+                    <td>${payment.category ?? '-'}</td>
+                </tr>
+            `).join('');
+            showStatus(`결제내역 조회 완료: ${data.count}건`);
+        } catch (error) {
+            showStatus(error.message, true);
+        }
+    });
+
+    bindTabs();
+</script>
+</body>
+</html>

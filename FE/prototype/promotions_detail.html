@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애낌(AEKKIM) 프로모션 상세 목업 (토스 스타일)</title>
+    <!-- 프리텐다드 폰트 적용 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #E5E8EB; 
+            padding: 40px;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        /* 스마트폰 디바이스 프레임 */
+        .device {
+            width: 375px;
+            height: 812px;
+            border-radius: 36px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== 라이트 모드 테마 (Toss) ===== */
+        .light {
+            background-color: #FFFFFF;
+            color: #191F28;
+            --bg-color: #FFFFFF;
+            --text-main: #191F28;
+            --text-sub: #8B95A1;
+            --text-desc: #4E5968;
+            --divider: #F2F4F6;
+            --toss-blue: #3182F6;
+            --box-bg: #F9FAFB;
+            --badge-bg: #E8F3FF;
+            --badge-text: #1B64DA;
+            --badge-red-bg: #FEECEF;
+            --badge-red-text: #F04452;
+            --btn-primary-bg: #3182F6;
+            --btn-primary-text: #FFFFFF;
+        }
+
+        /* ===== 다크 모드 테마 ===== */
+        .dark {
+            background-color: #101010;
+            color: #F9FAFB;
+            --bg-color: #101010;
+            --text-main: #F9FAFB;
+            --text-sub: #8B95A1;
+            --text-desc: #D1D6DB;
+            --divider: #1C1C1E;
+            --toss-blue: #3182F6;
+            --box-bg: #1C1C1E;
+            --badge-bg: #1A273A;
+            --badge-text: #4E95FF;
+            --badge-red-bg: #3A1D20;
+            --badge-red-text: #FF707F;
+            --btn-primary-bg: #3182F6;
+            --btn-primary-text: #FFFFFF;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* 헤더 영역 */
+        .header {
+            height: 56px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            background-color: var(--bg-color);
+            z-index: 10;
+        }
+
+        .back-btn {
+            font-size: 24px;
+            color: var(--text-main);
+            margin-right: 16px;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
+        .header-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* 메인 스크롤 콘텐츠 */
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 100px;
+        }
+        
+        .content::-webkit-scrollbar { display: none; }
+
+        /* Hero / 요약 섹션 */
+        .hero-section {
+            padding: 24px 24px 40px;
+        }
+
+        .badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .badge.save {
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+        }
+
+        .badge.expiry {
+            background-color: var(--badge-red-bg);
+            color: var(--badge-red-text);
+        }
+
+        .hero-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.4;
+            margin-bottom: 24px;
+            word-break: keep-all;
+        }
+
+        /* 가격 비교 박스 */
+        .price-box {
+            background-color: var(--box-bg);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price-col {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .price-label {
+            font-size: 14px;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .price-value.old {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-sub);
+            text-decoration: line-through;
+        }
+
+        .price-value.new {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--toss-blue);
+        }
+
+        .price-arrow {
+            color: var(--text-sub);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* 굵은 구분선 */
+        .thick-divider {
+            height: 12px;
+            background-color: var(--divider);
+            width: 100%;
+        }
+
+        /* 공통 섹션 스타일 */
+        .section {
+            padding: 32px 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-desc);
+            margin-bottom: 24px;
+            word-break: keep-all;
+        }
+
+        /* 조건 목록 (Bullet List) */
+        .condition-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .condition-item {
+            position: relative;
+            padding-left: 20px;
+            font-size: 15px;
+            color: var(--text-desc);
+            line-height: 1.5;
+            word-break: keep-all;
+        }
+
+        .condition-item::before {
+            content: '•';
+            position: absolute;
+            left: 4px;
+            top: -1px;
+            color: var(--text-sub);
+            font-size: 18px;
+        }
+
+        /* 하단 고정 CTA 버튼 */
+        .bottom-fixed {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 16px 24px 32px;
+            box-sizing: border-box;
+            background: linear-gradient(to top, var(--bg-color) 80%, transparent);
+        }
+
+        .btn-primary {
+            width: 100%;
+            height: 56px;
+            border-radius: 16px;
+            border: none;
+            background-color: var(--btn-primary-bg);
+            color: var(--btn-primary-text);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.2s;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+
+        .device-label {
+            position: absolute;
+            top: -40px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 라이트 모드 -->
+    <div style="position: relative;">
+        <div class="device-label">Light Mode</div>
+        <div class="device light">
+            
+            <div class="header">
+                <span class="back-btn">‹</span>
+                <span class="header-title">절약 방법 상세</span>
+            </div>
+
+            <div class="content">
+                <!-- 1. Hero & 가격 비교 시각화 -->
+                <div class="hero-section">
+                    <div class="badges">
+                        <div class="badge save">매월 8,600원 절약</div>
+                        <div class="badge expiry">D-15 종료</div>
+                    </div>
+                    <div class="hero-title">네이버플러스 멤버십으로<br>넷플릭스 더 저렴하게 보기</div>
+                    
+                    <div class="price-box">
+                        <div class="price-col">
+                            <span class="price-label">기존 넷플릭스</span>
+                            <span class="price-value old">13,500원</span>
+                        </div>
+                        <div class="price-arrow">→</div>
+                        <div class="price-col" style="align-items: flex-end;">
+                            <span class="price-label">멤버십 적용 시</span>
+                            <span class="price-value new">월 4,900원</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thick-divider"></div>
+
+                <!-- 2. 계산 근거 및 적용 방법 -->
+                <div class="section">
+                    <div class="section-title">어떻게 저렴해지나요?</div>
+                    <div class="section-desc">
+                        월 4,900원인 '네이버플러스 멤버십'에 가입하면 무료로 제공되는 디지털 콘텐츠 혜택 중 <strong>'넷플릭스 광고형 스탠다드'</strong>를 선택할 수 있어요.<br><br>
+                        기존에 보던 13,500원짜리 요금제를 해지하고 이 혜택으로 변경하면, 한 달에 무려 8,600원을 아낄 수 있습니다.
+                    </div>
+                </div>
+
+                <div class="thick-divider"></div>
+
+                <!-- 3. 조건 및 유의사항 -->
+                <div class="section">
+                    <div class="section-title">확인해 주세요</div>
+                    <ul class="condition-list">
+                        <li class="condition-item">콘텐츠 시청 전후에 광고가 노출되는 요금제입니다.</li>
+                        <li class="condition-item">이미 사용 중인 넷플릭스 계정과 바로 연동할 수 있습니다.</li>
+                        <li class="condition-item">네이버플러스 멤버십 혜택 제공 기간 내에만 유지됩니다.</li>
+                        <li class="condition-item">넷플릭스 외의 다른 디지털 혜택(티빙 등)과 중복 선택할 수 없습니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 하단 고정 혜택 받기 버튼 -->
+            <div class="bottom-fixed">
+                <button class="btn-primary" onclick="alert('제휴사 외부 링크 또는 딥링크로 이동합니다.')">적용하러 가기</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 다크 모드 -->
+    <div style="position: relative;">
+        <div class="device-label">Dark Mode</div>
+        <div class="device dark">
+            
+            <div class="header">
+                <span class="back-btn">‹</span>
+                <span class="header-title">절약 방법 상세</span>
+            </div>
+
+            <div class="content">
+                <!-- 1. Hero & 가격 비교 시각화 -->
+                <div class="hero-section">
+                    <div class="badges">
+                        <div class="badge save">매월 8,600원 절약</div>
+                        <div class="badge expiry">D-15 종료</div>
+                    </div>
+                    <div class="hero-title">네이버플러스 멤버십으로<br>넷플릭스 더 저렴하게 보기</div>
+                    
+                    <div class="price-box">
+                        <div class="price-col">
+                            <span class="price-label">기존 넷플릭스</span>
+                            <span class="price-value old">13,500원</span>
+                        </div>
+                        <div class="price-arrow">→</div>
+                        <div class="price-col" style="align-items: flex-end;">
+                            <span class="price-label">멤버십 적용 시</span>
+                            <span class="price-value new">월 4,900원</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thick-divider"></div>
+
+                <!-- 2. 계산 근거 및 적용 방법 -->
+                <div class="section">
+                    <div class="section-title">어떻게 저렴해지나요?</div>
+                    <div class="section-desc">
+                        월 4,900원인 '네이버플러스 멤버십'에 가입하면 무료로 제공되는 디지털 콘텐츠 혜택 중 <strong>'넷플릭스 광고형 스탠다드'</strong>를 선택할 수 있어요.<br><br>
+                        기존에 보던 13,500원짜리 요금제를 해지하고 이 혜택으로 변경하면, 한 달에 무려 8,600원을 아낄 수 있습니다.
+                    </div>
+                </div>
+
+                <div class="thick-divider"></div>
+
+                <!-- 3. 조건 및 유의사항 -->
+                <div class="section">
+                    <div class="section-title">확인해 주세요</div>
+                    <ul class="condition-list">
+                        <li class="condition-item">콘텐츠 시청 전후에 광고가 노출되는 요금제입니다.</li>
+                        <li class="condition-item">이미 사용 중인 넷플릭스 계정과 바로 연동할 수 있습니다.</li>
+                        <li class="condition-item">네이버플러스 멤버십 혜택 제공 기간 내에만 유지됩니다.</li>
+                        <li class="condition-item">넷플릭스 외의 다른 디지털 혜택(티빙 등)과 중복 선택할 수 없습니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 하단 고정 혜택 받기 버튼 -->
+            <div class="bottom-fixed">
+                <button class="btn-primary" onclick="alert('제휴사 외부 링크 또는 딥링크로 이동합니다.')">적용하러 가기</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

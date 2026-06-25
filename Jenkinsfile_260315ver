@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+
+    options {
+        skipDefaultCheckout(true)
+    }
+
+    environment {
+        IMAGE_NAME = 'yourdockerhubid/e106-backend-dev'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                dir('backend') {
+                    sh 'chmod +x ./gradlew'
+                    sh './gradlew clean build -x test'
+                }
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME:latest ./backend'
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                echo '여기에 Docker Hub credentials 연동'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo '여기에 dev 서버 배포 스크립트'
+            }
+        }
+    }
+}

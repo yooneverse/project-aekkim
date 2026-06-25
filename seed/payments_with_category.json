@@ -1,0 +1,7016 @@
+﻿[
+    {
+        "paymentId":  "pay_20250101_0001",
+        "merchantRaw":  "보너스마트",
+        "amount":  4800,
+        "paymentDate":  "2025-01-01",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250101_0002",
+        "merchantRaw":  "마츠도",
+        "amount":  89500,
+        "paymentDate":  "2025-01-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250101_0003",
+        "merchantRaw":  "(주)신세계백화점센",
+        "amount":  5800,
+        "paymentDate":  "2025-01-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250101_0004",
+        "merchantRaw":  "컴인워시부산본점",
+        "amount":  6300,
+        "paymentDate":  "2025-01-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250102_0005",
+        "merchantRaw":  "크린토피아부산부경",
+        "amount":  13200,
+        "paymentDate":  "2025-01-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250102_0006",
+        "merchantRaw":  "워시맨",
+        "amount":  21600,
+        "paymentDate":  "2025-01-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250103_0001",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  5300,
+        "paymentDate":  "2025-01-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250104_0002",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  21800,
+        "paymentDate":  "2025-01-04",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250105_0007",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  131100,
+        "paymentDate":  "2025-01-05",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250105_0008",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  6200,
+        "paymentDate":  "2025-01-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250105_0009",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  78700,
+        "paymentDate":  "2025-01-05",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250105_0010",
+        "merchantRaw":  "오빠다방",
+        "amount":  21000,
+        "paymentDate":  "2025-01-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250105_0003",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-01-05",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250106_0011",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  30000,
+        "paymentDate":  "2025-01-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250106_0004",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  8200,
+        "paymentDate":  "2025-01-06",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250107_0012",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  14900,
+        "paymentDate":  "2025-01-07",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250107_0013",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  15600,
+        "paymentDate":  "2025-01-07",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250108_0014",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  10000,
+        "paymentDate":  "2025-01-08",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250108_0015",
+        "merchantRaw":  "SR",
+        "amount":  122800,
+        "paymentDate":  "2025-01-08",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250108_0005",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  6100,
+        "paymentDate":  "2025-01-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250109_0016",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  23600,
+        "paymentDate":  "2025-01-09",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250109_0017",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  18300,
+        "paymentDate":  "2025-01-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250109_0018",
+        "merchantRaw":  "보너스마트",
+        "amount":  19900,
+        "paymentDate":  "2025-01-09",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250109_0019",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  20200,
+        "paymentDate":  "2025-01-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250110_0020",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  15900,
+        "paymentDate":  "2025-01-10",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250110_0021",
+        "merchantRaw":  "(주)신세계백화점센",
+        "amount":  15400,
+        "paymentDate":  "2025-01-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250110_0022",
+        "merchantRaw":  "교보핫트랙스(주)",
+        "amount":  4500,
+        "paymentDate":  "2025-01-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250110_0023",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  4700,
+        "paymentDate":  "2025-01-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250110_0024",
+        "merchantRaw":  "텐퍼센트커피경성부",
+        "amount":  2900,
+        "paymentDate":  "2025-01-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250110_0006",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-01-10",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250111_0025",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  51400,
+        "paymentDate":  "2025-01-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250111_0026",
+        "merchantRaw":  "배스킨라빈스",
+        "amount":  12800,
+        "paymentDate":  "2025-01-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250111_0027",
+        "merchantRaw":  "(주)파리크라상경성",
+        "amount":  23700,
+        "paymentDate":  "2025-01-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250111_0028",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  10700,
+        "paymentDate":  "2025-01-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250111_0029",
+        "merchantRaw":  "네이버페이",
+        "amount":  30000,
+        "paymentDate":  "2025-01-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250112_0030",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  5300,
+        "paymentDate":  "2025-01-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250112_0031",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  4700,
+        "paymentDate":  "2025-01-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250112_0032",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  29900,
+        "paymentDate":  "2025-01-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250112_0033",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  30000,
+        "paymentDate":  "2025-01-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250112_0007",
+        "merchantRaw":  "보너스마트",
+        "amount":  7600,
+        "paymentDate":  "2025-01-12",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250113_0034",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  18700,
+        "paymentDate":  "2025-01-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250113_0035",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  5900,
+        "paymentDate":  "2025-01-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250113_0036",
+        "merchantRaw":  "보너스마트",
+        "amount":  5300,
+        "paymentDate":  "2025-01-13",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250113_0037",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  4600,
+        "paymentDate":  "2025-01-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250113_0038",
+        "merchantRaw":  "네이버페이",
+        "amount":  13500,
+        "paymentDate":  "2025-01-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250114_0008",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-01-14",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250115_0039",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-01-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250115_0040",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  5500,
+        "paymentDate":  "2025-01-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250115_0041",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  51000,
+        "paymentDate":  "2025-01-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250115_0042",
+        "merchantRaw":  "코코노카",
+        "amount":  5200,
+        "paymentDate":  "2025-01-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250115_0009",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  4800,
+        "paymentDate":  "2025-01-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250116_0043",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-01-16",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250116_0044",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  5000,
+        "paymentDate":  "2025-01-16",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250116_0045",
+        "merchantRaw":  "코코노카",
+        "amount":  3400,
+        "paymentDate":  "2025-01-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250116_0046",
+        "merchantRaw":  "SR",
+        "amount":  24700,
+        "paymentDate":  "2025-01-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250116_0047",
+        "merchantRaw":  "코코노카",
+        "amount":  27000,
+        "paymentDate":  "2025-01-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250116_0048",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  4100,
+        "paymentDate":  "2025-01-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250117_0049",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-01-17",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250117_0050",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  12600,
+        "paymentDate":  "2025-01-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250117_0051",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  15000,
+        "paymentDate":  "2025-01-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250118_0052",
+        "merchantRaw":  "데이앤데이미음점",
+        "amount":  6500,
+        "paymentDate":  "2025-01-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250118_0053",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  17100,
+        "paymentDate":  "2025-01-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250118_0010",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  15600,
+        "paymentDate":  "2025-01-18",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250119_0054",
+        "merchantRaw":  "푸드시스코리아(부",
+        "amount":  5600,
+        "paymentDate":  "2025-01-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250119_0055",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  25700,
+        "paymentDate":  "2025-01-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250120_0056",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  2300,
+        "paymentDate":  "2025-01-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250120_0057",
+        "merchantRaw":  "투썸플레이스더블유",
+        "amount":  5500,
+        "paymentDate":  "2025-01-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250120_0058",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  30000,
+        "paymentDate":  "2025-01-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250120_0059",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  15200,
+        "paymentDate":  "2025-01-20",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250121_0060",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  2700,
+        "paymentDate":  "2025-01-21",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250121_0061",
+        "merchantRaw":  "(주)신세계백화점센",
+        "amount":  94200,
+        "paymentDate":  "2025-01-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250121_0062",
+        "merchantRaw":  "배스킨라빈스",
+        "amount":  10000,
+        "paymentDate":  "2025-01-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250121_0063",
+        "merchantRaw":  "카르타플라워",
+        "amount":  8300,
+        "paymentDate":  "2025-01-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250121_0064",
+        "merchantRaw":  "네이버페이",
+        "amount":  17200,
+        "paymentDate":  "2025-01-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250121_0065",
+        "merchantRaw":  "코코노카",
+        "amount":  18900,
+        "paymentDate":  "2025-01-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250121_0066",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  26600,
+        "paymentDate":  "2025-01-21",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250121_0067",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  117600,
+        "paymentDate":  "2025-01-21",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250121_0011",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  3900,
+        "paymentDate":  "2025-01-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250122_0068",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  7300,
+        "paymentDate":  "2025-01-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250122_0069",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  3700,
+        "paymentDate":  "2025-01-22",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250122_0070",
+        "merchantRaw":  "해인온누리약국",
+        "amount":  4700,
+        "paymentDate":  "2025-01-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250123_0071",
+        "merchantRaw":  "충북대학교",
+        "amount":  5900,
+        "paymentDate":  "2025-01-23",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250123_0072",
+        "merchantRaw":  "코코노카",
+        "amount":  111100,
+        "paymentDate":  "2025-01-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250123_0073",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  20900,
+        "paymentDate":  "2025-01-23",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250123_0074",
+        "merchantRaw":  "오빠다방",
+        "amount":  92900,
+        "paymentDate":  "2025-01-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250124_0075",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  19600,
+        "paymentDate":  "2025-01-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250124_0076",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  5300,
+        "paymentDate":  "2025-01-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250124_0077",
+        "merchantRaw":  "오빠다방",
+        "amount":  5200,
+        "paymentDate":  "2025-01-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250124_0078",
+        "merchantRaw":  "(주)호텔신라인천공",
+        "amount":  4300,
+        "paymentDate":  "2025-01-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250124_0079",
+        "merchantRaw":  "보너스마트",
+        "amount":  3500,
+        "paymentDate":  "2025-01-24",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250125_0080",
+        "merchantRaw":  "SR",
+        "amount":  5900,
+        "paymentDate":  "2025-01-25",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250125_0081",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  6300,
+        "paymentDate":  "2025-01-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250125_0012",
+        "merchantRaw":  "에이스스터디카페",
+        "amount":  12000,
+        "paymentDate":  "2025-01-25",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250126_0082",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  5500,
+        "paymentDate":  "2025-01-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250126_0083",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  4000,
+        "paymentDate":  "2025-01-26",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250127_0084",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  5100,
+        "paymentDate":  "2025-01-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250127_0085",
+        "merchantRaw":  "(주)호텔신라인천공",
+        "amount":  25700,
+        "paymentDate":  "2025-01-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250127_0086",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  27800,
+        "paymentDate":  "2025-01-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250127_0087",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  7000,
+        "paymentDate":  "2025-01-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250128_0088",
+        "merchantRaw":  "오빠다방",
+        "amount":  5500,
+        "paymentDate":  "2025-01-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250128_0013",
+        "merchantRaw":  "네이버페이",
+        "amount":  17300,
+        "paymentDate":  "2025-01-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250129_0089",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  3300,
+        "paymentDate":  "2025-01-29",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250129_0090",
+        "merchantRaw":  "배스킨라빈스",
+        "amount":  17600,
+        "paymentDate":  "2025-01-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250129_0091",
+        "merchantRaw":  "(주)이마트해운대점",
+        "amount":  6800,
+        "paymentDate":  "2025-01-29",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250130_0092",
+        "merchantRaw":  "마츠도",
+        "amount":  108600,
+        "paymentDate":  "2025-01-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250130_0093",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  3300,
+        "paymentDate":  "2025-01-30",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250202_0094",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  5400,
+        "paymentDate":  "2025-02-02",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250202_0095",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  17100,
+        "paymentDate":  "2025-02-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250204_0096",
+        "merchantRaw":  "네이버페이",
+        "amount":  29300,
+        "paymentDate":  "2025-02-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250204_0097",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  6400,
+        "paymentDate":  "2025-02-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250204_0098",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  22900,
+        "paymentDate":  "2025-02-04",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250204_0099",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  11400,
+        "paymentDate":  "2025-02-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250205_0100",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  4600,
+        "paymentDate":  "2025-02-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250205_0101",
+        "merchantRaw":  "에이스스터디카페",
+        "amount":  5700,
+        "paymentDate":  "2025-02-05",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250205_0102",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  20900,
+        "paymentDate":  "2025-02-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250205_0014",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  9900,
+        "paymentDate":  "2025-02-05",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250206_0103",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  23100,
+        "paymentDate":  "2025-02-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250206_0104",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  4500,
+        "paymentDate":  "2025-02-06",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250206_0105",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  97000,
+        "paymentDate":  "2025-02-06",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250206_0015",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  4700,
+        "paymentDate":  "2025-02-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250207_0106",
+        "merchantRaw":  "오빠다방",
+        "amount":  19700,
+        "paymentDate":  "2025-02-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250207_0107",
+        "merchantRaw":  "맥도날드김해장유DT",
+        "amount":  150000,
+        "paymentDate":  "2025-02-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250208_0108",
+        "merchantRaw":  "(사)한국건강관리협",
+        "amount":  14500,
+        "paymentDate":  "2025-02-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250208_0016",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  34100,
+        "paymentDate":  "2025-02-08",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250209_0109",
+        "merchantRaw":  "코인싱어동전노래연",
+        "amount":  18600,
+        "paymentDate":  "2025-02-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250209_0110",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  22500,
+        "paymentDate":  "2025-02-09",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250210_0111",
+        "merchantRaw":  "오빠다방",
+        "amount":  14600,
+        "paymentDate":  "2025-02-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250210_0112",
+        "merchantRaw":  "세븐스타코인노래연",
+        "amount":  10000,
+        "paymentDate":  "2025-02-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250210_0017",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-02-10",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250211_0113",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  24900,
+        "paymentDate":  "2025-02-11",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250212_0018",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  9300,
+        "paymentDate":  "2025-02-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250213_0114",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-02-13",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250213_0115",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-02-13",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250213_0116",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  29200,
+        "paymentDate":  "2025-02-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250213_0117",
+        "merchantRaw":  "코코노카",
+        "amount":  30000,
+        "paymentDate":  "2025-02-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250213_0118",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  20200,
+        "paymentDate":  "2025-02-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250214_0019",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-02-14",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250215_0119",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  4300,
+        "paymentDate":  "2025-02-15",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250215_0120",
+        "merchantRaw":  "투썸플레이스더블유",
+        "amount":  4400,
+        "paymentDate":  "2025-02-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250216_0121",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-02-16",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250216_0122",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  16000,
+        "paymentDate":  "2025-02-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250216_0123",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  30000,
+        "paymentDate":  "2025-02-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250216_0020",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  6800,
+        "paymentDate":  "2025-02-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250217_0124",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  21300,
+        "paymentDate":  "2025-02-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250217_0125",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  3200,
+        "paymentDate":  "2025-02-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250218_0126",
+        "merchantRaw":  "텐퍼센트커피경성부",
+        "amount":  48000,
+        "paymentDate":  "2025-02-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250218_0127",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  6400,
+        "paymentDate":  "2025-02-18",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250219_0128",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  30000,
+        "paymentDate":  "2025-02-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250219_0129",
+        "merchantRaw":  "워시맨",
+        "amount":  25700,
+        "paymentDate":  "2025-02-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250219_0130",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  3300,
+        "paymentDate":  "2025-02-19",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250219_0021",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  5400,
+        "paymentDate":  "2025-02-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250220_0131",
+        "merchantRaw":  "마츠도",
+        "amount":  108000,
+        "paymentDate":  "2025-02-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250222_0132",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  30000,
+        "paymentDate":  "2025-02-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250222_0133",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  4900,
+        "paymentDate":  "2025-02-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250222_0022",
+        "merchantRaw":  "SR",
+        "amount":  25900,
+        "paymentDate":  "2025-02-22",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250223_0134",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  20600,
+        "paymentDate":  "2025-02-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250223_0135",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  5300,
+        "paymentDate":  "2025-02-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250224_0136",
+        "merchantRaw":  "BKR버거킹부산대",
+        "amount":  150000,
+        "paymentDate":  "2025-02-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250224_0137",
+        "merchantRaw":  "GS25부경대",
+        "amount":  18600,
+        "paymentDate":  "2025-02-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250224_0138",
+        "merchantRaw":  "SR",
+        "amount":  11300,
+        "paymentDate":  "2025-02-24",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250224_0139",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  14800,
+        "paymentDate":  "2025-02-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250225_0140",
+        "merchantRaw":  "오빠다방",
+        "amount":  26700,
+        "paymentDate":  "2025-02-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250225_0023",
+        "merchantRaw":  "오빠다방",
+        "amount":  7400,
+        "paymentDate":  "2025-02-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250227_0141",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  9000,
+        "paymentDate":  "2025-02-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250227_0142",
+        "merchantRaw":  "보너스마트",
+        "amount":  30000,
+        "paymentDate":  "2025-02-27",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250227_0143",
+        "merchantRaw":  "고려주차장",
+        "amount":  6700,
+        "paymentDate":  "2025-02-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250227_0144",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  16900,
+        "paymentDate":  "2025-02-27",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250228_0145",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  90700,
+        "paymentDate":  "2025-02-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250301_0146",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  12700,
+        "paymentDate":  "2025-03-01",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250302_0147",
+        "merchantRaw":  "에이스스터디카페",
+        "amount":  3000,
+        "paymentDate":  "2025-03-02",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250302_0148",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  8000,
+        "paymentDate":  "2025-03-02",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250302_0149",
+        "merchantRaw":  "카카오스타일",
+        "amount":  13100,
+        "paymentDate":  "2025-03-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250303_0150",
+        "merchantRaw":  "마츠도",
+        "amount":  3800,
+        "paymentDate":  "2025-03-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250304_0151",
+        "merchantRaw":  "텐퍼센트커피경성부",
+        "amount":  26000,
+        "paymentDate":  "2025-03-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250305_0152",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  11500,
+        "paymentDate":  "2025-03-05",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250305_0024",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  9900,
+        "paymentDate":  "2025-03-05",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250306_0153",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  4200,
+        "paymentDate":  "2025-03-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250306_0025",
+        "merchantRaw":  "보너스마트",
+        "amount":  12900,
+        "paymentDate":  "2025-03-06",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250307_0154",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  5200,
+        "paymentDate":  "2025-03-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250307_0155",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  4900,
+        "paymentDate":  "2025-03-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250307_0156",
+        "merchantRaw":  "오빠다방",
+        "amount":  2800,
+        "paymentDate":  "2025-03-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250308_0157",
+        "merchantRaw":  "호텔뮤리",
+        "amount":  23800,
+        "paymentDate":  "2025-03-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250308_0158",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  3500,
+        "paymentDate":  "2025-03-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250308_0159",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  8000,
+        "paymentDate":  "2025-03-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250309_0160",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  30000,
+        "paymentDate":  "2025-03-09",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250309_0161",
+        "merchantRaw":  "보너스마트",
+        "amount":  20700,
+        "paymentDate":  "2025-03-09",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250309_0162",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  4300,
+        "paymentDate":  "2025-03-09",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250309_0163",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  23800,
+        "paymentDate":  "2025-03-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250310_0164",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  8000,
+        "paymentDate":  "2025-03-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250310_0165",
+        "merchantRaw":  "주식회사빡벳부경",
+        "amount":  17100,
+        "paymentDate":  "2025-03-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250310_0166",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  96500,
+        "paymentDate":  "2025-03-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250310_0167",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  5600,
+        "paymentDate":  "2025-03-10",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250310_0168",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  10000,
+        "paymentDate":  "2025-03-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250310_0026",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-03-10",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250311_0169",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-03-11",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250311_0170",
+        "merchantRaw":  "네이버페이",
+        "amount":  10000,
+        "paymentDate":  "2025-03-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250311_0171",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  17000,
+        "paymentDate":  "2025-03-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250312_0172",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  30000,
+        "paymentDate":  "2025-03-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250312_0173",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  3300,
+        "paymentDate":  "2025-03-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250313_0027",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  4100,
+        "paymentDate":  "2025-03-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250314_0174",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  5100,
+        "paymentDate":  "2025-03-14",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250314_0175",
+        "merchantRaw":  "보너스마트",
+        "amount":  69700,
+        "paymentDate":  "2025-03-14",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250314_0028",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-03-14",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250315_0176",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  5100,
+        "paymentDate":  "2025-03-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250315_0177",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  15200,
+        "paymentDate":  "2025-03-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250315_0178",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  11300,
+        "paymentDate":  "2025-03-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250315_0179",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  15600,
+        "paymentDate":  "2025-03-15",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250315_0180",
+        "merchantRaw":  "보너스마트",
+        "amount":  23900,
+        "paymentDate":  "2025-03-15",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250316_0181",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-03-16",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250316_0182",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-03-16",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250316_0183",
+        "merchantRaw":  "보너스마트",
+        "amount":  4100,
+        "paymentDate":  "2025-03-16",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250316_0184",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  10000,
+        "paymentDate":  "2025-03-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250316_0029",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  5100,
+        "paymentDate":  "2025-03-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250317_0185",
+        "merchantRaw":  "밀알케터링부경대점",
+        "amount":  10000,
+        "paymentDate":  "2025-03-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250317_0186",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  22800,
+        "paymentDate":  "2025-03-17",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250318_0187",
+        "merchantRaw":  "배스킨라빈스",
+        "amount":  4800,
+        "paymentDate":  "2025-03-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250319_0188",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  62300,
+        "paymentDate":  "2025-03-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250319_0189",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  67500,
+        "paymentDate":  "2025-03-19",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250319_0190",
+        "merchantRaw":  "워시맨",
+        "amount":  83900,
+        "paymentDate":  "2025-03-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250319_0030",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  8900,
+        "paymentDate":  "2025-03-19",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250320_0191",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  3300,
+        "paymentDate":  "2025-03-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250321_0192",
+        "merchantRaw":  "네이버페이",
+        "amount":  5100,
+        "paymentDate":  "2025-03-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250322_0193",
+        "merchantRaw":  "시외버스승차권",
+        "amount":  14700,
+        "paymentDate":  "2025-03-22",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250322_0194",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  4900,
+        "paymentDate":  "2025-03-22",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250322_0195",
+        "merchantRaw":  "코코노카",
+        "amount":  4900,
+        "paymentDate":  "2025-03-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250322_0196",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  3100,
+        "paymentDate":  "2025-03-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250323_0197",
+        "merchantRaw":  "투썸플레이스더블유",
+        "amount":  6800,
+        "paymentDate":  "2025-03-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250323_0031",
+        "merchantRaw":  "교보핫트랙스(주)",
+        "amount":  6700,
+        "paymentDate":  "2025-03-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250324_0198",
+        "merchantRaw":  "오빠다방",
+        "amount":  3400,
+        "paymentDate":  "2025-03-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250325_0199",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  35900,
+        "paymentDate":  "2025-03-25",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250325_0200",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  12300,
+        "paymentDate":  "2025-03-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250326_0201",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  10000,
+        "paymentDate":  "2025-03-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250326_0202",
+        "merchantRaw":  "보너스마트",
+        "amount":  4700,
+        "paymentDate":  "2025-03-26",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250326_0203",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  12800,
+        "paymentDate":  "2025-03-26",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250327_0204",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  11900,
+        "paymentDate":  "2025-03-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250327_0205",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  3400,
+        "paymentDate":  "2025-03-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250327_0206",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  3600,
+        "paymentDate":  "2025-03-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250327_0207",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  4500,
+        "paymentDate":  "2025-03-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250327_0208",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  82300,
+        "paymentDate":  "2025-03-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250328_0209",
+        "merchantRaw":  "부경대학교",
+        "amount":  30000,
+        "paymentDate":  "2025-03-28",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250328_0210",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  30000,
+        "paymentDate":  "2025-03-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250328_0211",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  101100,
+        "paymentDate":  "2025-03-28",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250328_0212",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  20700,
+        "paymentDate":  "2025-03-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250328_0213",
+        "merchantRaw":  "마츠도",
+        "amount":  82500,
+        "paymentDate":  "2025-03-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250328_0214",
+        "merchantRaw":  "명지명인한의원",
+        "amount":  133400,
+        "paymentDate":  "2025-03-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250329_0215",
+        "merchantRaw":  "보너스마트",
+        "amount":  7700,
+        "paymentDate":  "2025-03-29",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250329_0216",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  5900,
+        "paymentDate":  "2025-03-29",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250330_0217",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  10000,
+        "paymentDate":  "2025-03-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250330_0218",
+        "merchantRaw":  "교보핫트랙스(주)",
+        "amount":  2800,
+        "paymentDate":  "2025-03-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250331_0219",
+        "merchantRaw":  "보너스마트",
+        "amount":  30000,
+        "paymentDate":  "2025-03-31",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250331_0220",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  14500,
+        "paymentDate":  "2025-03-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250401_0221",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  25600,
+        "paymentDate":  "2025-04-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250401_0222",
+        "merchantRaw":  "틈새라면",
+        "amount":  23000,
+        "paymentDate":  "2025-04-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250401_0223",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  28800,
+        "paymentDate":  "2025-04-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250401_0224",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  3700,
+        "paymentDate":  "2025-04-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250402_0225",
+        "merchantRaw":  "네이버페이",
+        "amount":  5100,
+        "paymentDate":  "2025-04-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250402_0226",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  21200,
+        "paymentDate":  "2025-04-02",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250403_0227",
+        "merchantRaw":  "율하신세계한의원",
+        "amount":  30000,
+        "paymentDate":  "2025-04-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250403_0228",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  74100,
+        "paymentDate":  "2025-04-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250403_0229",
+        "merchantRaw":  "달토풀글램핑",
+        "amount":  4300,
+        "paymentDate":  "2025-04-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250403_0230",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  5500,
+        "paymentDate":  "2025-04-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250404_0231",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  10000,
+        "paymentDate":  "2025-04-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250404_0232",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  20200,
+        "paymentDate":  "2025-04-04",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250404_0233",
+        "merchantRaw":  "(주)이마트해운대점",
+        "amount":  20000,
+        "paymentDate":  "2025-04-04",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250404_0234",
+        "merchantRaw":  "마츠도",
+        "amount":  13600,
+        "paymentDate":  "2025-04-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250405_0235",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  16200,
+        "paymentDate":  "2025-04-05",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250405_0236",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  2700,
+        "paymentDate":  "2025-04-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250406_0237",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  5500,
+        "paymentDate":  "2025-04-06",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250406_0238",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  10000,
+        "paymentDate":  "2025-04-06",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250406_0239",
+        "merchantRaw":  "오빠다방",
+        "amount":  10000,
+        "paymentDate":  "2025-04-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250406_0033",
+        "merchantRaw":  "LG U+ 유독",
+        "amount":  9900,
+        "paymentDate":  "2025-04-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20250407_0240",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  18800,
+        "paymentDate":  "2025-04-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250407_0241",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  85100,
+        "paymentDate":  "2025-04-07",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250407_0034",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  6200,
+        "paymentDate":  "2025-04-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250408_0242",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  6500,
+        "paymentDate":  "2025-04-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250408_0243",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  8100,
+        "paymentDate":  "2025-04-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250408_0244",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  3000,
+        "paymentDate":  "2025-04-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250408_0245",
+        "merchantRaw":  "주식회사빡벳부경",
+        "amount":  5700,
+        "paymentDate":  "2025-04-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250409_0246",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  48900,
+        "paymentDate":  "2025-04-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250409_0247",
+        "merchantRaw":  "(주)신세계백화점센",
+        "amount":  9000,
+        "paymentDate":  "2025-04-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250409_0248",
+        "merchantRaw":  "SR",
+        "amount":  7400,
+        "paymentDate":  "2025-04-09",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250409_0249",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  6700,
+        "paymentDate":  "2025-04-09",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250409_0035",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  3700,
+        "paymentDate":  "2025-04-09",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250410_0250",
+        "merchantRaw":  "맥도날드부산송정DT",
+        "amount":  23000,
+        "paymentDate":  "2025-04-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250410_0251",
+        "merchantRaw":  "호텔뮤리",
+        "amount":  14100,
+        "paymentDate":  "2025-04-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250410_0252",
+        "merchantRaw":  "(주)신세계백화점센",
+        "amount":  28200,
+        "paymentDate":  "2025-04-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250410_0253",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  3600,
+        "paymentDate":  "2025-04-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250410_0254",
+        "merchantRaw":  "메디팜명성약국",
+        "amount":  6500,
+        "paymentDate":  "2025-04-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250411_0255",
+        "merchantRaw":  "네이버페이",
+        "amount":  112300,
+        "paymentDate":  "2025-04-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250412_0256",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  17200,
+        "paymentDate":  "2025-04-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250412_0036",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  27600,
+        "paymentDate":  "2025-04-12",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250413_0257",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  6500,
+        "paymentDate":  "2025-04-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250413_0258",
+        "merchantRaw":  "네이버페이",
+        "amount":  5200,
+        "paymentDate":  "2025-04-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250414_0259",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-04-14",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250415_0260",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-04-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250415_0261",
+        "merchantRaw":  "오빠다방",
+        "amount":  10000,
+        "paymentDate":  "2025-04-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250415_0037",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  5100,
+        "paymentDate":  "2025-04-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250416_0262",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  97400,
+        "paymentDate":  "2025-04-16",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250416_0263",
+        "merchantRaw":  "충북대학교",
+        "amount":  14800,
+        "paymentDate":  "2025-04-16",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250416_0264",
+        "merchantRaw":  "SR",
+        "amount":  3800,
+        "paymentDate":  "2025-04-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250417_0265",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  30000,
+        "paymentDate":  "2025-04-17",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250417_0266",
+        "merchantRaw":  "할매분식",
+        "amount":  3400,
+        "paymentDate":  "2025-04-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250417_0267",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  2700,
+        "paymentDate":  "2025-04-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250418_0268",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  23700,
+        "paymentDate":  "2025-04-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250418_0269",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  5300,
+        "paymentDate":  "2025-04-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250418_0270",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  4000,
+        "paymentDate":  "2025-04-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250418_0271",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  20300,
+        "paymentDate":  "2025-04-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250418_0038",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  11800,
+        "paymentDate":  "2025-04-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250419_0272",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  17200,
+        "paymentDate":  "2025-04-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250419_0273",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  16400,
+        "paymentDate":  "2025-04-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250420_0274",
+        "merchantRaw":  "오빠다방",
+        "amount":  6300,
+        "paymentDate":  "2025-04-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250420_0275",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  4800,
+        "paymentDate":  "2025-04-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250421_0276",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-04-21",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250421_0277",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  25100,
+        "paymentDate":  "2025-04-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250421_0278",
+        "merchantRaw":  "롯데몰동부산점매",
+        "amount":  108800,
+        "paymentDate":  "2025-04-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250422_0279",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  15600,
+        "paymentDate":  "2025-04-22",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250422_0280",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  3000,
+        "paymentDate":  "2025-04-22",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250422_0039",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  9400,
+        "paymentDate":  "2025-04-22",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250423_0281",
+        "merchantRaw":  "카르타플라워",
+        "amount":  15400,
+        "paymentDate":  "2025-04-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250424_0282",
+        "merchantRaw":  "푸드시스코리아(부",
+        "amount":  22900,
+        "paymentDate":  "2025-04-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250424_0283",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  14200,
+        "paymentDate":  "2025-04-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250424_0284",
+        "merchantRaw":  "(주)이마트해운대점",
+        "amount":  19400,
+        "paymentDate":  "2025-04-24",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250425_0285",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  5200,
+        "paymentDate":  "2025-04-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250426_0286",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  8000,
+        "paymentDate":  "2025-04-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250426_0287",
+        "merchantRaw":  "카카오스타일",
+        "amount":  7300,
+        "paymentDate":  "2025-04-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250427_0040",
+        "merchantRaw":  "GS25부경대",
+        "amount":  7800,
+        "paymentDate":  "2025-04-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250428_0288",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  26800,
+        "paymentDate":  "2025-04-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250428_0289",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  150000,
+        "paymentDate":  "2025-04-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250428_0290",
+        "merchantRaw":  "오빠다방",
+        "amount":  6200,
+        "paymentDate":  "2025-04-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250428_0291",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  13800,
+        "paymentDate":  "2025-04-28",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250428_0292",
+        "merchantRaw":  "틈새라면",
+        "amount":  18300,
+        "paymentDate":  "2025-04-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250429_0293",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  21500,
+        "paymentDate":  "2025-04-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250430_0294",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  21500,
+        "paymentDate":  "2025-04-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250430_0295",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  9900,
+        "paymentDate":  "2025-04-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250430_0296",
+        "merchantRaw":  "오빠다방",
+        "amount":  12300,
+        "paymentDate":  "2025-04-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250502_0297",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  16700,
+        "paymentDate":  "2025-05-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250502_0298",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  5800,
+        "paymentDate":  "2025-05-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250504_0299",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  15200,
+        "paymentDate":  "2025-05-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250504_0300",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  4500,
+        "paymentDate":  "2025-05-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250506_0041",
+        "merchantRaw":  "LGU+ 유독 더블스트리밍",
+        "amount":  9900,
+        "paymentDate":  "2025-05-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20250507_0301",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  13900,
+        "paymentDate":  "2025-05-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250507_0302",
+        "merchantRaw":  "밀알케터링부경대점",
+        "amount":  4800,
+        "paymentDate":  "2025-05-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250508_0042",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  5900,
+        "paymentDate":  "2025-05-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250510_0303",
+        "merchantRaw":  "네이버페이",
+        "amount":  3600,
+        "paymentDate":  "2025-05-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250511_0043",
+        "merchantRaw":  "보너스마트",
+        "amount":  8800,
+        "paymentDate":  "2025-05-11",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250512_0304",
+        "merchantRaw":  "부경대학교",
+        "amount":  14000,
+        "paymentDate":  "2025-05-12",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250513_0305",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  6500,
+        "paymentDate":  "2025-05-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250514_0306",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  30000,
+        "paymentDate":  "2025-05-14",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250514_0044",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  14100,
+        "paymentDate":  "2025-05-14",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250515_0307",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-05-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250515_0308",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-05-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250516_0309",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-05-16",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250516_0310",
+        "merchantRaw":  "씨제이올리브네트웍",
+        "amount":  30000,
+        "paymentDate":  "2025-05-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250516_0311",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  3500,
+        "paymentDate":  "2025-05-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250516_0312",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  30000,
+        "paymentDate":  "2025-05-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250517_0045",
+        "merchantRaw":  "네이버페이",
+        "amount":  9200,
+        "paymentDate":  "2025-05-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250520_0313",
+        "merchantRaw":  "텐퍼센트커피경성부",
+        "amount":  5100,
+        "paymentDate":  "2025-05-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250520_0314",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  101700,
+        "paymentDate":  "2025-05-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250520_0315",
+        "merchantRaw":  "충북대학교",
+        "amount":  41800,
+        "paymentDate":  "2025-05-20",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250521_0316",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  17300,
+        "paymentDate":  "2025-05-21",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250521_0046",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  4600,
+        "paymentDate":  "2025-05-21",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250522_0317",
+        "merchantRaw":  "마라패션(痲辣fashion",
+        "amount":  4800,
+        "paymentDate":  "2025-05-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250522_0318",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  9400,
+        "paymentDate":  "2025-05-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250522_0319",
+        "merchantRaw":  "워시맨",
+        "amount":  140500,
+        "paymentDate":  "2025-05-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250523_0320",
+        "merchantRaw":  "텐퍼센트커피경성부",
+        "amount":  20300,
+        "paymentDate":  "2025-05-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250523_0321",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  6700,
+        "paymentDate":  "2025-05-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250523_0322",
+        "merchantRaw":  "해인온누리약국",
+        "amount":  18600,
+        "paymentDate":  "2025-05-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250524_0323",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  24400,
+        "paymentDate":  "2025-05-24",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250524_0047",
+        "merchantRaw":  "충북대학교",
+        "amount":  14800,
+        "paymentDate":  "2025-05-24",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250527_0324",
+        "merchantRaw":  "맥도날드김해장유DT",
+        "amount":  8500,
+        "paymentDate":  "2025-05-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250527_0325",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  4200,
+        "paymentDate":  "2025-05-27",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250527_0326",
+        "merchantRaw":  "코코노카",
+        "amount":  11900,
+        "paymentDate":  "2025-05-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250528_0048",
+        "merchantRaw":  "오빠다방",
+        "amount":  5300,
+        "paymentDate":  "2025-05-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250529_0327",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  6100,
+        "paymentDate":  "2025-05-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250530_0328",
+        "merchantRaw":  "BKR버거킹부산대",
+        "amount":  13100,
+        "paymentDate":  "2025-05-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250601_0329",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  4100,
+        "paymentDate":  "2025-06-01",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250601_0330",
+        "merchantRaw":  "네이버페이",
+        "amount":  3500,
+        "paymentDate":  "2025-06-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250601_0331",
+        "merchantRaw":  "세븐스타코인노래연",
+        "amount":  104600,
+        "paymentDate":  "2025-06-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250602_0332",
+        "merchantRaw":  "SR",
+        "amount":  21300,
+        "paymentDate":  "2025-06-02",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250603_0333",
+        "merchantRaw":  "컴인워시부산본점",
+        "amount":  112300,
+        "paymentDate":  "2025-06-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250603_0334",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  19600,
+        "paymentDate":  "2025-06-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250604_0335",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  6900,
+        "paymentDate":  "2025-06-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250604_0336",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  10000,
+        "paymentDate":  "2025-06-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250604_0337",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  10900,
+        "paymentDate":  "2025-06-04",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250604_0338",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  30000,
+        "paymentDate":  "2025-06-04",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250605_0339",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  43100,
+        "paymentDate":  "2025-06-05",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250606_0049",
+        "merchantRaw":  "유독 더블 스트리밍",
+        "amount":  9900,
+        "paymentDate":  "2025-06-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20250607_0340",
+        "merchantRaw":  "네이버페이",
+        "amount":  30000,
+        "paymentDate":  "2025-06-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250607_0341",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  15800,
+        "paymentDate":  "2025-06-07",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250607_0342",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  6000,
+        "paymentDate":  "2025-06-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250608_0343",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  4800,
+        "paymentDate":  "2025-06-08",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250608_0344",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  16800,
+        "paymentDate":  "2025-06-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250609_0345",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  5300,
+        "paymentDate":  "2025-06-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250609_0346",
+        "merchantRaw":  "고려주차장",
+        "amount":  5700,
+        "paymentDate":  "2025-06-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250609_0347",
+        "merchantRaw":  "카카오스타일",
+        "amount":  30000,
+        "paymentDate":  "2025-06-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250609_0348",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  2300,
+        "paymentDate":  "2025-06-09",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250609_0349",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  70200,
+        "paymentDate":  "2025-06-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250609_0050",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  4300,
+        "paymentDate":  "2025-06-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250610_0350",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  16700,
+        "paymentDate":  "2025-06-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250611_0351",
+        "merchantRaw":  "시외버스승차권",
+        "amount":  15900,
+        "paymentDate":  "2025-06-11",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250612_0352",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  3700,
+        "paymentDate":  "2025-06-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250612_0353",
+        "merchantRaw":  "코인워시365대연자",
+        "amount":  17600,
+        "paymentDate":  "2025-06-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250612_0051",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  6900,
+        "paymentDate":  "2025-06-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250614_0354",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  16200,
+        "paymentDate":  "2025-06-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250614_0355",
+        "merchantRaw":  "오빠다방",
+        "amount":  5000,
+        "paymentDate":  "2025-06-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250615_0356",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-06-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250615_0357",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-06-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250615_0358",
+        "merchantRaw":  "맥도날드부산송정DT",
+        "amount":  2800,
+        "paymentDate":  "2025-06-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250615_0359",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  106800,
+        "paymentDate":  "2025-06-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250615_0360",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  6100,
+        "paymentDate":  "2025-06-15",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250615_0052",
+        "merchantRaw":  "SPOTIFY",
+        "amount":  11990,
+        "paymentDate":  "2025-06-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20250616_0361",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  8100,
+        "paymentDate":  "2025-06-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250616_0362",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  13300,
+        "paymentDate":  "2025-06-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250616_0363",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  23300,
+        "paymentDate":  "2025-06-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250616_0053",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  5900,
+        "paymentDate":  "2025-06-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250617_0364",
+        "merchantRaw":  "경포비치호텔",
+        "amount":  5700,
+        "paymentDate":  "2025-06-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250617_0365",
+        "merchantRaw":  "부경대학교소비자생",
+        "amount":  3200,
+        "paymentDate":  "2025-06-17",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250617_0366",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  21500,
+        "paymentDate":  "2025-06-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250617_0367",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  93200,
+        "paymentDate":  "2025-06-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250618_0368",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-06-18",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250618_0369",
+        "merchantRaw":  "BKR버거킹부산대",
+        "amount":  5900,
+        "paymentDate":  "2025-06-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250618_0370",
+        "merchantRaw":  "네이버페이",
+        "amount":  17100,
+        "paymentDate":  "2025-06-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250618_0371",
+        "merchantRaw":  "보너스마트",
+        "amount":  23700,
+        "paymentDate":  "2025-06-18",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250618_0054",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  44100,
+        "paymentDate":  "2025-06-18",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250619_0372",
+        "merchantRaw":  "푸드시스코리아(부",
+        "amount":  6300,
+        "paymentDate":  "2025-06-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250620_0373",
+        "merchantRaw":  "에이스스터디카페",
+        "amount":  5500,
+        "paymentDate":  "2025-06-20",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250620_0374",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  18600,
+        "paymentDate":  "2025-06-20",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250621_0375",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  25700,
+        "paymentDate":  "2025-06-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250622_0376",
+        "merchantRaw":  "마라패션(痲辣fashion",
+        "amount":  10500,
+        "paymentDate":  "2025-06-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250622_0055",
+        "merchantRaw":  "코코노카",
+        "amount":  12600,
+        "paymentDate":  "2025-06-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250623_0377",
+        "merchantRaw":  "GS25부경대",
+        "amount":  5200,
+        "paymentDate":  "2025-06-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250624_0378",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  4100,
+        "paymentDate":  "2025-06-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250625_0379",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  10000,
+        "paymentDate":  "2025-06-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250625_0380",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  29100,
+        "paymentDate":  "2025-06-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250626_0381",
+        "merchantRaw":  "마라패션(痲辣fashion",
+        "amount":  9300,
+        "paymentDate":  "2025-06-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250626_0382",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  5300,
+        "paymentDate":  "2025-06-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250626_0383",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  24800,
+        "paymentDate":  "2025-06-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250626_0384",
+        "merchantRaw":  "코코노카",
+        "amount":  6000,
+        "paymentDate":  "2025-06-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250627_0056",
+        "merchantRaw":  "SR",
+        "amount":  17800,
+        "paymentDate":  "2025-06-27",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250629_0385",
+        "merchantRaw":  "오빠다방",
+        "amount":  19300,
+        "paymentDate":  "2025-06-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250629_0386",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  25700,
+        "paymentDate":  "2025-06-29",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250630_0387",
+        "merchantRaw":  "컴인워시부산본점",
+        "amount":  4200,
+        "paymentDate":  "2025-06-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250630_0388",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  3700,
+        "paymentDate":  "2025-06-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250701_0389",
+        "merchantRaw":  "네이버페이",
+        "amount":  15700,
+        "paymentDate":  "2025-07-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250701_0390",
+        "merchantRaw":  "데이앤데이미음점",
+        "amount":  4800,
+        "paymentDate":  "2025-07-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250701_0391",
+        "merchantRaw":  "시외버스승차권",
+        "amount":  105500,
+        "paymentDate":  "2025-07-01",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250702_0392",
+        "merchantRaw":  "BKR버거킹부산대",
+        "amount":  25400,
+        "paymentDate":  "2025-07-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250703_0393",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  17200,
+        "paymentDate":  "2025-07-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250703_0394",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  11500,
+        "paymentDate":  "2025-07-03",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250704_0395",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  99300,
+        "paymentDate":  "2025-07-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250704_0396",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  12100,
+        "paymentDate":  "2025-07-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250704_0397",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  145600,
+        "paymentDate":  "2025-07-04",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250706_0398",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  9700,
+        "paymentDate":  "2025-07-06",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250706_0399",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  130900,
+        "paymentDate":  "2025-07-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250706_0057",
+        "merchantRaw":  "유독 더블 스트리밍",
+        "amount":  9900,
+        "paymentDate":  "2025-07-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20250707_0400",
+        "merchantRaw":  "GS25부경대",
+        "amount":  9900,
+        "paymentDate":  "2025-07-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250707_0401",
+        "merchantRaw":  "텐퍼센트커피경성부",
+        "amount":  15700,
+        "paymentDate":  "2025-07-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250708_0402",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  5400,
+        "paymentDate":  "2025-07-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250709_0403",
+        "merchantRaw":  "마츠도",
+        "amount":  3200,
+        "paymentDate":  "2025-07-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250709_0404",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  10000,
+        "paymentDate":  "2025-07-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250709_0058",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  6900,
+        "paymentDate":  "2025-07-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250713_0405",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  5200,
+        "paymentDate":  "2025-07-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250714_0406",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  59300,
+        "paymentDate":  "2025-07-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250714_0407",
+        "merchantRaw":  "오빠다방",
+        "amount":  25500,
+        "paymentDate":  "2025-07-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250714_0408",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  20300,
+        "paymentDate":  "2025-07-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250714_0059",
+        "merchantRaw":  "OPENAI*CHATGPT",
+        "amount":  20000,
+        "paymentDate":  "2025-07-14",
+        "category":  "AI"
+    },
+    {
+        "paymentId":  "pay_20250715_0409",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-07-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_u1_20250715_0060",
+        "merchantRaw":  "Spotify",
+        "amount":  11990,
+        "paymentDate":  "2025-07-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20250716_0410",
+        "merchantRaw":  "마츠도",
+        "amount":  4200,
+        "paymentDate":  "2025-07-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250716_0411",
+        "merchantRaw":  "주식회사빡벳부경",
+        "amount":  7400,
+        "paymentDate":  "2025-07-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250717_0412",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-07-17",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250717_0413",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-07-17",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250717_0414",
+        "merchantRaw":  "교보핫트랙스(주)",
+        "amount":  26400,
+        "paymentDate":  "2025-07-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250717_0415",
+        "merchantRaw":  "시외버스승차권",
+        "amount":  24800,
+        "paymentDate":  "2025-07-17",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250717_0416",
+        "merchantRaw":  "GS25부경대",
+        "amount":  14000,
+        "paymentDate":  "2025-07-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250717_0061",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  2900,
+        "paymentDate":  "2025-07-17",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250718_0417",
+        "merchantRaw":  "마츠도",
+        "amount":  6800,
+        "paymentDate":  "2025-07-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250720_0418",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  17100,
+        "paymentDate":  "2025-07-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250720_0062",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  7800,
+        "paymentDate":  "2025-07-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250722_0419",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  9900,
+        "paymentDate":  "2025-07-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250722_0420",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  19100,
+        "paymentDate":  "2025-07-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250722_0421",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  2500,
+        "paymentDate":  "2025-07-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250723_0422",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  7600,
+        "paymentDate":  "2025-07-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250724_0423",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  16100,
+        "paymentDate":  "2025-07-24",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250724_0424",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  17500,
+        "paymentDate":  "2025-07-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250724_0063",
+        "merchantRaw":  "보너스마트",
+        "amount":  15900,
+        "paymentDate":  "2025-07-24",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250725_0425",
+        "merchantRaw":  "마츠도",
+        "amount":  16100,
+        "paymentDate":  "2025-07-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250725_0426",
+        "merchantRaw":  "고려주차장",
+        "amount":  18000,
+        "paymentDate":  "2025-07-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250726_0427",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  30000,
+        "paymentDate":  "2025-07-26",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250726_0428",
+        "merchantRaw":  "보너스마트",
+        "amount":  87400,
+        "paymentDate":  "2025-07-26",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250727_0429",
+        "merchantRaw":  "네이버페이",
+        "amount":  30000,
+        "paymentDate":  "2025-07-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250729_0430",
+        "merchantRaw":  "좋아서하는",
+        "amount":  10000,
+        "paymentDate":  "2025-07-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250729_0431",
+        "merchantRaw":  "보너스마트",
+        "amount":  18400,
+        "paymentDate":  "2025-07-29",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250729_0432",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  3600,
+        "paymentDate":  "2025-07-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250729_0064",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  4100,
+        "paymentDate":  "2025-07-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250730_0433",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  14400,
+        "paymentDate":  "2025-07-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250730_0434",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  26000,
+        "paymentDate":  "2025-07-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250731_0435",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  22700,
+        "paymentDate":  "2025-07-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250731_0436",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  10000,
+        "paymentDate":  "2025-07-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250731_0437",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  4500,
+        "paymentDate":  "2025-07-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250801_0438",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  9700,
+        "paymentDate":  "2025-08-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250801_0439",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  10000,
+        "paymentDate":  "2025-08-01",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250801_0440",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  4500,
+        "paymentDate":  "2025-08-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250802_0441",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  30000,
+        "paymentDate":  "2025-08-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250803_0442",
+        "merchantRaw":  "마츠도",
+        "amount":  29100,
+        "paymentDate":  "2025-08-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250803_0443",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  12700,
+        "paymentDate":  "2025-08-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250803_0444",
+        "merchantRaw":  "투썸플레이스더블유",
+        "amount":  24000,
+        "paymentDate":  "2025-08-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250804_0445",
+        "merchantRaw":  "마츠도",
+        "amount":  8600,
+        "paymentDate":  "2025-08-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250805_0446",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  73900,
+        "paymentDate":  "2025-08-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250805_0447",
+        "merchantRaw":  "마츠도",
+        "amount":  6000,
+        "paymentDate":  "2025-08-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250806_0448",
+        "merchantRaw":  "코코노카",
+        "amount":  3800,
+        "paymentDate":  "2025-08-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250806_0065",
+        "merchantRaw":  "유독 더블 스트리밍",
+        "amount":  9900,
+        "paymentDate":  "2025-08-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_u1_20250810_0066",
+        "merchantRaw":  "OPENAI ChatGPT",
+        "amount":  20000,
+        "paymentDate":  "2025-08-10",
+        "category":  "AI"
+    },
+    {
+        "paymentId":  "pay_20250811_0449",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  7900,
+        "paymentDate":  "2025-08-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250812_0450",
+        "merchantRaw":  "SR",
+        "amount":  8000,
+        "paymentDate":  "2025-08-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250812_0451",
+        "merchantRaw":  "시외버스승차권",
+        "amount":  5200,
+        "paymentDate":  "2025-08-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250814_0452",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  6700,
+        "paymentDate":  "2025-08-14",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250814_0453",
+        "merchantRaw":  "씨제이올리브네트웍",
+        "amount":  30000,
+        "paymentDate":  "2025-08-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250815_0454",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-08-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_u1_20250815_0067",
+        "merchantRaw":  "Spotify P11990",
+        "amount":  11990,
+        "paymentDate":  "2025-08-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20250816_0455",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-08-16",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250816_0456",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  4900,
+        "paymentDate":  "2025-08-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250816_0457",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  4100,
+        "paymentDate":  "2025-08-16",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250816_0068",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  5300,
+        "paymentDate":  "2025-08-16",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250817_0458",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  19100,
+        "paymentDate":  "2025-08-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250817_0459",
+        "merchantRaw":  "부경대학교소비자생",
+        "amount":  5200,
+        "paymentDate":  "2025-08-17",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250819_0460",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-08-19",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250819_0461",
+        "merchantRaw":  "GS25부경대",
+        "amount":  7900,
+        "paymentDate":  "2025-08-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250819_0069",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  11300,
+        "paymentDate":  "2025-08-19",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250821_0462",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  30000,
+        "paymentDate":  "2025-08-21",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20250822_0070",
+        "merchantRaw":  "네이버페이",
+        "amount":  23100,
+        "paymentDate":  "2025-08-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250826_0463",
+        "merchantRaw":  "쿠팡(쿠페이)",
+        "amount":  3800,
+        "paymentDate":  "2025-08-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250827_0071",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  7200,
+        "paymentDate":  "2025-08-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250828_0464",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  7800,
+        "paymentDate":  "2025-08-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250828_0465",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  4700,
+        "paymentDate":  "2025-08-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250829_0466",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  5000,
+        "paymentDate":  "2025-08-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250830_0467",
+        "merchantRaw":  "(주)파리크라상경성",
+        "amount":  3600,
+        "paymentDate":  "2025-08-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250830_0468",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  10000,
+        "paymentDate":  "2025-08-30",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250830_0469",
+        "merchantRaw":  "오빠다방",
+        "amount":  9800,
+        "paymentDate":  "2025-08-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250831_0470",
+        "merchantRaw":  "메디팜명성약국",
+        "amount":  30000,
+        "paymentDate":  "2025-08-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250831_0471",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  57700,
+        "paymentDate":  "2025-08-31",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250831_0472",
+        "merchantRaw":  "오빠다방",
+        "amount":  30000,
+        "paymentDate":  "2025-08-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250901_0473",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  3400,
+        "paymentDate":  "2025-09-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250901_0474",
+        "merchantRaw":  "GS25부경대",
+        "amount":  24100,
+        "paymentDate":  "2025-09-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250902_0475",
+        "merchantRaw":  "투썸플레이스더블유",
+        "amount":  115000,
+        "paymentDate":  "2025-09-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250902_0476",
+        "merchantRaw":  "보너스마트",
+        "amount":  4100,
+        "paymentDate":  "2025-09-02",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250902_0477",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  6500,
+        "paymentDate":  "2025-09-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250902_0478",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  74500,
+        "paymentDate":  "2025-09-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250903_0479",
+        "merchantRaw":  "충북대학교",
+        "amount":  4600,
+        "paymentDate":  "2025-09-03",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250903_0480",
+        "merchantRaw":  "오빠다방",
+        "amount":  6600,
+        "paymentDate":  "2025-09-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250904_0481",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  30000,
+        "paymentDate":  "2025-09-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250904_0482",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  2700,
+        "paymentDate":  "2025-09-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250904_0483",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  28800,
+        "paymentDate":  "2025-09-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250904_0484",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  26200,
+        "paymentDate":  "2025-09-04",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250905_0485",
+        "merchantRaw":  "오빠다방",
+        "amount":  4100,
+        "paymentDate":  "2025-09-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250905_0486",
+        "merchantRaw":  "마츠도",
+        "amount":  10400,
+        "paymentDate":  "2025-09-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250905_0487",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  17200,
+        "paymentDate":  "2025-09-05",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250905_0488",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  3500,
+        "paymentDate":  "2025-09-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250906_0489",
+        "merchantRaw":  "보너스마트",
+        "amount":  4900,
+        "paymentDate":  "2025-09-06",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250906_0490",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  7400,
+        "paymentDate":  "2025-09-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250906_0491",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  30000,
+        "paymentDate":  "2025-09-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250906_0492",
+        "merchantRaw":  "보너스마트",
+        "amount":  30000,
+        "paymentDate":  "2025-09-06",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250906_0493",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  3800,
+        "paymentDate":  "2025-09-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250906_0072",
+        "merchantRaw":  "유독 더블 스트리밍",
+        "amount":  9900,
+        "paymentDate":  "2025-09-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20250907_0494",
+        "merchantRaw":  "보너스마트",
+        "amount":  4100,
+        "paymentDate":  "2025-09-07",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250907_0495",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  19100,
+        "paymentDate":  "2025-09-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250908_0496",
+        "merchantRaw":  "맥도날드김해장유DT",
+        "amount":  4200,
+        "paymentDate":  "2025-09-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250908_0497",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  10000,
+        "paymentDate":  "2025-09-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250908_0498",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  21800,
+        "paymentDate":  "2025-09-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250908_0499",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  4100,
+        "paymentDate":  "2025-09-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250908_0500",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  5700,
+        "paymentDate":  "2025-09-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250908_0501",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  30000,
+        "paymentDate":  "2025-09-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250908_0502",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  97100,
+        "paymentDate":  "2025-09-08",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250909_0503",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  4500,
+        "paymentDate":  "2025-09-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250909_0504",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  3500,
+        "paymentDate":  "2025-09-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250909_0505",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  2900,
+        "paymentDate":  "2025-09-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250909_0506",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  28500,
+        "paymentDate":  "2025-09-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250909_0507",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  21200,
+        "paymentDate":  "2025-09-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250909_0508",
+        "merchantRaw":  "배스킨라빈스부산진",
+        "amount":  17900,
+        "paymentDate":  "2025-09-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250909_0509",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  30000,
+        "paymentDate":  "2025-09-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250909_0073",
+        "merchantRaw":  "오빠다방",
+        "amount":  6600,
+        "paymentDate":  "2025-09-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250910_0510",
+        "merchantRaw":  "보너스마트",
+        "amount":  12800,
+        "paymentDate":  "2025-09-10",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250910_0511",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  14300,
+        "paymentDate":  "2025-09-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250910_0074",
+        "merchantRaw":  "OPENAI*CHATGPT",
+        "amount":  20000,
+        "paymentDate":  "2025-09-10",
+        "category":  "AI"
+    },
+    {
+        "paymentId":  "pay_20250911_0512",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  7300,
+        "paymentDate":  "2025-09-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250912_0513",
+        "merchantRaw":  "투썸플레이스장유율",
+        "amount":  10000,
+        "paymentDate":  "2025-09-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250912_0514",
+        "merchantRaw":  "시외버스승차권",
+        "amount":  72300,
+        "paymentDate":  "2025-09-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250912_0515",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  25000,
+        "paymentDate":  "2025-09-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250912_0075",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  4500,
+        "paymentDate":  "2025-09-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250913_0516",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  14600,
+        "paymentDate":  "2025-09-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250913_0517",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  150000,
+        "paymentDate":  "2025-09-13",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250914_0518",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-09-14",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250914_0519",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  4800,
+        "paymentDate":  "2025-09-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250914_0520",
+        "merchantRaw":  "(주)파리크라상경성",
+        "amount":  7400,
+        "paymentDate":  "2025-09-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250914_0521",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  150000,
+        "paymentDate":  "2025-09-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250914_0522",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  19400,
+        "paymentDate":  "2025-09-14",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250914_0523",
+        "merchantRaw":  "부경대학교",
+        "amount":  4300,
+        "paymentDate":  "2025-09-14",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250914_0524",
+        "merchantRaw":  "오빠다방",
+        "amount":  130800,
+        "paymentDate":  "2025-09-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250915_0525",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-09-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250915_0526",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-09-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20250915_0527",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  4900,
+        "paymentDate":  "2025-09-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250915_0528",
+        "merchantRaw":  "오빠다방",
+        "amount":  4100,
+        "paymentDate":  "2025-09-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250915_0529",
+        "merchantRaw":  "BKR버거킹부산대",
+        "amount":  3200,
+        "paymentDate":  "2025-09-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250915_0530",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  19100,
+        "paymentDate":  "2025-09-15",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250915_0076",
+        "merchantRaw":  "SPOTIFY",
+        "amount":  9900,
+        "paymentDate":  "2025-09-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20250916_0531",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  4500,
+        "paymentDate":  "2025-09-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250917_0532",
+        "merchantRaw":  "카카오스타일",
+        "amount":  3600,
+        "paymentDate":  "2025-09-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250917_0533",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  7600,
+        "paymentDate":  "2025-09-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250917_0534",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  8200,
+        "paymentDate":  "2025-09-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250917_0535",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  7700,
+        "paymentDate":  "2025-09-17",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20250917_0536",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  30000,
+        "paymentDate":  "2025-09-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250918_0537",
+        "merchantRaw":  "고려주차장",
+        "amount":  30000,
+        "paymentDate":  "2025-09-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250919_0538",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  16000,
+        "paymentDate":  "2025-09-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250920_0539",
+        "merchantRaw":  "코코노카",
+        "amount":  6500,
+        "paymentDate":  "2025-09-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250920_0540",
+        "merchantRaw":  "(주)이마트해운대점",
+        "amount":  150000,
+        "paymentDate":  "2025-09-20",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20250920_0077",
+        "merchantRaw":  "부경대학교소비자생",
+        "amount":  5200,
+        "paymentDate":  "2025-09-20",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250921_0541",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  5900,
+        "paymentDate":  "2025-09-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250922_0542",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  4100,
+        "paymentDate":  "2025-09-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250922_0543",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  5200,
+        "paymentDate":  "2025-09-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250922_0544",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  20900,
+        "paymentDate":  "2025-09-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250923_0545",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  10000,
+        "paymentDate":  "2025-09-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250923_0546",
+        "merchantRaw":  "GS25부경대",
+        "amount":  13400,
+        "paymentDate":  "2025-09-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250923_0078",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  20300,
+        "paymentDate":  "2025-09-23",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250924_0547",
+        "merchantRaw":  "오빠다방",
+        "amount":  4500,
+        "paymentDate":  "2025-09-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250925_0548",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  9600,
+        "paymentDate":  "2025-09-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250925_0549",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  30000,
+        "paymentDate":  "2025-09-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250925_0550",
+        "merchantRaw":  "보너스마트",
+        "amount":  20600,
+        "paymentDate":  "2025-09-25",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250925_0551",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  58400,
+        "paymentDate":  "2025-09-25",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20250926_0552",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  18500,
+        "paymentDate":  "2025-09-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250926_0553",
+        "merchantRaw":  "오빠다방",
+        "amount":  12000,
+        "paymentDate":  "2025-09-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250926_0554",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  20000,
+        "paymentDate":  "2025-09-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250927_0555",
+        "merchantRaw":  "에이스스터디카페",
+        "amount":  150000,
+        "paymentDate":  "2025-09-27",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20250928_0556",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  25700,
+        "paymentDate":  "2025-09-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20250928_0079",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  5100,
+        "paymentDate":  "2025-09-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250929_0557",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  2900,
+        "paymentDate":  "2025-09-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20250929_0558",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  2800,
+        "paymentDate":  "2025-09-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251001_0559",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  10500,
+        "paymentDate":  "2025-10-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251003_0560",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  85200,
+        "paymentDate":  "2025-10-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251006_0561",
+        "merchantRaw":  "(주)이마트해운대점",
+        "amount":  6800,
+        "paymentDate":  "2025-10-06",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251006_0562",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  8700,
+        "paymentDate":  "2025-10-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251006_0080",
+        "merchantRaw":  "LG U+ 유독",
+        "amount":  9900,
+        "paymentDate":  "2025-10-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20251007_0563",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  6200,
+        "paymentDate":  "2025-10-07",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251007_0564",
+        "merchantRaw":  "교보핫트랙스(주)",
+        "amount":  5900,
+        "paymentDate":  "2025-10-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251007_0565",
+        "merchantRaw":  "고려주차장",
+        "amount":  30000,
+        "paymentDate":  "2025-10-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251007_0566",
+        "merchantRaw":  "투썸플레이스장유율",
+        "amount":  3900,
+        "paymentDate":  "2025-10-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251008_0567",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  72600,
+        "paymentDate":  "2025-10-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251009_0568",
+        "merchantRaw":  "마츠도",
+        "amount":  18300,
+        "paymentDate":  "2025-10-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251010_0569",
+        "merchantRaw":  "롯데몰동부산점매",
+        "amount":  6000,
+        "paymentDate":  "2025-10-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251010_0570",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  10000,
+        "paymentDate":  "2025-10-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251010_0081",
+        "merchantRaw":  "OPENAI*CHATGPT",
+        "amount":  20000,
+        "paymentDate":  "2025-10-10",
+        "category":  "AI"
+    },
+    {
+        "paymentId":  "pay_20251011_0571",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  20500,
+        "paymentDate":  "2025-10-11",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251011_0572",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  3900,
+        "paymentDate":  "2025-10-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251012_0573",
+        "merchantRaw":  "율하신세계한의원",
+        "amount":  6400,
+        "paymentDate":  "2025-10-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251012_0574",
+        "merchantRaw":  "코코노카",
+        "amount":  20700,
+        "paymentDate":  "2025-10-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251013_0575",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-10-13",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20251013_0576",
+        "merchantRaw":  "코코노카",
+        "amount":  150000,
+        "paymentDate":  "2025-10-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251013_0577",
+        "merchantRaw":  "에이스스터디카페",
+        "amount":  10000,
+        "paymentDate":  "2025-10-13",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20251013_0578",
+        "merchantRaw":  "카카오스타일",
+        "amount":  140100,
+        "paymentDate":  "2025-10-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251013_0579",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  150000,
+        "paymentDate":  "2025-10-13",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251013_0580",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  90400,
+        "paymentDate":  "2025-10-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251014_0581",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-10-14",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20251014_0582",
+        "merchantRaw":  "충북대학교",
+        "amount":  4800,
+        "paymentDate":  "2025-10-14",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20251015_0583",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-10-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_u1_20251015_0082",
+        "merchantRaw":  "SPOTIFY",
+        "amount":  9900,
+        "paymentDate":  "2025-10-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20251016_0584",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  79700,
+        "paymentDate":  "2025-10-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251016_0585",
+        "merchantRaw":  "보너스마트",
+        "amount":  22000,
+        "paymentDate":  "2025-10-16",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20251016_0083",
+        "merchantRaw":  "SR",
+        "amount":  12400,
+        "paymentDate":  "2025-10-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251017_0586",
+        "merchantRaw":  "시외버스승차권",
+        "amount":  3800,
+        "paymentDate":  "2025-10-17",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251017_0587",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  5400,
+        "paymentDate":  "2025-10-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251018_0588",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  10000,
+        "paymentDate":  "2025-10-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251019_0589",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  17700,
+        "paymentDate":  "2025-10-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251019_0590",
+        "merchantRaw":  "주식회사빡벳부경",
+        "amount":  30000,
+        "paymentDate":  "2025-10-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251019_0084",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  6700,
+        "paymentDate":  "2025-10-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251021_0591",
+        "merchantRaw":  "보너스마트",
+        "amount":  7600,
+        "paymentDate":  "2025-10-21",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251021_0592",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  100400,
+        "paymentDate":  "2025-10-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251021_0593",
+        "merchantRaw":  "밀알케터링부경대점",
+        "amount":  5600,
+        "paymentDate":  "2025-10-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251022_0594",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  30000,
+        "paymentDate":  "2025-10-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251022_0595",
+        "merchantRaw":  "맥도날드부산송정DT",
+        "amount":  24900,
+        "paymentDate":  "2025-10-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251022_0596",
+        "merchantRaw":  "오빠다방",
+        "amount":  6300,
+        "paymentDate":  "2025-10-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251023_0597",
+        "merchantRaw":  "네이버페이",
+        "amount":  19300,
+        "paymentDate":  "2025-10-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251023_0598",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  15000,
+        "paymentDate":  "2025-10-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251024_0599",
+        "merchantRaw":  "수미지이비인후과",
+        "amount":  62200,
+        "paymentDate":  "2025-10-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251024_0600",
+        "merchantRaw":  "네이버페이",
+        "amount":  30000,
+        "paymentDate":  "2025-10-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251024_0085",
+        "merchantRaw":  "보너스마트",
+        "amount":  9700,
+        "paymentDate":  "2025-10-24",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251025_0601",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  3500,
+        "paymentDate":  "2025-10-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251025_0602",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  2400,
+        "paymentDate":  "2025-10-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251025_0603",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  30000,
+        "paymentDate":  "2025-10-25",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251026_0604",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  10000,
+        "paymentDate":  "2025-10-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251027_0605",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  101300,
+        "paymentDate":  "2025-10-27",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251028_0606",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  19500,
+        "paymentDate":  "2025-10-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251028_0607",
+        "merchantRaw":  "네이버페이",
+        "amount":  96700,
+        "paymentDate":  "2025-10-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251028_0086",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  14300,
+        "paymentDate":  "2025-10-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251029_0608",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  10000,
+        "paymentDate":  "2025-10-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251029_0609",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  4100,
+        "paymentDate":  "2025-10-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251030_0610",
+        "merchantRaw":  "네이버페이",
+        "amount":  10000,
+        "paymentDate":  "2025-10-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251030_0611",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  12600,
+        "paymentDate":  "2025-10-30",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251031_0612",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  3100,
+        "paymentDate":  "2025-10-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251031_0613",
+        "merchantRaw":  "마츠도",
+        "amount":  3200,
+        "paymentDate":  "2025-10-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251103_0614",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  3200,
+        "paymentDate":  "2025-11-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251104_0615",
+        "merchantRaw":  "투썸플레이스더블유",
+        "amount":  6400,
+        "paymentDate":  "2025-11-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251106_0616",
+        "merchantRaw":  "(사)한국건강관리협",
+        "amount":  90800,
+        "paymentDate":  "2025-11-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251106_0087",
+        "merchantRaw":  "LG U+ 유독",
+        "amount":  9900,
+        "paymentDate":  "2025-11-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20251107_0617",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  15300,
+        "paymentDate":  "2025-11-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251108_0618",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  4700,
+        "paymentDate":  "2025-11-08",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20251109_0088",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  3900,
+        "paymentDate":  "2025-11-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251110_0619",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  7900,
+        "paymentDate":  "2025-11-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251110_0089",
+        "merchantRaw":  "OPENAI*CHATGPT",
+        "amount":  20000,
+        "paymentDate":  "2025-11-10",
+        "category":  "AI"
+    },
+    {
+        "paymentId":  "pay_u1_20251112_0090",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  4100,
+        "paymentDate":  "2025-11-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251115_0620",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-11-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20251115_0621",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-11-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20251115_0622",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-11-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20251115_0623",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  30000,
+        "paymentDate":  "2025-11-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251115_0624",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  5200,
+        "paymentDate":  "2025-11-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251115_0091",
+        "merchantRaw":  "Spotify",
+        "amount":  9900,
+        "paymentDate":  "2025-11-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20251116_0625",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  3800,
+        "paymentDate":  "2025-11-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251118_0626",
+        "merchantRaw":  "마츠도",
+        "amount":  3300,
+        "paymentDate":  "2025-11-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251118_0092",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  35800,
+        "paymentDate":  "2025-11-18",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251120_0627",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  3800,
+        "paymentDate":  "2025-11-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251120_0628",
+        "merchantRaw":  "네이버페이",
+        "amount":  30000,
+        "paymentDate":  "2025-11-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251121_0629",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  29000,
+        "paymentDate":  "2025-11-21",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251122_0630",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  30000,
+        "paymentDate":  "2025-11-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251122_0093",
+        "merchantRaw":  "에이스스터디카페",
+        "amount":  8700,
+        "paymentDate":  "2025-11-22",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20251123_0631",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  11800,
+        "paymentDate":  "2025-11-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251124_0632",
+        "merchantRaw":  "GS25부경대",
+        "amount":  120200,
+        "paymentDate":  "2025-11-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251124_0633",
+        "merchantRaw":  "SR",
+        "amount":  5100,
+        "paymentDate":  "2025-11-24",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251125_0634",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  6600,
+        "paymentDate":  "2025-11-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251125_0635",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  106900,
+        "paymentDate":  "2025-11-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251126_0636",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  25300,
+        "paymentDate":  "2025-11-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251126_0637",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  6700,
+        "paymentDate":  "2025-11-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251127_0638",
+        "merchantRaw":  "맥도날드부산송정DT",
+        "amount":  16000,
+        "paymentDate":  "2025-11-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251127_0639",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  25100,
+        "paymentDate":  "2025-11-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251128_0640",
+        "merchantRaw":  "SR",
+        "amount":  27200,
+        "paymentDate":  "2025-11-28",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251129_0641",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  13100,
+        "paymentDate":  "2025-11-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251129_0642",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  3000,
+        "paymentDate":  "2025-11-29",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251129_0643",
+        "merchantRaw":  "푸드시스코리아(부",
+        "amount":  4200,
+        "paymentDate":  "2025-11-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251129_0094",
+        "merchantRaw":  "GS25부경대",
+        "amount":  6500,
+        "paymentDate":  "2025-11-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251130_0644",
+        "merchantRaw":  "율하신세계한의원",
+        "amount":  4500,
+        "paymentDate":  "2025-11-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251201_0645",
+        "merchantRaw":  "오빠다방",
+        "amount":  13800,
+        "paymentDate":  "2025-12-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251201_0646",
+        "merchantRaw":  "쿠팡(쿠페이)",
+        "amount":  10000,
+        "paymentDate":  "2025-12-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251202_0647",
+        "merchantRaw":  "밀알케터링부경대점",
+        "amount":  27000,
+        "paymentDate":  "2025-12-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251202_0648",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  7000,
+        "paymentDate":  "2025-12-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251203_0649",
+        "merchantRaw":  "베스토어",
+        "amount":  10000,
+        "paymentDate":  "2025-12-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251203_0650",
+        "merchantRaw":  "시외버스승차권",
+        "amount":  6000,
+        "paymentDate":  "2025-12-03",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251203_0651",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  9600,
+        "paymentDate":  "2025-12-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251203_0652",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  2300,
+        "paymentDate":  "2025-12-03",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251203_0653",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  7700,
+        "paymentDate":  "2025-12-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251204_0654",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  30000,
+        "paymentDate":  "2025-12-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251204_0655",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  3900,
+        "paymentDate":  "2025-12-04",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251205_0656",
+        "merchantRaw":  "마츠도",
+        "amount":  7700,
+        "paymentDate":  "2025-12-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251205_0657",
+        "merchantRaw":  "데이앤데이미음점",
+        "amount":  18500,
+        "paymentDate":  "2025-12-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251205_0658",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  3800,
+        "paymentDate":  "2025-12-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251205_0659",
+        "merchantRaw":  "코코노카",
+        "amount":  2600,
+        "paymentDate":  "2025-12-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251206_0660",
+        "merchantRaw":  "좋아서하는",
+        "amount":  3000,
+        "paymentDate":  "2025-12-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251206_0095",
+        "merchantRaw":  "LG U+ 유독",
+        "amount":  9900,
+        "paymentDate":  "2025-12-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20251207_0661",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  4000,
+        "paymentDate":  "2025-12-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251208_0662",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  2600,
+        "paymentDate":  "2025-12-08",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251208_0663",
+        "merchantRaw":  "(주)이마트해운대점",
+        "amount":  26100,
+        "paymentDate":  "2025-12-08",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251209_0664",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  24400,
+        "paymentDate":  "2025-12-09",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251209_0665",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  6400,
+        "paymentDate":  "2025-12-09",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251210_0666",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  10000,
+        "paymentDate":  "2025-12-10",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251210_0667",
+        "merchantRaw":  "충북대학교",
+        "amount":  23800,
+        "paymentDate":  "2025-12-10",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_u1_20251210_0096",
+        "merchantRaw":  "OPENAI*CHATGPT",
+        "amount":  14500,
+        "paymentDate":  "2025-12-10",
+        "category":  "AI"
+    },
+    {
+        "paymentId":  "pay_20251211_0668",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  24600,
+        "paymentDate":  "2025-12-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251211_0669",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  10700,
+        "paymentDate":  "2025-12-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251211_0670",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  7500,
+        "paymentDate":  "2025-12-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251211_0671",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  3900,
+        "paymentDate":  "2025-12-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251211_0672",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  5800,
+        "paymentDate":  "2025-12-11",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251212_0673",
+        "merchantRaw":  "코코노카",
+        "amount":  4300,
+        "paymentDate":  "2025-12-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251212_0674",
+        "merchantRaw":  "텐퍼센트커피경성부",
+        "amount":  4000,
+        "paymentDate":  "2025-12-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251212_0675",
+        "merchantRaw":  "명지명인한의원",
+        "amount":  3900,
+        "paymentDate":  "2025-12-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251212_0097",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  9900,
+        "paymentDate":  "2025-12-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251213_0676",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  99100,
+        "paymentDate":  "2025-12-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251213_0677",
+        "merchantRaw":  "뚜레주르장유젤미마",
+        "amount":  30000,
+        "paymentDate":  "2025-12-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251214_0678",
+        "merchantRaw":  "마츠도",
+        "amount":  4700,
+        "paymentDate":  "2025-12-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251214_0679",
+        "merchantRaw":  "푸드시스코리아(부",
+        "amount":  3400,
+        "paymentDate":  "2025-12-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251214_0680",
+        "merchantRaw":  "보너스마트",
+        "amount":  5900,
+        "paymentDate":  "2025-12-14",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251215_0681",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2025-12-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20251215_0682",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2025-12-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20251215_0683",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  4000,
+        "paymentDate":  "2025-12-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251215_0684",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  38500,
+        "paymentDate":  "2025-12-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251215_0685",
+        "merchantRaw":  "BKR버거킹부산대",
+        "amount":  10000,
+        "paymentDate":  "2025-12-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251215_0686",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  6900,
+        "paymentDate":  "2025-12-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251215_0098",
+        "merchantRaw":  "Spotify",
+        "amount":  11990,
+        "paymentDate":  "2025-12-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20251216_0687",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2025-12-16",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20251216_0688",
+        "merchantRaw":  "오빠다방",
+        "amount":  3700,
+        "paymentDate":  "2025-12-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251216_0689",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  23900,
+        "paymentDate":  "2025-12-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251217_0690",
+        "merchantRaw":  "텐퍼센트대연자이점",
+        "amount":  25700,
+        "paymentDate":  "2025-12-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251218_0691",
+        "merchantRaw":  "시외버스승차권",
+        "amount":  6000,
+        "paymentDate":  "2025-12-18",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251218_0692",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  7500,
+        "paymentDate":  "2025-12-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251218_0693",
+        "merchantRaw":  "만우화원",
+        "amount":  6800,
+        "paymentDate":  "2025-12-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251218_0694",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  7600,
+        "paymentDate":  "2025-12-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251218_0099",
+        "merchantRaw":  "네이버페이",
+        "amount":  28600,
+        "paymentDate":  "2025-12-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251219_0695",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  10600,
+        "paymentDate":  "2025-12-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251219_0696",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  6200,
+        "paymentDate":  "2025-12-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251219_0697",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  5400,
+        "paymentDate":  "2025-12-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251219_0698",
+        "merchantRaw":  "텐퍼센트커피경성부",
+        "amount":  10000,
+        "paymentDate":  "2025-12-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251220_0699",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  13700,
+        "paymentDate":  "2025-12-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251221_0700",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  30000,
+        "paymentDate":  "2025-12-21",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251221_0701",
+        "merchantRaw":  "보너스마트",
+        "amount":  5600,
+        "paymentDate":  "2025-12-21",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251221_0702",
+        "merchantRaw":  "(주)신세계백화점센",
+        "amount":  5400,
+        "paymentDate":  "2025-12-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251221_0703",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  25900,
+        "paymentDate":  "2025-12-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251221_0100",
+        "merchantRaw":  "보너스마트",
+        "amount":  14200,
+        "paymentDate":  "2025-12-21",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251222_0704",
+        "merchantRaw":  "네이버페이",
+        "amount":  9800,
+        "paymentDate":  "2025-12-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251223_0705",
+        "merchantRaw":  "세븐일레븐부산대연",
+        "amount":  10000,
+        "paymentDate":  "2025-12-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251223_0706",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  5300,
+        "paymentDate":  "2025-12-23",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251224_0707",
+        "merchantRaw":  "마츠도",
+        "amount":  8500,
+        "paymentDate":  "2025-12-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251225_0708",
+        "merchantRaw":  "메디팜명성약국",
+        "amount":  7800,
+        "paymentDate":  "2025-12-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251226_0709",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  107500,
+        "paymentDate":  "2025-12-26",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251226_0710",
+        "merchantRaw":  "GS25부경대",
+        "amount":  4800,
+        "paymentDate":  "2025-12-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251226_0711",
+        "merchantRaw":  "고려주차장",
+        "amount":  3600,
+        "paymentDate":  "2025-12-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251226_0712",
+        "merchantRaw":  "보너스마트",
+        "amount":  30000,
+        "paymentDate":  "2025-12-26",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20251226_0101",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  4800,
+        "paymentDate":  "2025-12-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251227_0713",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  5000,
+        "paymentDate":  "2025-12-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251227_0714",
+        "merchantRaw":  "마츠도",
+        "amount":  7900,
+        "paymentDate":  "2025-12-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251227_0715",
+        "merchantRaw":  "고려주차장",
+        "amount":  4500,
+        "paymentDate":  "2025-12-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251228_0716",
+        "merchantRaw":  "배스킨라빈스부산진",
+        "amount":  4800,
+        "paymentDate":  "2025-12-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251228_0717",
+        "merchantRaw":  "코코노카",
+        "amount":  5200,
+        "paymentDate":  "2025-12-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251228_0718",
+        "merchantRaw":  "SR",
+        "amount":  30000,
+        "paymentDate":  "2025-12-28",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20251228_0719",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  30000,
+        "paymentDate":  "2025-12-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251228_0720",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  5000,
+        "paymentDate":  "2025-12-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251228_0721",
+        "merchantRaw":  "네이버페이",
+        "amount":  4700,
+        "paymentDate":  "2025-12-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251229_0722",
+        "merchantRaw":  "(주)신세계백화점센",
+        "amount":  78600,
+        "paymentDate":  "2025-12-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251229_0723",
+        "merchantRaw":  "고려주차장",
+        "amount":  3600,
+        "paymentDate":  "2025-12-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251229_0724",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  2300,
+        "paymentDate":  "2025-12-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251229_0725",
+        "merchantRaw":  "마츠도",
+        "amount":  4100,
+        "paymentDate":  "2025-12-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251230_0726",
+        "merchantRaw":  "지에스(GS)25좌동코",
+        "amount":  27900,
+        "paymentDate":  "2025-12-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251230_0727",
+        "merchantRaw":  "보너스마트",
+        "amount":  22500,
+        "paymentDate":  "2025-12-30",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20251230_0728",
+        "merchantRaw":  "(주)신세계백화점센",
+        "amount":  6000,
+        "paymentDate":  "2025-12-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20251230_0102",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  7300,
+        "paymentDate":  "2025-12-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251231_0729",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  5000,
+        "paymentDate":  "2025-12-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251231_0730",
+        "merchantRaw":  "마라패션(痲辣fashion",
+        "amount":  73000,
+        "paymentDate":  "2025-12-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20251231_0731",
+        "merchantRaw":  "컴포즈커피부산롯데",
+        "amount":  16500,
+        "paymentDate":  "2025-12-31",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260102_0732",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  19200,
+        "paymentDate":  "2026-01-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260102_0733",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  13600,
+        "paymentDate":  "2026-01-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260102_0734",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  18300,
+        "paymentDate":  "2026-01-02",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260103_0735",
+        "merchantRaw":  "투썸플레이스장유율",
+        "amount":  10000,
+        "paymentDate":  "2026-01-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260104_0736",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  12200,
+        "paymentDate":  "2026-01-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260104_0737",
+        "merchantRaw":  "보너스마트",
+        "amount":  15600,
+        "paymentDate":  "2026-01-04",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260104_0738",
+        "merchantRaw":  "(주)이스턴웰스STX",
+        "amount":  3600,
+        "paymentDate":  "2026-01-04",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260105_0739",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  3700,
+        "paymentDate":  "2026-01-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260106_0740",
+        "merchantRaw":  "마츠도",
+        "amount":  9800,
+        "paymentDate":  "2026-01-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260106_0741",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  30000,
+        "paymentDate":  "2026-01-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260106_0103",
+        "merchantRaw":  "LG U+ 유독",
+        "amount":  9900,
+        "paymentDate":  "2026-01-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20260108_0742",
+        "merchantRaw":  "(주)이마트해운대점",
+        "amount":  21800,
+        "paymentDate":  "2026-01-08",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260109_0743",
+        "merchantRaw":  "푸드시스코리아(부",
+        "amount":  30000,
+        "paymentDate":  "2026-01-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260109_0744",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  150000,
+        "paymentDate":  "2026-01-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260110_0745",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  4800,
+        "paymentDate":  "2026-01-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260110_0104",
+        "merchantRaw":  "OPENAI ChatGPT",
+        "amount":  14500,
+        "paymentDate":  "2026-01-10",
+        "category":  "AI"
+    },
+    {
+        "paymentId":  "pay_20260112_0746",
+        "merchantRaw":  "교보핫트랙스(주)",
+        "amount":  70800,
+        "paymentDate":  "2026-01-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260112_0747",
+        "merchantRaw":  "(주)이마트해운대점",
+        "amount":  10000,
+        "paymentDate":  "2026-01-12",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20260112_0105",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  5200,
+        "paymentDate":  "2026-01-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260113_0748",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  30000,
+        "paymentDate":  "2026-01-13",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260113_0749",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  30000,
+        "paymentDate":  "2026-01-13",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260114_0750",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2026-01-14",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20260114_0751",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2026-01-14",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20260114_0752",
+        "merchantRaw":  "고려주차장",
+        "amount":  3700,
+        "paymentDate":  "2026-01-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260115_0753",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  4900,
+        "paymentDate":  "2026-01-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260115_0106",
+        "merchantRaw":  "Spotify",
+        "amount":  11990,
+        "paymentDate":  "2026-01-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20260116_0754",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  14900,
+        "paymentDate":  "2026-01-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260116_0755",
+        "merchantRaw":  "호텔뮤리",
+        "amount":  3700,
+        "paymentDate":  "2026-01-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260116_0756",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  5700,
+        "paymentDate":  "2026-01-16",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260116_0107",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  7200,
+        "paymentDate":  "2026-01-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260117_0757",
+        "merchantRaw":  "쿠팡(쿠페이)",
+        "amount":  6100,
+        "paymentDate":  "2026-01-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260118_0758",
+        "merchantRaw":  "카카오선물하기_카카",
+        "amount":  5300,
+        "paymentDate":  "2026-01-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260118_0759",
+        "merchantRaw":  "네이버페이",
+        "amount":  28800,
+        "paymentDate":  "2026-01-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260118_0760",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  14300,
+        "paymentDate":  "2026-01-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260119_0761",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2026-01-19",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20260119_0762",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  4200,
+        "paymentDate":  "2026-01-19",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20260119_0108",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  18700,
+        "paymentDate":  "2026-01-19",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260120_0763",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  27300,
+        "paymentDate":  "2026-01-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260120_0764",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  8900,
+        "paymentDate":  "2026-01-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260120_0765",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  27000,
+        "paymentDate":  "2026-01-20",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260121_0766",
+        "merchantRaw":  "코코노카",
+        "amount":  3900,
+        "paymentDate":  "2026-01-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260121_0767",
+        "merchantRaw":  "코코노카",
+        "amount":  4800,
+        "paymentDate":  "2026-01-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260121_0768",
+        "merchantRaw":  "컴포즈커피범방점",
+        "amount":  6700,
+        "paymentDate":  "2026-01-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260122_0769",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  7000,
+        "paymentDate":  "2026-01-22",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260122_0770",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  6700,
+        "paymentDate":  "2026-01-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260122_0771",
+        "merchantRaw":  "롯데몰동부산점매",
+        "amount":  5600,
+        "paymentDate":  "2026-01-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260122_0772",
+        "merchantRaw":  "오빠다방",
+        "amount":  18700,
+        "paymentDate":  "2026-01-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260123_0773",
+        "merchantRaw":  "텐퍼센트커피경성부",
+        "amount":  7900,
+        "paymentDate":  "2026-01-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260123_0774",
+        "merchantRaw":  "하삼동커피녹산중앙",
+        "amount":  19300,
+        "paymentDate":  "2026-01-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260124_0775",
+        "merchantRaw":  "오빠다방",
+        "amount":  17600,
+        "paymentDate":  "2026-01-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260124_0109",
+        "merchantRaw":  "충북대학교",
+        "amount":  9300,
+        "paymentDate":  "2026-01-24",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20260125_0776",
+        "merchantRaw":  "부경대학교소비자생",
+        "amount":  5200,
+        "paymentDate":  "2026-01-25",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20260125_0777",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  17100,
+        "paymentDate":  "2026-01-25",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260125_0778",
+        "merchantRaw":  "보너스마트",
+        "amount":  7600,
+        "paymentDate":  "2026-01-25",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260126_0779",
+        "merchantRaw":  "SR",
+        "amount":  7600,
+        "paymentDate":  "2026-01-26",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260128_0780",
+        "merchantRaw":  "GS25부경대",
+        "amount":  103200,
+        "paymentDate":  "2026-01-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260128_0110",
+        "merchantRaw":  "오빠다방",
+        "amount":  5900,
+        "paymentDate":  "2026-01-28",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260130_0781",
+        "merchantRaw":  "맥도날드부산송정DT",
+        "amount":  10000,
+        "paymentDate":  "2026-01-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260130_0782",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  11600,
+        "paymentDate":  "2026-01-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260201_0783",
+        "merchantRaw":  "에이스스터디카페",
+        "amount":  14400,
+        "paymentDate":  "2026-02-01",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20260201_0784",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  14000,
+        "paymentDate":  "2026-02-01",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260205_0785",
+        "merchantRaw":  "GS25부경대",
+        "amount":  1800,
+        "paymentDate":  "2026-02-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260206_0111",
+        "merchantRaw":  "유독 더블 스트리밍",
+        "amount":  9900,
+        "paymentDate":  "2026-02-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20260207_0786",
+        "merchantRaw":  "부경대학교",
+        "amount":  5000,
+        "paymentDate":  "2026-02-07",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20260209_0787",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  2200,
+        "paymentDate":  "2026-02-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260209_0788",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  30000,
+        "paymentDate":  "2026-02-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260210_0789",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  30000,
+        "paymentDate":  "2026-02-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260210_0112",
+        "merchantRaw":  "OPENAI ChatGPT",
+        "amount":  20000,
+        "paymentDate":  "2026-02-10",
+        "category":  "AI"
+    },
+    {
+        "paymentId":  "pay_20260211_0790",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  5500,
+        "paymentDate":  "2026-02-11",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260212_0791",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  8400,
+        "paymentDate":  "2026-02-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260212_0113",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  3300,
+        "paymentDate":  "2026-02-12",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260214_0792",
+        "merchantRaw":  "맥도날드부산송정DT",
+        "amount":  4700,
+        "paymentDate":  "2026-02-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260215_0793",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2026-02-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20260215_0794",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2026-02-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_u1_20260215_0114",
+        "merchantRaw":  "Spotify",
+        "amount":  11990,
+        "paymentDate":  "2026-02-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20260216_0795",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2026-02-16",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20260216_0796",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  10000,
+        "paymentDate":  "2026-02-16",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260216_0797",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  27500,
+        "paymentDate":  "2026-02-16",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20260218_0115",
+        "merchantRaw":  "보너스마트",
+        "amount":  11600,
+        "paymentDate":  "2026-02-18",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260219_0798",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  18300,
+        "paymentDate":  "2026-02-19",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260221_0799",
+        "merchantRaw":  "쿠팡(쿠페이)",
+        "amount":  4700,
+        "paymentDate":  "2026-02-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260222_0116",
+        "merchantRaw":  "네이버페이",
+        "amount":  15400,
+        "paymentDate":  "2026-02-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260224_0800",
+        "merchantRaw":  "마츠도",
+        "amount":  6600,
+        "paymentDate":  "2026-02-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260226_0801",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  5100,
+        "paymentDate":  "2026-02-26",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260227_0802",
+        "merchantRaw":  "경포비치호텔",
+        "amount":  6200,
+        "paymentDate":  "2026-02-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260227_0803",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  59000,
+        "paymentDate":  "2026-02-27",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_u1_20260227_0117",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  6200,
+        "paymentDate":  "2026-02-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260301_0804",
+        "merchantRaw":  "매머드커피익스프레",
+        "amount":  20100,
+        "paymentDate":  "2026-03-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260301_0805",
+        "merchantRaw":  "GS25부경대",
+        "amount":  15000,
+        "paymentDate":  "2026-03-01",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260302_0806",
+        "merchantRaw":  "할매분식",
+        "amount":  4700,
+        "paymentDate":  "2026-03-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260302_0807",
+        "merchantRaw":  "씨제이올리브네트웍",
+        "amount":  8400,
+        "paymentDate":  "2026-03-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260302_0808",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  13100,
+        "paymentDate":  "2026-03-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260302_0809",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  30000,
+        "paymentDate":  "2026-03-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260302_0810",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  62000,
+        "paymentDate":  "2026-03-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260302_0811",
+        "merchantRaw":  "고려주차장",
+        "amount":  21900,
+        "paymentDate":  "2026-03-02",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260303_0812",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  16100,
+        "paymentDate":  "2026-03-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260303_0813",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  21400,
+        "paymentDate":  "2026-03-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260303_0814",
+        "merchantRaw":  "씨유(CU)부산글로벌",
+        "amount":  3700,
+        "paymentDate":  "2026-03-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260303_0815",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  23900,
+        "paymentDate":  "2026-03-03",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260304_0816",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  17800,
+        "paymentDate":  "2026-03-04",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260305_0817",
+        "merchantRaw":  "데이앤데이미음점",
+        "amount":  22100,
+        "paymentDate":  "2026-03-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260305_0818",
+        "merchantRaw":  "오빠다방",
+        "amount":  2100,
+        "paymentDate":  "2026-03-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260305_0819",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  8300,
+        "paymentDate":  "2026-03-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260305_0820",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  9900,
+        "paymentDate":  "2026-03-05",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260306_0821",
+        "merchantRaw":  "마츠도",
+        "amount":  4600,
+        "paymentDate":  "2026-03-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260306_0822",
+        "merchantRaw":  "커피베이부산오시리",
+        "amount":  6200,
+        "paymentDate":  "2026-03-06",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260306_0118",
+        "merchantRaw":  "유독 더블 스트리밍",
+        "amount":  9900,
+        "paymentDate":  "2026-03-06",
+        "category":  "BUNDLE"
+    },
+    {
+        "paymentId":  "pay_20260307_0823",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  3500,
+        "paymentDate":  "2026-03-07",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260308_0824",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  23500,
+        "paymentDate":  "2026-03-08",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260308_0825",
+        "merchantRaw":  "코레일유통주식회사(",
+        "amount":  26900,
+        "paymentDate":  "2026-03-08",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260309_0826",
+        "merchantRaw":  "카카오스타일",
+        "amount":  3100,
+        "paymentDate":  "2026-03-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260309_0827",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  79900,
+        "paymentDate":  "2026-03-09",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260309_0828",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  24800,
+        "paymentDate":  "2026-03-09",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260310_0829",
+        "merchantRaw":  "오빠다방",
+        "amount":  29800,
+        "paymentDate":  "2026-03-10",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260310_0119",
+        "merchantRaw":  "OPENAI ChatGPT",
+        "amount":  20000,
+        "paymentDate":  "2026-03-10",
+        "category":  "AI"
+    },
+    {
+        "paymentId":  "pay_20260311_0830",
+        "merchantRaw":  "마츠도",
+        "amount":  3200,
+        "paymentDate":  "2026-03-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260311_0831",
+        "merchantRaw":  "카카오스타일",
+        "amount":  10400,
+        "paymentDate":  "2026-03-11",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260312_0832",
+        "merchantRaw":  "지에스25강서범방원",
+        "amount":  3400,
+        "paymentDate":  "2026-03-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260312_0120",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  5500,
+        "paymentDate":  "2026-03-12",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260313_0833",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  5500,
+        "paymentDate":  "2026-03-13",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260313_0834",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  6200,
+        "paymentDate":  "2026-03-13",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260313_0835",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  11500,
+        "paymentDate":  "2026-03-13",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260314_0836",
+        "merchantRaw":  "스타벅스코리아",
+        "amount":  6900,
+        "paymentDate":  "2026-03-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260314_0837",
+        "merchantRaw":  "코코노카",
+        "amount":  7900,
+        "paymentDate":  "2026-03-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260314_0838",
+        "merchantRaw":  "세븐일레븐장유덕정",
+        "amount":  15400,
+        "paymentDate":  "2026-03-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260314_0839",
+        "merchantRaw":  "네이버페이",
+        "amount":  150000,
+        "paymentDate":  "2026-03-14",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260315_0840",
+        "merchantRaw":  "NETFLIX_INICIS-넷플릭스서비시스코리",
+        "amount":  13500,
+        "paymentDate":  "2026-03-15",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20260315_0841",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  19900,
+        "paymentDate":  "2026-03-15",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260315_0842",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  96200,
+        "paymentDate":  "2026-03-15",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20260315_0121",
+        "merchantRaw":  "Spotify",
+        "amount":  11990,
+        "paymentDate":  "2026-03-15",
+        "category":  "MUSIC"
+    },
+    {
+        "paymentId":  "pay_20260316_0843",
+        "merchantRaw":  "디즈니플러스",
+        "amount":  13900,
+        "paymentDate":  "2026-03-16",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20260316_0844",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  22600,
+        "paymentDate":  "2026-03-16",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260317_0845",
+        "merchantRaw":  "주식회사 티빙",
+        "amount":  4900,
+        "paymentDate":  "2026-03-17",
+        "category":  "OTT"
+    },
+    {
+        "paymentId":  "pay_20260317_0846",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  10000,
+        "paymentDate":  "2026-03-17",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260317_0122",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  8700,
+        "paymentDate":  "2026-03-17",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260318_0847",
+        "merchantRaw":  "네이버페이",
+        "amount":  5600,
+        "paymentDate":  "2026-03-18",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260319_0848",
+        "merchantRaw":  "(주)이스턴웰스본사",
+        "amount":  30000,
+        "paymentDate":  "2026-03-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260319_0849",
+        "merchantRaw":  "오빠다방",
+        "amount":  15700,
+        "paymentDate":  "2026-03-19",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260319_0850",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  30000,
+        "paymentDate":  "2026-03-19",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260319_0851",
+        "merchantRaw":  "보너스마트",
+        "amount":  150000,
+        "paymentDate":  "2026-03-19",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260321_0852",
+        "merchantRaw":  "씨유수정진성로점",
+        "amount":  6300,
+        "paymentDate":  "2026-03-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260321_0853",
+        "merchantRaw":  "KB국민카드_카카오페",
+        "amount":  13100,
+        "paymentDate":  "2026-03-21",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260321_0123",
+        "merchantRaw":  "이마트24대연유엔점",
+        "amount":  4900,
+        "paymentDate":  "2026-03-21",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260322_0854",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  5400,
+        "paymentDate":  "2026-03-22",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260323_0855",
+        "merchantRaw":  "이마트24R부경대가",
+        "amount":  141000,
+        "paymentDate":  "2026-03-23",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260323_0856",
+        "merchantRaw":  "배스킨라빈스부산진",
+        "amount":  12500,
+        "paymentDate":  "2026-03-23",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260324_0857",
+        "merchantRaw":  "GS25부경삼광점",
+        "amount":  3800,
+        "paymentDate":  "2026-03-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260324_0858",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  10000,
+        "paymentDate":  "2026-03-24",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_u1_20260324_0124",
+        "merchantRaw":  "하삼동커피부경대점",
+        "amount":  4300,
+        "paymentDate":  "2026-03-24",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260325_0859",
+        "merchantRaw":  "GS25부경대",
+        "amount":  24100,
+        "paymentDate":  "2026-03-25",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260325_0860",
+        "merchantRaw":  "SR",
+        "amount":  13900,
+        "paymentDate":  "2026-03-25",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260325_0861",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  13900,
+        "paymentDate":  "2026-03-25",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260326_0862",
+        "merchantRaw":  "(주)이비카드택시법",
+        "amount":  10000,
+        "paymentDate":  "2026-03-26",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260326_0863",
+        "merchantRaw":  "부경대학교소비자생",
+        "amount":  17000,
+        "paymentDate":  "2026-03-26",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20260326_0864",
+        "merchantRaw":  "(주)신세계백화점센",
+        "amount":  6800,
+        "paymentDate":  "2026-03-26",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260327_0865",
+        "merchantRaw":  "마츠도",
+        "amount":  6800,
+        "paymentDate":  "2026-03-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260327_0866",
+        "merchantRaw":  "보너스마트",
+        "amount":  4800,
+        "paymentDate":  "2026-03-27",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260327_0867",
+        "merchantRaw":  "더-브릿지II(THEBRID",
+        "amount":  74400,
+        "paymentDate":  "2026-03-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260327_0868",
+        "merchantRaw":  "이동의즐거움_택시_9",
+        "amount":  3200,
+        "paymentDate":  "2026-03-27",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260327_0869",
+        "merchantRaw":  "오오(55)커피",
+        "amount":  10900,
+        "paymentDate":  "2026-03-27",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260327_0870",
+        "merchantRaw":  "탑플러스마트(부경대",
+        "amount":  12800,
+        "paymentDate":  "2026-03-27",
+        "category":  "대형마트"
+    },
+    {
+        "paymentId":  "pay_20260327_0871",
+        "merchantRaw":  "카카오T_바이크",
+        "amount":  6000,
+        "paymentDate":  "2026-03-27",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260329_0872",
+        "merchantRaw":  "마라패션(痲辣fashion",
+        "amount":  30000,
+        "paymentDate":  "2026-03-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260329_0873",
+        "merchantRaw":  "GS25부경대",
+        "amount":  4800,
+        "paymentDate":  "2026-03-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260329_0874",
+        "merchantRaw":  "호텔스미스(SMITH)",
+        "amount":  9500,
+        "paymentDate":  "2026-03-29",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_u1_20260329_0125",
+        "merchantRaw":  "부경대학교소비자생",
+        "amount":  7600,
+        "paymentDate":  "2026-03-29",
+        "category":  "교육/육아"
+    },
+    {
+        "paymentId":  "pay_20260330_0875",
+        "merchantRaw":  "틈새라면",
+        "amount":  15900,
+        "paymentDate":  "2026-03-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260330_0876",
+        "merchantRaw":  "카카오페이(택시)",
+        "amount":  24100,
+        "paymentDate":  "2026-03-30",
+        "category":  "교통"
+    },
+    {
+        "paymentId":  "pay_20260330_0877",
+        "merchantRaw":  "배스킨라빈스부산진",
+        "amount":  3300,
+        "paymentDate":  "2026-03-30",
+        "category":  "생활"
+    },
+    {
+        "paymentId":  "pay_20260331_0878",
+        "merchantRaw":  "카카오법인택시",
+        "amount":  30000,
+        "paymentDate":  "2026-03-31",
+        "category":  "교통"
+    }
+]

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>해지 권유 모달</title>
+  <style>
+    /* 기본 배경 설정 (앱 화면 느낌) */
+    body {
+      margin: 0;
+      background-color: #f4f4f4;
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 모달 배경 (어두운 오버레이) */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* 모달 컨테이너 */
+    .modal-content {
+      background: #ffffff;
+      width: 100%;
+      max-width: 320px;
+      border-radius: 24px;
+      padding: 32px 24px 24px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    /* 이모지/아이콘 영역 */
+    .modal-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+    /* 텍스트 영역 */
+    .modal-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #111;
+      margin: 0 0 12px 0;
+      word-break: keep-all;
+    }
+
+    .modal-desc {
+      font-size: 15px;
+      color: #666;
+      margin: 0 0 28px 0;
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+
+    /* 강조 텍스트 (넷플릭스 컬러 및 금액 강조) */
+    .highlight-red {
+      color: #E50914;
+      font-weight: 700;
+    }
+    .highlight-bold {
+      font-weight: 700;
+      color: #111;
+    }
+
+    /* 버튼 영역 */
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 16px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    /* Primary 버튼 (해지 유도) */
+    .btn-primary {
+      background-color: #E50914;
+      color: white;
+    }
+    .btn-primary:active {
+      background-color: #b80710;
+    }
+
+    /* Secondary 버튼 (유지) */
+    .btn-secondary {
+      background-color: #F5F4F0; /* 기존 버튼들과 비슷한 따뜻한 톤 */
+      color: #888;
+    }
+    .btn-secondary:active {
+      background-color: #e5e4e0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-icon">💸</div>
+      <h2 class="modal-title">넷플릭스, 잠시 쉬어갈까요?</h2>
+      <p class="modal-desc">
+        최근 <span class="highlight-bold">3개월 연속</span>으로 거의 안 보셨어요.<br>
+        지금 해지하면 다음 달에 <span class="highlight-red">13,500원</span>을 아낄 수 있어요!
+      </p>
+      
+      <div class="btn-group">
+        <button class="btn btn-primary">13,500원 아끼러 가기</button>
+        <button class="btn btn-secondary">조금 더 유지할게요</button>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애낌(AEKKIM) 프로모션 추천 목록 (토스 스타일)</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #E5E8EB; 
+            padding: 40px;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        .device {
+            width: 375px;
+            height: 812px;
+            border-radius: 36px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== 라이트 모드 (Toss) ===== */
+        .light {
+            background-color: #F2F4F6; /* 리스트 화면이므로 배경을 약간 어둡게 (토스 홈 스타일) */
+            color: #191F28;
+            --bg-color: #F2F4F6;
+            --header-bg: #FFFFFF;
+            --card-bg: #FFFFFF;
+            --text-main: #191F28;
+            --text-sub: #8B95A1;
+            --divider: #F2F4F6;
+            --toss-blue: #3182F6;
+            --badge-bg: #E8F3FF;
+            --badge-text: #1B64DA;
+            --nav-bg: rgba(255, 255, 255, 0.9);
+            --nav-border: #E5E8EB;
+        }
+
+        /* ===== 다크 모드 ===== */
+        .dark {
+            background-color: #101010;
+            color: #F9FAFB;
+            --bg-color: #101010;
+            --header-bg: #101010;
+            --card-bg: #1C1C1E;
+            --text-main: #F9FAFB;
+            --text-sub: #8B95A1;
+            --divider: #2C2C2E;
+            --toss-blue: #3182F6;
+            --badge-bg: #1A273A;
+            --badge-text: #4E95FF;
+            --nav-bg: rgba(28, 28, 30, 0.9);
+            --nav-border: #2C2C2E;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* 헤더 */
+        .header {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            background-color: var(--header-bg);
+            z-index: 10;
+        }
+
+        .header-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* 콘텐츠 스크롤 영역 */
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px 20px 100px;
+        }
+        
+        .content::-webkit-scrollbar { display: none; }
+
+        /* 그룹 섹션 */
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-header {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-left: 4px;
+        }
+
+        .section-count {
+            color: var(--toss-blue);
+        }
+
+        /* 프로모션 카드 */
+        .promo-card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            transition: transform 0.1s, background-color 0.2s;
+        }
+
+        .promo-card:active {
+            transform: scale(0.98);
+        }
+
+        .promo-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        /* OTT 로고 영역 */
+        .logo-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 800;
+            color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo-n { background-color: #E50914; }
+        .logo-t { background-color: #FF153C; }
+        .logo-p { background-color: #00C73C; } /* 파트너(네이버 등) 로고 예시 */
+
+        .logo-circle + .logo-circle {
+            margin-left: -10px;
+            border: 2px solid var(--card-bg);
+        }
+
+        /* 절약액 배지 */
+        .save-badge {
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* 프로모션 타이틀 & 설명 */
+        .promo-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-main);
+            line-height: 1.4;
+            margin-bottom: 12px;
+            word-break: keep-all;
+        }
+
+        /* 가격 비교 영역 */
+        .price-compare {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .old-price {
+            font-size: 15px;
+            color: var(--text-sub);
+            text-decoration: line-through;
+            font-weight: 500;
+        }
+
+        .arrow {
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        .new-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--toss-blue);
+        }
+
+        /* 조건 텍스트 (하단 회색 박스) */
+        .condition-box {
+            margin-top: 16px;
+            background-color: var(--divider);
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: var(--text-sub);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* 하단 탭바 */
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            background-color: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid var(--nav-border);
+            padding-bottom: 15px;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: var(--text-sub);
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 60px;
+        }
+
+        .nav-item.active {
+            color: var(--text-main);
+        }
+
+        .nav-icon {
+            font-size: 24px;
+            margin-bottom: 2px;
+        }
+
+        .device-label {
+            position: absolute;
+            top: -40px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 라이트 모드 -->
+    <div style="position: relative;">
+        <div class="device-label">Light Mode</div>
+        <div class="device light">
+            
+            <div class="header">
+                <div class="header-title">절약 방법</div>
+            </div>
+
+            <div class="content">
+                
+                <!-- 그룹 1: 바로 적용 가능 -->
+                <div class="section">
+                    <div class="section-header">
+                        ✅ 바로 적용 가능 <span class="section-count">1건</span>
+                    </div>
+                    
+                    <div class="promo-card" onclick="alert('프로모션 상세(SCR-006)로 이동')">
+                        <div class="promo-top">
+                            <div class="logo-group">
+                                <div class="logo-circle logo-n">N</div>
+                                <div class="logo-circle logo-p">P</div>
+                            </div>
+                            <div class="save-badge">월 8,600원 절약</div>
+                        </div>
+                        <div class="promo-title">네이버플러스 멤버십으로<br>넷플릭스 (광고형) 무료로 보기</div>
+                        <div class="price-compare">
+                            <span class="old-price">13,500원</span>
+                            <span class="arrow">→</span>
+                            <span class="new-price">4,900원</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 그룹 2: 조건 충족 시 -->
+                <div class="section">
+                    <div class="section-header">
+                        💳 조건 충족 시 <span class="section-count">2건</span>
+                    </div>
+
+                    <div class="promo-card" onclick="alert('프로모션 상세(SCR-006)로 이동')">
+                        <div class="promo-top">
+                            <div class="logo-group">
+                                <div class="logo-circle logo-t">T</div>
+                            </div>
+                            <div class="save-badge">월 9,500원 절약</div>
+                        </div>
+                        <div class="promo-title">KT 5G 초이스 요금제로<br>티빙 (베이직) 무료로 보기</div>
+                        <div class="price-compare">
+                            <span class="old-price">9,500원</span>
+                            <span class="arrow">→</span>
+                            <span class="new-price">0원</span>
+                        </div>
+                        <div class="condition-box">
+                            <span>💡</span> KT 특정 5G 요금제 이용 고객 대상
+                        </div>
+                    </div>
+
+                    <div class="promo-card" onclick="alert('프로모션 상세(SCR-006)로 이동')">
+                        <div class="promo-top">
+                            <div class="logo-group">
+                                <div class="logo-circle logo-n">N</div>
+                            </div>
+                            <div class="save-badge">월 6,750원 절약</div>
+                        </div>
+                        <div class="promo-title">국민 톡톡O 카드로<br>넷플릭스 50% 청구할인 받기</div>
+                        <div class="price-compare">
+                            <span class="old-price">13,500원</span>
+                            <span class="arrow">→</span>
+                            <span class="new-price">6,750원</span>
+                        </div>
+                        <div class="condition-box">
+                            <span>💳</span> 전월 실적 30만 원 이상 시
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 하단 탭바 -->
+            <div class="bottom-nav">
+                <div class="nav-item" onclick="alert('홈(대시보드)으로 이동')">
+                    <div class="nav-icon">🏠</div>
+                    <div>홈</div>
+                </div>
+                <div class="nav-item active">
+                    <div class="nav-icon">💡</div>
+                    <div>추천</div>
+                </div>
+                <div class="nav-item" onclick="alert('마이페이지로 이동')">
+                    <div class="nav-icon">👤</div>
+                    <div>마이</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 다크 모드 -->
+    <div style="position: relative;">
+        <div class="device-label">Dark Mode</div>
+        <div class="device dark">
+            
+            <div class="header">
+                <div class="header-title">절약 방법</div>
+            </div>
+
+            <div class="content">
+                
+                <!-- 그룹 1: 바로 적용 가능 -->
+                <div class="section">
+                    <div class="section-header">
+                        ✅ 바로 적용 가능 <span class="section-count">1건</span>
+                    </div>
+                    
+                    <div class="promo-card" onclick="alert('프로모션 상세(SCR-006)로 이동')">
+                        <div class="promo-top">
+                            <div class="logo-group">
+                                <div class="logo-circle logo-n">N</div>
+                                <div class="logo-circle logo-p">P</div>
+                            </div>
+                            <div class="save-badge">월 8,600원 절약</div>
+                        </div>
+                        <div class="promo-title">네이버플러스 멤버십으로<br>넷플릭스 (광고형) 무료로 보기</div>
+                        <div class="price-compare">
+                            <span class="old-price">13,500원</span>
+                            <span class="arrow">→</span>
+                            <span class="new-price">4,900원</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 그룹 2: 조건 충족 시 -->
+                <div class="section">
+                    <div class="section-header">
+                        💳 조건 충족 시 <span class="section-count">2건</span>
+                    </div>
+
+                    <div class="promo-card" onclick="alert('프로모션 상세(SCR-006)로 이동')">
+                        <div class="promo-top">
+                            <div class="logo-group">
+                                <div class="logo-circle logo-t">T</div>
+                            </div>
+                            <div class="save-badge">월 9,500원 절약</div>
+                        </div>
+                        <div class="promo-title">KT 5G 초이스 요금제로<br>티빙 (베이직) 무료로 보기</div>
+                        <div class="price-compare">
+                            <span class="old-price">9,500원</span>
+                            <span class="arrow">→</span>
+                            <span class="new-price">0원</span>
+                        </div>
+                        <div class="condition-box">
+                            <span>💡</span> KT 특정 5G 요금제 이용 고객 대상
+                        </div>
+                    </div>
+
+                    <div class="promo-card" onclick="alert('프로모션 상세(SCR-006)로 이동')">
+                        <div class="promo-top">
+                            <div class="logo-group">
+                                <div class="logo-circle logo-n">N</div>
+                            </div>
+                            <div class="save-badge">월 6,750원 절약</div>
+                        </div>
+                        <div class="promo-title">국민 톡톡O 카드로<br>넷플릭스 50% 청구할인 받기</div>
+                        <div class="price-compare">
+                            <span class="old-price">13,500원</span>
+                            <span class="arrow">→</span>
+                            <span class="new-price">6,750원</span>
+                        </div>
+                        <div class="condition-box">
+                            <span>💳</span> 전월 실적 30만 원 이상 시
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 하단 탭바 -->
+            <div class="bottom-nav">
+                <div class="nav-item" onclick="alert('홈(대시보드)으로 이동')">
+                    <div class="nav-icon">🏠</div>
+                    <div>홈</div>
+                </div>
+                <div class="nav-item active">
+                    <div class="nav-icon">💡</div>
+                    <div>추천</div>
+                </div>
+                <div class="nav-item" onclick="alert('마이페이지로 이동')">
+                    <div class="nav-icon">👤</div>
+                    <div>마이</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

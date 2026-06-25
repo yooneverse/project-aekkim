@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애낌(AEKKIM) 체크인 응답 목업 (토스 스타일)</title>
+    <!-- 프리텐다드 폰트 적용 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #E5E8EB; 
+            padding: 40px;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        /* 스마트폰 디바이스 프레임 */
+        .device {
+            width: 375px;
+            height: 812px;
+            border-radius: 36px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== 라이트 모드 테마 (Toss) ===== */
+        .light {
+            background-color: #FFFFFF;
+            color: #191F28;
+            --bg-color: #FFFFFF;
+            --text-main: #191F28;
+            --text-sub: #8B95A1;
+            --btn-bg: #F2F4F6;
+            --btn-active-bg: #E5E8EB;
+            --toast-bg: rgba(25, 31, 40, 0.9);
+            --toast-text: #FFFFFF;
+            --spinner-color: #8B95A1;
+        }
+
+        /* ===== 다크 모드 테마 ===== */
+        .dark {
+            background-color: #101010;
+            color: #F9FAFB;
+            --bg-color: #101010;
+            --text-main: #F9FAFB;
+            --text-sub: #8B95A1;
+            --btn-bg: #2C2C2E;
+            --btn-active-bg: #3A3A3C;
+            --toast-bg: rgba(255, 255, 255, 0.9);
+            --toast-text: #191F28;
+            --spinner-color: #8B95A1;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* 헤더 (닫기 버튼) */
+        .header {
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 20px;
+            background-color: transparent;
+            z-index: 10;
+        }
+
+        .close-btn {
+            font-size: 28px;
+            color: var(--text-main);
+            cursor: pointer;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        /* 메인 콘텐츠 영역 (중앙~하단 배치) */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 24px 40px;
+        }
+
+        /* 질문 텍스트 영역 */
+        .question-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+
+        .logo-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #E50914; /* 넷플릭스 컬러 */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .question-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+
+        .question-highlight {
+            color: var(--text-sub);
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        /* 응답 버튼 영역 */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-survey {
+            width: 100%;
+            height: 64px;
+            border-radius: 16px;
+            background-color: var(--btn-bg);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-survey:active:not(:disabled) {
+            transform: scale(0.97);
+            background-color: var(--btn-active-bg);
+        }
+
+        .btn-survey:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .btn-text {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-main);
+            font-family: 'Pretendard', sans-serif;
+            transition: opacity 0.2s;
+        }
+
+        .btn-emoji {
+            font-size: 22px;
+            transition: opacity 0.2s;
+        }
+
+        /* 버튼 로딩 상태 */
+        .btn-survey.loading .btn-text,
+        .btn-survey.loading .btn-emoji {
+            opacity: 0;
+        }
+
+        .spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            border: 3px solid transparent;
+            border-top-color: var(--spinner-color);
+            border-left-color: var(--spinner-color);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s;
+        }
+
+        .btn-survey.loading .spinner {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* 토스트 메시지 */
+        .toast {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--toast-bg);
+            color: var(--toast-text);
+            padding: 14px 24px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: bottom 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            z-index: 100;
+            white-space: nowrap;
+        }
+
+        .toast.show {
+            bottom: 40px;
+        }
+
+        .device-label {
+            position: absolute;
+            top: -40px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 라이트 모드 -->
+    <div style="position: relative;">
+        <div class="device-label">Light Mode</div>
+        <div class="device light" id="device-light">
+            
+            <div class="header">
+                <span class="close-btn" onclick="alert('닫고 대시보드로 이동합니다.')">×</span>
+            </div>
+
+            <div class="content">
+                <div class="question-area">
+                    <div class="logo-circle">N</div>
+                    <div class="question-title">넷플릭스 결제일이<br>다가와요.</div>
+                    <div class="question-highlight">이번 달 얼마나 보셨나요?</div>
+                </div>
+
+                <div class="button-group" id="btn-group-light">
+                    <button class="btn-survey" onclick="handleSurveyClick(this, 'light')">
+                        <span class="btn-text">잘 쓰고 있어요</span>
+                        <span class="btn-emoji">😊</span>
+                        <div class="spinner"></div>
+                    </button>
+                    <button class="btn-survey" onclick="handleSurveyClick(this, 'light')">
+                        <span class="btn-text">거의 안 썼어요</span>
+                        <span class="btn-emoji">😅</span>
+                        <div class="spinner"></div>
+                    </button>
+                    <button class="btn-survey" onclick="handleSurveyClick(this, 'light')">
+                        <span class="btn-text">잘 모르겠어요</span>
+                        <span class="btn-emoji">🤔</span>
+                        <div class="spinner"></div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 토스트 메시지 -->
+            <div class="toast" id="toast-light">
+                ✅ 응답이 저장되었어요
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 다크 모드 -->
+    <div style="position: relative;">
+        <div class="device-label">Dark Mode</div>
+        <div class="device dark" id="device-dark">
+            
+            <div class="header">
+                <span class="close-btn" onclick="alert('닫고 대시보드로 이동합니다.')">×</span>
+            </div>
+
+            <div class="content">
+                <div class="question-area">
+                    <div class="logo-circle">N</div>
+                    <div class="question-title">넷플릭스 결제일이<br>다가와요.</div>
+                    <div class="question-highlight">이번 달 얼마나 보셨나요?</div>
+                </div>
+
+                <div class="button-group" id="btn-group-dark">
+                    <button class="btn-survey" onclick="handleSurveyClick(this, 'dark')">
+                        <span class="btn-text">잘 쓰고 있어요</span>
+                        <span class="btn-emoji">😊</span>
+                        <div class="spinner"></div>
+                    </button>
+                    <button class="btn-survey" onclick="handleSurveyClick(this, 'dark')">
+                        <span class="btn-text">거의 안 썼어요</span>
+                        <span class="btn-emoji">😅</span>
+                        <div class="spinner"></div>
+                    </button>
+                    <button class="btn-survey" onclick="handleSurveyClick(this, 'dark')">
+                        <span class="btn-text">잘 모르겠어요</span>
+                        <span class="btn-emoji">🤔</span>
+                        <div class="spinner"></div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 토스트 메시지 -->
+            <div class="toast" id="toast-dark">
+                ✅ 응답이 저장되었어요
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function handleSurveyClick(clickedBtn, mode) {
+            // 1. 해당 디바이스의 모든 버튼 가져오기
+            const btnGroup = document.getElementById(`btn-group-${mode}`);
+            const buttons = btnGroup.querySelectorAll('.btn-survey');
+            
+            // 2. 이미 로딩 중이거나 처리된 경우 방지 (Debounce 역할)
+            if (clickedBtn.classList.contains('loading') || clickedBtn.disabled) return;
+
+            // 3. 클릭된 버튼에 로딩 애니메이션 추가, 나머지 버튼 비활성화
+            buttons.forEach(btn => {
+                if (btn === clickedBtn) {
+                    btn.classList.add('loading');
+                } else {
+                    btn.disabled = true;
+                }
+            });
+
+            // 4. API 통신 딜레이 시뮬레이션 (1.2초 후)
+            setTimeout(() => {
+                // 로딩 제거 및 현재 버튼도 비활성화 (중복 탭 방지)
+                clickedBtn.classList.remove('loading');
+                clickedBtn.disabled = true;
+
+                // 5. 토스트 띄우기
+                const toast = document.getElementById(`toast-${mode}`);
+                toast.classList.add('show');
+
+                // 6. 잠시 후 대시보드로 이동 시뮬레이션
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    // 실제 환경에서는 여기서 location.href 등으로 이동
+                    // alert(`[${mode}] 대시보드(SCR-003)로 이동합니다.`);
+                    
+                    // 데모 리셋을 위해 버튼 활성화 원복
+                    buttons.forEach(btn => btn.disabled = false);
+                }, 1500);
+
+            }, 1200);
+        }
+    </script>
+</body>
+</html>

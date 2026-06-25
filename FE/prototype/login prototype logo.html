@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애낌(AEKKIM) 로그인 목업</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #E5E8EB; /* 작업 공간 배경 */
+            padding: 40px;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        /* 스마트폰 디바이스 프레임 */
+        .device {
+            width: 375px;
+            height: 812px;
+            border-radius: 36px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== 라이트 모드 테마 ===== */
+        .light {
+            background-color: #FFFFFF;
+            color: #191F28;
+            --text-main: #191F28;
+            --text-sub: #8B95A1;
+            --google-bg: #FFFFFF;
+            --google-text: #191F28;
+            --google-border: #E5E8EB;
+        }
+
+        /* ===== 다크 모드 테마 ===== */
+        .dark {
+            background-color: #101010;
+            color: #F9FAFB;
+            --text-main: #F9FAFB;
+            --text-sub: #8B95A1;
+            --google-bg: #2C2C2E;
+            --google-text: #F9FAFB;
+            --google-border: #3A3A3C;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* 로그인 화면 레이아웃 */
+        .login-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 80px 24px 50px;
+            box-sizing: border-box;
+        }
+
+        /* 상단 브랜딩 영역 */
+        .brand-area {
+            margin-top: 40px;
+        }
+        .brand-logo {
+            width: 138px;
+            height: auto;
+            display: block;
+            margin: 0 0 16px 0;
+        }
+
+        .app-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .app-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 0 0 16px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .app-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--text-sub);
+            line-height: 1.5;
+            margin: 0;
+            letter-spacing: -0.3px;
+        }
+
+        /* 하단 소셜 로그인 버튼 영역 */
+        .login-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            width: 100%;
+            height: 56px;
+            border-radius: 16px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            font-family: inherit;
+            transition: transform 0.1s, opacity 0.2s;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+
+        .btn-icon {
+            position: absolute;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        /* 카카오 버튼 */
+        .btn-kakao {
+            background-color: #FEE500;
+            color: #000000;
+        }
+        
+        .icon-k { color: #000000; }
+
+        /* 네이버 버튼 */
+        .btn-naver {
+            background-color: #03C75A;
+            color: #FFFFFF;
+        }
+
+        .icon-n { color: #FFFFFF; }
+
+        /* 구글 버튼 */
+        .btn-google {
+            background-color: var(--google-bg);
+            color: var(--google-text);
+            border: 1px solid var(--google-border);
+        }
+
+        .icon-g {
+            /* 구글 로고 컬러 느낌의 텍스트 */
+            background: linear-gradient(45deg, #4285F4, #EA4335, #FBBC05, #34A853);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 다크모드일 때 구글 아이콘을 하얀색으로 심플하게 처리하려면 아래 클래스 사용 가능 */
+        .dark .icon-g {
+            background: none;
+            -webkit-text-fill-color: #FFFFFF;
+            color: #FFFFFF;
+        }
+
+        .device-label {
+            position: absolute;
+            top: -40px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="position: relative;">
+        <div class="device-label">Light Mode</div>
+        <div class="device light">
+            <div class="login-wrapper">
+                <div class="brand-area">
+                    <img class="brand-logo" src="file:///C:/Users/SSAFY/Desktop/워크스페이스/SSAFY/싸피%20프로젝트/특화PJT/S14P21E106/FE/prototype/화면%20캡처%202026-03-03%20152858.png" alt="애낌 로고">
+                    <p class="app-subtitle">흩어진 OTT 구독,<br>이제 한곳에서 <strong>확인</strong>하고<br>쉽게 <strong>관리</strong>하세요.</p>
+                </div>
+
+                <div class="login-buttons">
+                    <button class="btn btn-kakao">
+                        <span class="btn-icon icon-k">K</span>
+                        카카오로 시작하기
+                    </button>
+                    <button class="btn btn-naver">
+                        <span class="btn-icon icon-n">N</span>
+                        네이버로 시작하기
+                    </button>
+                    <button class="btn btn-google">
+                        <span class="btn-icon icon-g">G</span>
+                        Google로 시작하기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="position: relative;">
+        <div class="device-label">Dark Mode</div>
+        <div class="device dark">
+            <div class="login-wrapper">
+                <div class="brand-area">
+                    <img class="brand-logo" src="file:///C:/Users/SSAFY/Desktop/워크스페이스/SSAFY/싸피%20프로젝트/특화PJT/S14P21E106/FE/prototype/화면%20캡처%202026-03-03%20152858.png" alt="애낌 로고">
+                    <p class="app-subtitle">흩어진 OTT 구독,<br>이제 한곳에서 <strong>확인</strong>하고<br>쉽게 <strong>관리</strong>하세요.</p>
+                </div>
+
+                <div class="login-buttons">
+                    <button class="btn btn-kakao">
+                        <span class="btn-icon icon-k">K</span>
+                        카카오로 시작하기
+                    </button>
+                    <button class="btn btn-naver">
+                        <span class="btn-icon icon-n">N</span>
+                        네이버로 시작하기
+                    </button>
+                    <button class="btn btn-google">
+                        <span class="btn-icon icon-g">G</span>
+                        Google로 시작하기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.login-buttons .btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                window.location.href = 'onbording prototype.html';
+            });
+        });
+    </script>
+</body>
+</html>

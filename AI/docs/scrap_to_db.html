@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>애낌 스크래퍼 — DB 저장 로직</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:       #080c10;
+  --surface:  #0e1520;
+  --s2:       #141d2b;
+  --border:   #1e2d40;
+  --cyan:     #00e5ff;
+  --cyan2:    #00bcd4;
+  --green:    #00e676;
+  --amber:    #ffab00;
+  --red:      #ff5252;
+  --purple:   #d500f9;
+  --blue:     #2979ff;
+  --text:     #e8f0fe;
+  --text2:    #7890a8;
+  --text3:    #344860;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans KR', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ──────── HERO / TITLE ──────── */
+.hero {
+  padding: 64px 40px 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--cyan);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 8vw, 96px);
+  letter-spacing: 2px;
+  line-height: 0.95;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.hero h1 span { color: var(--cyan); }
+.hero-sub {
+  font-size: 16px;
+  color: var(--text2);
+  font-weight: 300;
+  margin-top: 12px;
+}
+
+/* ──────── SECTION WRAPPER ──────── */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 36px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.sec-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--text3);
+}
+.sec-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.sec-desc { font-size: 14px; color: var(--text2); margin-top: 3px; }
+
+/* ──────── PIPELINE (Step 1) ──────── */
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) repeat(4, 40px);
+  /* reorder: 5 steps + 4 arrows interleaved */
+  grid-template-columns: 1fr 36px 1fr 36px 1fr 36px 1fr 36px 1fr;
+  align-items: center;
+  gap: 0;
+}
+.p-step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 16px;
+  transition: border-color .2s, transform .2s;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.p-step::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: var(--cyan);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+.p-step:hover::before { transform: scaleX(1); }
+.p-step:hover { border-color: var(--cyan2); transform: translateY(-2px); }
+
+.p-step-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.p-step-icon { font-size: 26px; margin-bottom: 8px; }
+.p-step-name { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+.p-step-file { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--cyan); }
+.p-step-desc { font-size: 11px; color: var(--text2); margin-top: 8px; line-height: 1.5; }
+
+.p-arrow {
+  text-align: center;
+  color: var(--text3);
+  font-size: 18px;
+}
+
+/* ──────── DOCKER NETWORK (Step 2) ──────── */
+.docker-scene {
+  position: relative;
+  border: 1.5px dashed #1e3a50;
+  border-radius: 20px;
+  padding: 48px 40px 40px;
+  background: radial-gradient(ellipse at 50% 0%, #051520 0%, var(--bg) 70%);
+}
+
+.docker-badge {
+  position: absolute;
+  top: -14px; left: 32px;
+  background: var(--bg);
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 3px 14px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* 3 containers row */
+.dc-row {
+  display: grid;
+  grid-template-columns: 1fr 160px 1fr 160px 1fr;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.dc-box {
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  position: relative;
+}
+.dc-box.scraper { border-color: #7c3aed; background: #0e0920; }
+.dc-box.mysql   { border-color: var(--cyan2); background: #001f2a; }
+.dc-box.spring  { border-color: var(--green); background: #001a0e; }
+
+.dc-glow {
+  position: absolute;
+  top: -1px; left: -1px; right: -1px; bottom: -1px;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity .3s;
+  pointer-events: none;
+}
+.dc-box.scraper .dc-glow { box-shadow: 0 0 30px #7c3aed55; }
+.dc-box.mysql   .dc-glow { box-shadow: 0 0 30px var(--cyan2) + '44'; }
+.dc-box.spring  .dc-glow { box-shadow: 0 0 30px #00e67644; }
+.dc-box:hover .dc-glow { opacity: 1; }
+
+.dc-icon  { font-size: 36px; margin-bottom: 12px; }
+.dc-name  { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.dc-tag   { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text2); margin-bottom: 16px; }
+.dc-env   {
+  background: rgba(0,0,0,.4);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 2;
+}
+.dc-env .k { color: var(--text3); }
+.dc-env .v { color: var(--amber); }
+.dc-env .v.hl { color: var(--cyan); font-weight: 700; }
+
+/* connection column */
+.dc-conn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.conn-track {
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  position: relative;
+  overflow: visible;
+}
+.conn-track.ins { background: rgba(0,229,255,.15); }
+.conn-track.sel { background: rgba(0,230,118,.15); }
+
+/* animated packet */
+.packet {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  animation: slide-right 1.8s ease-in-out infinite;
+}
+.packet.ins { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); left: -5px; }
+.packet.sel { background: var(--green); box-shadow: 0 0 8px var(--green); right: -5px; animation-direction: reverse; animation-name: slide-right; }
+@keyframes slide-right {
+  0%   { transform: translateY(-50%) translateX(0);    opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(-50%) translateX(140px); opacity: 0; }
+}
+
+.conn-type {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.conn-type.ins { color: var(--cyan); }
+.conn-type.sel { color: var(--green); }
+
+.conn-detail {
+  font-size: 11px;
+  color: var(--text3);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* DNS 설명 인포박스 */
+.dns-explainer {
+  background: var(--s2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.dns-icon-wrap {
+  width: 40px; height: 40px;
+  background: rgba(255,171,0,.1);
+  border: 1px solid var(--amber);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.dns-body { font-size: 13px; color: var(--text2); line-height: 1.9; }
+.dns-body strong { color: var(--cyan); font-family: 'JetBrains Mono', monospace; }
+.dns-body .amber { color: var(--amber); font-family: 'JetBrains Mono', monospace; }
+
+/* ──────── JOBBRANCH (Step 3) ──────── */
+.jb-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.jb-node {
+  border-radius: 10px;
+  padding: 14px 32px;
+  text-align: center;
+  font-size: 14px;
+}
+.jb-node.input {
+  background: var(--s2);
+  border: 1px solid var(--border);
+  min-width: 320px;
+}
+.jb-node.input .lbl { font-size: 11px; color: var(--text3); font-family: 'JetBrains Mono', monospace; margin-bottom: 4px; }
+.jb-node.input .val { font-family: 'JetBrains Mono', monospace; color: var(--blue); font-size: 15px; font-weight: 700; }
+
+.jb-line { width: 2px; height: 28px; background: var(--border); }
+
+.jb-diamond {
+  background: rgba(255,171,0,.08);
+  border: 1.5px solid var(--amber);
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--amber);
+  min-width: 200px;
+  text-align: center;
+}
+
+.jb-fork {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  height: 40px;
+}
+.jb-fork::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(50% - 160px);
+  width: 320px;
+  height: 1px;
+  background: var(--border);
+}
+.jb-fork::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  width: 2px; height: 40px;
+  background: var(--border);
+  display: none;
+}
+.jb-fork-line {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 40px;
+  background: var(--border);
+}
+.jb-fork-line.left  { left: calc(50% - 160px); }
+.jb-fork-line.right { left: calc(50% + 160px); }
+
+.jb-branches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 700px;
+}
+.jb-branch { display: flex; flex-direction: column; align-items: center; gap: 0; }
+.jb-branch-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 4px;
+  margin-bottom: 0;
+}
+.jb-branch-tag.c { background: rgba(41,121,255,.15); color: var(--blue); border: 1px solid var(--blue); }
+.jb-branch-tag.p { background: rgba(213,0,249,.15); color: var(--purple); border: 1px solid var(--purple); }
+
+.jb-card {
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+.jb-card.c { background: rgba(41,121,255,.07); border: 1px solid var(--blue); }
+.jb-card.p { background: rgba(213,0,249,.07); border: 1px solid var(--purple); }
+
+.jb-card-fn { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+.jb-card.c .jb-card-fn { color: var(--blue); }
+.jb-card.p .jb-card-fn { color: var(--purple); }
+.jb-card-tables { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+
+.pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.pill.c { color: var(--blue); border: 1px solid var(--blue); background: rgba(41,121,255,.1); }
+.pill.p { color: var(--purple); border: 1px solid var(--purple); background: rgba(213,0,249,.1); }
+
+/* ──────── SQL CARDS (Step 4) ──────── */
+.sql-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.sql-grid-full { grid-column: span 2; }
+
+.sql-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.sql-card:hover { border-color: var(--cyan2); }
+
+.sql-head {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sql-head.b { background: rgba(41,121,255,.08); }
+.sql-head.p { background: rgba(213,0,249,.08); }
+
+.sql-head-title { font-size: 15px; font-weight: 700; }
+.sql-head.b .sql-head-title { color: #79c0ff; }
+.sql-head.p .sql-head-title { color: #d2a8ff; }
+.sql-head-sub { font-size: 11px; color: var(--text2); font-family: 'JetBrains Mono', monospace; margin-top: 2px; }
+
+.sql-body { padding: 20px; }
+
+pre.code {
+  background: #030609;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 2;
+  overflow-x: auto;
+  white-space: pre;
+  margin-bottom: 14px;
+}
+.kw  { color: #ff7b72; }
+.fn  { color: #79c0ff; }
+.str { color: #a5d6ff; }
+.cm  { color: #3a4a5a; }
+.pk  { color: var(--amber); font-weight: 700; }
+.hi  { color: var(--cyan); }
+
+.meta-list { display: flex; flex-direction: column; gap: 8px; }
+.meta-row  { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text2); }
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap;
+}
+.badge.pk   { background: rgba(255,171,0,.1); color: var(--amber); border: 1px solid var(--amber); }
+.badge.uq   { background: rgba(213,0,249,.1); color: var(--purple); border: 1px solid var(--purple); }
+.badge.fk   { background: rgba(41,121,255,.1); color: #79c0ff; border: 1px solid #79c0ff; }
+.badge.py   { background: rgba(0,229,255,.1); color: var(--cyan); border: 1px solid var(--cyan); }
+.badge.warn { background: rgba(255,82,82,.1); color: var(--red); border: 1px solid var(--red); }
+
+/* ──────── PYTHON FIELDS (Step 5) ──────── */
+.py-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.py-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cyan);
+  border-radius: 10px;
+  padding: 16px 18px;
+  transition: border-color .2s;
+}
+.py-card:hover { border-color: var(--cyan); }
+.py-field { font-family: 'JetBrains Mono', monospace; color: var(--cyan); font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+.py-how   { font-size: 12px; color: var(--text); margin-bottom: 4px; }
+.py-why   { font-size: 11px; color: var(--text3); }
+
+/* ──────── SCHEMA (Step 6) ──────── */
+.schema-section { margin-bottom: 36px; }
+.schema-label {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 12px;
+}
+.schema-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.schema-name { font-size: 17px; font-weight: 700; }
+.schema-tag  { font-size: 12px; color: var(--text3); font-family: 'JetBrains Mono', monospace; }
+
+table.st {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.st th {
+  background: var(--s2);
+  color: var(--text3);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+table.st td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(30,45,64,.5);
+  vertical-align: middle;
+}
+table.st tr:last-child td { border-bottom: none; }
+table.st tr:hover td { background: rgba(14,21,32,.5); }
+.cn { font-family: 'JetBrains Mono', monospace; color: #79c0ff; font-size: 12px; }
+.ct { font-family: 'JetBrains Mono', monospace; color: var(--text3); font-size: 12px; }
+.nn { color: var(--red); font-size: 11px; }
+.nl { color: var(--text3); font-size: 11px; }
+.cd { color: var(--text2); font-size: 12px; }
+
+/* ──────── SCHEDULE (Step 7) ──────── */
+.sch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.sch-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.sch-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.sch-card.d::before { background: var(--blue); }
+.sch-card.w::before { background: var(--purple); }
+.sch-card.m::before { background: var(--amber); }
+
+.sch-freq {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.sch-card.d .sch-freq { color: var(--blue); }
+.sch-card.w .sch-freq { color: var(--purple); }
+.sch-card.m .sch-freq { color: var(--amber); }
+
+.sch-time { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 1px; margin-bottom: 4px; }
+.sch-fn   { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text3); margin-bottom: 16px; }
+.sch-items { display: flex; flex-direction: column; gap: 7px; }
+.sch-item  { font-size: 12px; color: var(--text2); display: flex; align-items: flex-start; gap: 8px; }
+.sch-bullet {
+  width: 5px; height: 5px; border-radius: 50%;
+  flex-shrink: 0; margin-top: 5px;
+}
+.sch-card.d .sch-bullet { background: var(--blue); }
+.sch-card.w .sch-bullet { background: var(--purple); }
+.sch-card.m .sch-bullet { background: var(--amber); }
+
+/* ──────── WARNINGS (Step 8) ──────── */
+.warn-header {
+  background: rgba(255,82,82,.08);
+  border: 1px solid rgba(255,82,82,.3);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #ffb3b0;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.issue-list { display: flex; flex-direction: column; gap: 10px; }
+.issue-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex; gap: 14px;
+}
+.issue-n {
+  width: 26px; height: 26px; border-radius: 6px;
+  background: rgba(255,82,82,.1);
+  border: 1px solid var(--red);
+  color: var(--red);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.issue-body { font-size: 13px; color: var(--text2); line-height: 1.8; }
+.issue-title { font-weight: 700; color: var(--text); margin-bottom: 4px; }
+code { font-family: 'JetBrains Mono', monospace; color: var(--amber); font-size: 12px; background: rgba(255,171,0,.08); padding: 1px 6px; border-radius: 4px; }
+
+/* ──────── ENV (Step 9) ──────── */
+table.env {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.env th {
+  background: var(--s2);
+  color: var(--text3);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  padding: 10px 16px; text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+table.env td { padding: 11px 16px; border-bottom: 1px solid rgba(30,45,64,.4); vertical-align: middle; }
+table.env tr:last-child td { border-bottom: none; }
+table.env tr:hover td { background: rgba(14,21,32,.5); }
+.ev { font-family: 'JetBrains Mono', monospace; color: #79c0ff; }
+.evv { font-family: 'JetBrains Mono', monospace; color: var(--amber); font-size: 12px; }
+.evr { color: var(--red); font-weight: 700; font-size: 12px; }
+.evd { color: var(--text2); font-size: 12px; }
+
+/* ──────── NAV ──────── */
+.nav {
+  position: sticky;
+  top: 0; z-index: 100;
+  background: rgba(8,12,16,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+.nav a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text3);
+  text-decoration: none;
+  padding: 14px 16px;
+  white-space: nowrap;
+  transition: color .15s;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover { color: var(--cyan); border-bottom-color: var(--cyan); }
+
+.divider { border: none; border-top: 1px solid var(--border); margin: 0 0 72px; }
+
+/* ──────── RESPONSIVE ──────── */
+@media (max-width: 800px) {
+  .pipeline { grid-template-columns: 1fr; }
+  .p-arrow  { transform: rotate(90deg); }
+  .dc-row   { grid-template-columns: 1fr; }
+  .sql-grid { grid-template-columns: 1fr; }
+  .sql-grid-full { grid-column: span 1; }
+  .py-grid  { grid-template-columns: 1fr 1fr; }
+  .sch-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#s1">① 파이프라인</a>
+  <a href="#s2">② Docker 네트워크</a>
+  <a href="#s3">③ jobType 분기</a>
+  <a href="#s4">④ SQL 저장</a>
+  <a href="#s5">⑤ Python 처리 필드</a>
+  <a href="#s6">⑥ DB 스키마</a>
+  <a href="#s7">⑦ 스케줄</a>
+  <a href="#s8">⑧ 주의 항목</a>
+  <a href="#s9">⑨ 환경변수</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">인프라팀 협업 참고 · 2026-03-17</div>
+  <h1>애낌 스크래퍼<br><span>DB 저장 로직</span></h1>
+  <div class="hero-sub">스크래퍼 컨테이너가 MySQL에 직접 데이터를 넣는 전 과정</div>
+</div>
+
+<!-- ① 파이프라인 -->
+<div class="section" id="s1">
+  <div class="sec-label">
+    <div class="sec-num">SECTION 01</div>
+    <div>
+      <div class="sec-title">전체 파이프라인</div>
+      <div class="sec-desc">OTT 사이트 → MySQL까지 5단계</div>
+    </div>
+  </div>
+
+  <div class="pipeline">
+    <div class="p-step">
+      <div class="p-step-num">STEP 01</div>
+      <div class="p-step-icon">⏰</div>
+      <div class="p-step-name">스케줄러 트리거</div>
+      <div class="p-step-file">scheduler.py</div>
+      <div class="p-step-desc">APScheduler가 매일 03:00 자동 실행</div>
+    </div>
+    <div class="p-arrow">→</div>
+    <div class="p-step">
+      <div class="p-step-num">STEP 02</div>
+      <div class="p-step-icon">🕷️</div>
+      <div class="p-step-name">OTT 스크래핑</div>
+      <div class="p-step-file">ott/*.py</div>
+      <div class="p-step-desc">Playwright로 DOM 파싱, raw dict 반환</div>
+    </div>
+    <div class="p-arrow">→</div>
+    <div class="p-step">
+      <div class="p-step-num">STEP 03</div>
+      <div class="p-step-icon">🤖</div>
+      <div class="p-step-name">LLM 정규화</div>
+      <div class="p-step-file">llm/normalizer.py</div>
+      <div class="p-step-desc">Gemini 2.0 Flash → 정형 JSON + Pydantic 검증</div>
+    </div>
+    <div class="p-arrow">→</div>
+    <div class="p-step">
+      <div class="p-step-num">STEP 04</div>
+      <div class="p-step-icon">💾</div>
+      <div class="p-step-name">DB UPSERT</div>
+      <div class="p-step-file">db/client.py</div>
+      <div class="p-step-desc">pymysql 직접 연결 → INSERT ON DUPLICATE KEY UPDATE</div>
+    </div>
+    <div class="p-arrow">→</div>
+    <div class="p-step">
+      <div class="p-step-num">STEP 05</div>
+      <div class="p-step-icon">🐬</div>
+      <div class="p-step-name">MySQL 저장</div>
+      <div class="p-step-file">aekkeum DB</div>
+      <div class="p-step-desc">3개 테이블에 최신 데이터 반영 완료</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ② Docker 네트워크 -->
+<div class="section" id="s2">
+  <div class="sec-label">
+    <div class="sec-num">SECTION 02</div>
+    <div>
+      <div class="sec-title">Docker 네트워크 — 컨테이너가 DB에 직접 붙는 방법</div>
+      <div class="sec-desc">인프라팀이 가장 궁금해한 부분입니다. Spring을 거치지 않고 직접 TCP 연결합니다.</div>
+    </div>
+  </div>
+
+  <div class="docker-scene">
+    <div class="docker-badge">docker-compose 내부 브릿지 네트워크</div>
+
+    <div class="dc-row">
+      <!-- Scraper -->
+      <div class="dc-box scraper">
+        <div class="dc-glow"></div>
+        <div class="dc-icon">🐍</div>
+        <div class="dc-name">scraper</div>
+        <div class="dc-tag">Python 3.12 · APScheduler · Playwright</div>
+        <div class="dc-env">
+          <span class="k">DB_HOST</span> = <span class="v hl">"mysql"</span><br>
+          <span class="k">DB_PORT</span> = <span class="v">3306</span><br>
+          <span class="k">DB_NAME</span> = <span class="v">"aekkeum"</span><br>
+          <span class="k">DB_USER</span> = <span class="v">***</span><br>
+          <span class="k">GMS_KEY</span> = <span class="v">***</span>
+        </div>
+      </div>
+
+      <!-- 연결: scraper → mysql -->
+      <div class="dc-conn">
+        <div class="conn-type ins">INSERT / UPDATE</div>
+        <div class="conn-track ins">
+          <div class="packet ins"></div>
+        </div>
+        <div class="conn-detail">TCP 3306<br>pymysql 직접 연결</div>
+      </div>
+
+      <!-- MySQL -->
+      <div class="dc-box mysql">
+        <div class="dc-glow"></div>
+        <div class="dc-icon">🐬</div>
+        <div class="dc-name">mysql</div>
+        <div class="dc-tag">MySQL 8 · 내부 포트 3306</div>
+        <div class="dc-env">
+          <span class="k">database</span>: <span class="v">aekkeum</span><br>
+          <span class="k">tables</span>:<br>
+          &nbsp;· <span class="v">services</span><br>
+          &nbsp;· <span class="v">service_plans</span><br>
+          &nbsp;· <span class="v">promotions</span>
+        </div>
+      </div>
+
+      <!-- 연결: mysql → spring (SELECT) -->
+      <div class="dc-conn">
+        <div class="conn-type sel">SELECT ONLY</div>
+        <div class="conn-track sel" style="transform:scaleX(-1)">
+          <div class="packet sel"></div>
+        </div>
+        <div class="conn-detail">Spring은<br>읽기 전용</div>
+      </div>
+
+      <!-- Spring -->
+      <div class="dc-box spring">
+        <div class="dc-glow"></div>
+        <div class="dc-icon">🍃</div>
+        <div class="dc-name">spring</div>
+        <div class="dc-tag">Spring Boot · API 서버</div>
+        <div class="dc-env">
+          <span class="k">역할</span>: API 응답<br>
+          <span class="k">DB 작업</span>: <span class="v">SELECT만</span><br>
+          <br>
+          <span class="k">← 외부 클라이언트</span><br>
+          &nbsp;&nbsp;HTTP 요청 처리
+        </div>
+      </div>
+    </div>
+
+    <!-- DNS 설명 -->
+    <div class="dns-explainer">
+      <div class="dns-icon-wrap">🔍</div>
+      <div class="dns-body">
+        <strong>DB_HOST = "mysql"</strong> 로 설정하는 이유 — docker-compose는 모든 서비스를 같은 브릿지 네트워크에 연결하고, <span class="amber">컨테이너명을 그대로 hostname</span> 으로 등록합니다. 그래서 scraper 컨테이너 안에서 <strong>"mysql"</strong> 에 TCP 연결을 시도하면 Docker 내부 DNS가 mysql 컨테이너의 실제 IP 주소로 자동 해석합니다. 외부 인터넷으로 나가지 않고, <span class="amber">컨테이너 내부 네트워크로만 통신</span>하므로 3306 포트를 외부에 노출할 필요가 없습니다.
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ③ jobType 분기 -->
+<div class="section" id="s3">
+  <div class="sec-label">
+    <div class="sec-num">SECTION 03</div>
+    <div>
+      <div class="sec-title">jobType 분기</div>
+      <div class="sec-desc">LLM 정규화 결과의 jobType 값에 따라 저장 경로가 갈립니다</div>
+    </div>
+  </div>
+
+  <div class="jb-wrap">
+    <div class="jb-node input">
+      <div class="lbl">LLM 정규화 결과 (norm dict)</div>
+      <div class="val">norm["jobType"] = ?</div>
+    </div>
+    <div class="jb-line"></div>
+    <div class="jb-diamond">🔀 jobType 분기</div>
+
+    <div style="position:relative; width:100%; max-width:700px; height:40px;">
+      <div style="position:absolute; top:0; left:50%; width:1px; height:40px; background:var(--border);"></div>
+      <div style="position:absolute; top:0; left:calc(25% - 0px); right:calc(25% - 0px); height:1px; background:var(--border);"></div>
+      <div style="position:absolute; top:0; left:25%; width:1px; height:40px; background:var(--border);"></div>
+      <div style="position:absolute; top:0; right:25%; width:1px; height:40px; background:var(--border);"></div>
+    </div>
+
+    <div class="jb-branches">
+      <div class="jb-branch">
+        <div class="jb-branch-tag c">SERVICE_CATALOG_CRAWL</div>
+        <div class="jb-line"></div>
+        <div class="jb-card c">
+          <div class="jb-card-fn">upsert_service_plans()</div>
+          <div class="jb-card-tables">
+            <span class="pill c">services</span>
+            <span class="pill c">service_plans</span>
+          </div>
+        </div>
+      </div>
+      <div class="jb-branch">
+        <div class="jb-branch-tag p">PROMOTION_CRAWL</div>
+        <div class="jb-line"></div>
+        <div class="jb-card p">
+          <div class="jb-card-fn">upsert_promotions()</div>
+          <div class="jb-card-tables">
+            <span class="pill p">promotions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ④ SQL 저장 -->
+<div class="section" id="s4">
+  <div class="sec-label">
+    <div class="sec-num">SECTION 04</div>
+    <div>
+      <div class="sec-title">SQL 저장 로직 상세</div>
+      <div class="sec-desc">실제 실행되는 SQL과 PK / UNIQUE KEY 기준</div>
+    </div>
+  </div>
+
+  <div class="sql-grid">
+    <!-- services -->
+    <div class="sql-card">
+      <div class="sql-head b">
+        <div>
+          <div class="sql-head-title">① services 테이블</div>
+          <div class="sql-head-sub">PK: code — 없으면 INSERT, 있으면 UPDATE</div>
+        </div>
+      </div>
+      <div class="sql-body">
+        <pre class="code"><span class="kw">INSERT INTO</span> <span class="fn">services</span> (
+  <span class="pk">code</span>, <span class="fn">name</span>, <span class="fn">category</span>,
+  <span class="fn">logo_url</span>, <span class="fn">cancel_guide_url</span>,
+  <span class="fn">customer_service_phone</span>
+)
+<span class="kw">ON DUPLICATE KEY UPDATE</span>
+  <span class="fn">name</span>     = <span class="hi">VALUES</span>(<span class="fn">name</span>),
+  <span class="fn">logo_url</span> = <span class="hi">VALUES</span>(<span class="fn">logo_url</span>),
+  <span class="fn">...</span></pre>
+        <div class="meta-list">
+          <div class="meta-row"><span class="badge pk">PK</span> <span>code — TVING / NETFLIX / WAVVE / DISNEY_PLUS / WATCHA</span></div>
+          <div class="meta-row"><span class="badge py">Python</span> <span>logo_url, cancel_guide_url → base.py 상수에서 주입 (LLM 아님)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- service_plans -->
+    <div class="sql-card">
+      <div class="sql-head b">
+        <div>
+          <div class="sql-head-title">② service_plans 테이블</div>
+          <div class="sql-head-sub">복합 PK: (service_code + plan_name)</div>
+        </div>
+      </div>
+      <div class="sql-body">
+        <pre class="code"><span class="kw">INSERT INTO</span> <span class="fn">service_plans</span> (
+  <span class="pk">service_code</span>, <span class="pk">plan_name</span>,
+  <span class="fn">billing_cycle</span>, <span class="fn">monthly_price</span>
+)
+<span class="kw">ON DUPLICATE KEY UPDATE</span>
+  <span class="fn">billing_cycle</span> = <span class="hi">VALUES</span>(<span class="fn">billing_cycle</span>),
+  <span class="fn">monthly_price</span> = <span class="hi">VALUES</span>(<span class="fn">monthly_price</span>);</pre>
+        <div class="meta-list">
+          <div class="meta-row"><span class="badge pk">PK</span> <span>(service_code, plan_name) 복합 키</span></div>
+          <div class="meta-row"><span class="badge fk">FK</span> <span>service_code → services.code</span></div>
+          <div class="meta-row"><span class="badge py">Python</span> <span>YEARLY: monthly_price = rawPrice ÷ 12 (Python 직접 계산)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- promotions -->
+    <div class="sql-card sql-grid-full">
+      <div class="sql-head p">
+        <div>
+          <div class="sql-head-title">③ promotions 테이블</div>
+          <div class="sql-head-sub">UNIQUE KEY: (title + starts_at) — BUNDLE / CARD_BENEFIT / PROMO 모두 처리</div>
+        </div>
+      </div>
+      <div class="sql-body">
+        <pre class="code"><span class="kw">INSERT INTO</span> <span class="fn">promotions</span> (
+  <span class="fn">promotion_type</span>, <span class="pk">title</span>, <span class="fn">summary</span>,
+  <span class="fn">original_price</span>, <span class="fn">discount_price</span>,
+  <span class="pk">starts_at</span>, <span class="fn">ends_at</span>,
+  <span class="fn">source_url</span>, <span class="fn">service_codes</span>, <span class="fn">collected_at</span>
+)
+<span class="kw">ON DUPLICATE KEY UPDATE</span>
+  <span class="fn">summary</span>        = <span class="hi">VALUES</span>(<span class="fn">summary</span>),
+  <span class="fn">original_price</span> = <span class="hi">VALUES</span>(<span class="fn">original_price</span>),
+  <span class="fn">service_codes</span>  = <span class="hi">VALUES</span>(<span class="fn">service_codes</span>),
+  <span class="fn">collected_at</span>   = <span class="hi">VALUES</span>(<span class="fn">collected_at</span>);</pre>
+        <div class="meta-list">
+          <div class="meta-row"><span class="badge uq">UNIQUE</span> <span>(title, starts_at) — 같은 제목 + 시작일 = 동일 프로모션</span></div>
+          <div class="meta-row"><span class="badge py">Python</span> <span>BUNDLE의 starts_at = 수집 시각(KST), ends_at = 2099-12-31 고정</span></div>
+          <div class="meta-row"><span class="badge warn">주의</span> <span>BUNDLE은 실행마다 starts_at이 달라지므로 매번 새 행이 삽입됨 → Spring 팀과 확인 필요</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ⑤ Python 처리 필드 -->
+<div class="section" id="s5">
+  <div class="sec-label">
+    <div class="sec-num">SECTION 05</div>
+    <div>
+      <div class="sec-title">Python이 직접 처리하는 필드들</div>
+      <div class="sec-desc">소형 LLM 모델의 한계로 LLM을 신뢰하지 않고 Python이 직접 값을 채웁니다</div>
+    </div>
+  </div>
+
+  <div class="py-grid">
+    <div class="py-card">
+      <div class="py-field">collectedAt</div>
+      <div class="py-how">→ Python 현재 KST 시각</div>
+      <div class="py-why">LLM이 임의 과거 시각을 삽입하는 오류 발생</div>
+    </div>
+    <div class="py-card">
+      <div class="py-field">logoUrl</div>
+      <div class="py-how">→ base.py 상수 딕셔너리</div>
+      <div class="py-why">LLM이 URL을 채우지 못하거나 잘못된 URL 생성</div>
+    </div>
+    <div class="py-card">
+      <div class="py-field">cancelGuideUrl</div>
+      <div class="py-how">→ base.py 상수 딕셔너리</div>
+      <div class="py-why">동일: LLM 채우기 불가</div>
+    </div>
+    <div class="py-card">
+      <div class="py-field">customerServicePhone</div>
+      <div class="py-how">→ scrap_company_info() + regex</div>
+      <div class="py-why">사업자 정보 페이지에서 직접 수집, 전화번호 패턴 추출</div>
+    </div>
+    <div class="py-card">
+      <div class="py-field">monthlyPrice (YEARLY)</div>
+      <div class="py-how">→ rawPrice // 12</div>
+      <div class="py-why">LLM이 "49900 / 12" 등 수식 문자열 반환 오류</div>
+    </div>
+    <div class="py-card">
+      <div class="py-field">services[] 번들 분리</div>
+      <div class="py-how">→ services 길이 기준 Python 선분리</div>
+      <div class="py-why">길이 1 = 단일, 2 이상 = 번들 — LLM 의존 안 함</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ⑥ DB 스키마 -->
+<div class="section" id="s6">
+  <div class="sec-label">
+    <div class="sec-num">SECTION 06</div>
+    <div>
+      <div class="sec-title">DB 스키마</div>
+      <div class="sec-desc">스크래퍼가 직접 INSERT / UPDATE하는 테이블 3개</div>
+    </div>
+  </div>
+
+  <div class="schema-section">
+    <div class="schema-label">
+      <div class="schema-dot" style="background:var(--blue)"></div>
+      <div class="schema-name">services</div>
+      <div class="schema-tag">OTT 플랫폼 기본 정보</div>
+    </div>
+    <table class="st">
+      <thead><tr><th>컬럼</th><th>타입</th><th>NULL</th><th>설명</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cn">code</span> <span class="badge pk">PK</span></td><td class="ct">VARCHAR(50)</td><td class="nn">NOT NULL</td><td class="cd">TVING / NETFLIX / WAVVE / DISNEY_PLUS / WATCHA</td></tr>
+        <tr><td class="cn">name</td><td class="ct">VARCHAR(100)</td><td class="nn">NOT NULL</td><td class="cd">서비스명 (클래스명 소문자)</td></tr>
+        <tr><td class="cn">category</td><td class="ct">VARCHAR(30)</td><td class="nn">NOT NULL</td><td class="cd">OTT 고정값</td></tr>
+        <tr><td class="cn">logo_url</td><td class="ct">VARCHAR(500)</td><td class="nl">NULL</td><td class="cd">/assets/services/{CODE}.png (base.py 상수)</td></tr>
+        <tr><td class="cn">cancel_guide_url</td><td class="ct">VARCHAR(500)</td><td class="nl">NULL</td><td class="cd">각 OTT 해지 안내 URL (base.py 상수)</td></tr>
+        <tr><td class="cn">customer_service_phone</td><td class="ct">VARCHAR(50)</td><td class="nl">NULL</td><td class="cd">수집된 전화번호</td></tr>
+        <tr><td class="cn">contact_email</td><td class="ct">VARCHAR(100)</td><td class="nl">NULL</td><td class="cd">현재 null (수집 미구현)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="schema-section">
+    <div class="schema-label">
+      <div class="schema-dot" style="background:var(--blue)"></div>
+      <div class="schema-name">service_plans</div>
+      <div class="schema-tag">OTT 요금제 정보</div>
+    </div>
+    <table class="st">
+      <thead><tr><th>컬럼</th><th>타입</th><th>NULL</th><th>설명</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cn">service_code</span> <span class="badge pk">PK</span> <span class="badge fk">FK</span></td><td class="ct">VARCHAR(50)</td><td class="nn">NOT NULL</td><td class="cd">services.code 참조</td></tr>
+        <tr><td><span class="cn">plan_name</span> <span class="badge pk">PK</span></td><td class="ct">VARCHAR(100)</td><td class="nn">NOT NULL</td><td class="cd">스탠다드 / 프리미엄 / 베이직 등</td></tr>
+        <tr><td class="cn">billing_cycle</td><td class="ct">ENUM</td><td class="nn">NOT NULL</td><td class="cd">MONTHLY 또는 YEARLY</td></tr>
+        <tr><td class="cn">monthly_price</td><td class="ct">INT</td><td class="nn">NOT NULL</td><td class="cd">월 환산 금액. YEARLY = 연간 ÷ 12 (Python 계산)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="schema-section">
+    <div class="schema-label">
+      <div class="schema-dot" style="background:var(--purple)"></div>
+      <div class="schema-name">promotions</div>
+      <div class="schema-tag">번들 · 카드혜택 · 이벤트 할인</div>
+    </div>
+    <table class="st">
+      <thead><tr><th>컬럼</th><th>타입</th><th>NULL</th><th>설명</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cn">id</span> <span class="badge pk">PK</span></td><td class="ct">BIGINT</td><td class="nn">NOT NULL</td><td class="cd">AUTO_INCREMENT</td></tr>
+        <tr><td class="cn">promotion_type</td><td class="ct">ENUM</td><td class="nn">NOT NULL</td><td class="cd">BUNDLE / CARD_BENEFIT / PROMO</td></tr>
+        <tr><td><span class="cn">title</span> <span class="badge uq">UQ</span></td><td class="ct">VARCHAR(200)</td><td class="nn">NOT NULL</td><td class="cd">starts_at과 복합 UNIQUE KEY</td></tr>
+        <tr><td class="cn">summary</td><td class="ct">TEXT</td><td class="nl">NULL</td><td class="cd">프로모션 요약 설명</td></tr>
+        <tr><td class="cn">original_price</td><td class="ct">INT</td><td class="nl">NULL</td><td class="cd">할인 전 정가 (번들 DISNEY+는 null)</td></tr>
+        <tr><td class="cn">discount_price</td><td class="ct">INT</td><td class="nl">NULL</td><td class="cd">할인 적용 가격</td></tr>
+        <tr><td><span class="cn">starts_at</span> <span class="badge uq">UQ</span></td><td class="ct">DATETIME</td><td class="nn">NOT NULL</td><td class="cd">수집 시각 (BUNDLE은 실행마다 변동)</td></tr>
+        <tr><td class="cn">ends_at</td><td class="ct">DATETIME</td><td class="nn">NOT NULL</td><td class="cd">BUNDLE: 2099-12-31 고정</td></tr>
+        <tr><td class="cn">source_url</td><td class="ct">VARCHAR(500)</td><td class="nl">NULL</td><td class="cd">출처 URL (현재 null)</td></tr>
+        <tr><td class="cn">service_codes</td><td class="ct">JSON</td><td class="nl">NULL</td><td class="cd">["TVING", "WAVVE"] 형식 JSON 배열</td></tr>
+        <tr><td class="cn">collected_at</td><td class="ct">DATETIME</td><td class="nn">NOT NULL</td><td class="cd">수집 시각 (Python 현재 KST)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ⑦ 스케줄 -->
+<div class="section" id="s7">
+  <div class="sec-label">
+    <div class="sec-num">SECTION 07</div>
+    <div>
+      <div class="sec-title">자동 실행 스케줄</div>
+      <div class="sec-desc">APScheduler · Asia/Seoul (KST) 기준</div>
+    </div>
+  </div>
+  <div class="sch-grid">
+    <div class="sch-card d">
+      <div class="sch-freq">DAILY</div>
+      <div class="sch-time">03:00</div>
+      <div class="sch-fn">run_daily_plans()</div>
+      <div class="sch-items">
+        <div class="sch-item"><div class="sch-bullet"></div>5개 OTT 요금제 스크래핑</div>
+        <div class="sch-item"><div class="sch-bullet"></div>회사 정보 수집</div>
+        <div class="sch-item"><div class="sch-bullet"></div>LLM 정규화</div>
+        <div class="sch-item"><div class="sch-bullet"></div>services + service_plans UPSERT</div>
+        <div class="sch-item"><div class="sch-bullet"></div>번들이면 promotions에도 저장</div>
+      </div>
+    </div>
+    <div class="sch-card w">
+      <div class="sch-freq">WEEKLY</div>
+      <div class="sch-time">매주 월</div>
+      <div class="sch-fn">run_weekly_promotions()</div>
+      <div class="sch-items">
+        <div class="sch-item"><div class="sch-bullet"></div>공지사항 / 이벤트 수집</div>
+        <div class="sch-item"><div class="sch-bullet"></div>공지 1건씩 LLM 정규화</div>
+        <div class="sch-item"><div class="sch-bullet"></div>promotions UPSERT</div>
+      </div>
+    </div>
+    <div class="sch-card m">
+      <div class="sch-freq">MONTHLY</div>
+      <div class="sch-time">매월 1일</div>
+      <div class="sch-fn">run_monthly_meta()</div>
+      <div class="sch-items">
+        <div class="sch-item"><div class="sch-bullet"></div>사업자 정보 재수집</div>
+        <div class="sch-item"><div class="sch-bullet"></div>로고 URL 재주입</div>
+        <div class="sch-item"><div class="sch-bullet"></div>services 테이블 갱신</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ⑧ 주의 항목 -->
+<div class="section" id="s8">
+  <div class="sec-label">
+    <div class="sec-num">SECTION 08</div>
+    <div>
+      <div class="sec-title">Spring DDL 대조 필요 항목 ⚠️</div>
+      <div class="sec-desc">Spring DDL 받으면 반드시 확인 후 client.py 수정 필요</div>
+    </div>
+  </div>
+  <div class="warn-header">
+    <span>⚠️</span>
+    <span>아래 3가지가 해결되지 않은 상태에서 서버 DB에 연결하면 <strong>SQL 오류</strong>가 발생합니다.</span>
+  </div>
+  <div class="issue-list">
+    <div class="issue-item">
+      <div class="issue-n">1</div>
+      <div class="issue-body">
+        <div class="issue-title">Service 컬럼 불일치</div>
+        현재 client.py는 <code>cancel_guide_url</code>, <code>customer_service_phone</code>, <code>contact_email</code> 을 INSERT하지만, ERD에 이 컬럼이 없을 수 있음. Spring DDL 확인 후 컬럼 추가 또는 SQL 제거 필요.
+      </div>
+    </div>
+    <div class="issue-item">
+      <div class="issue-n">2</div>
+      <div class="issue-body">
+        <div class="issue-title">ServicePlan FK 방식</div>
+        현재는 <code>service_code (VARCHAR)</code> 로 INSERT하지만, ERD는 <code>serviceId (BIGINT FK)</code> 를 사용할 수 있음. 그럴 경우 serviceId를 먼저 조회 후 INSERT로 변경 필요.
+      </div>
+    </div>
+    <div class="issue-item">
+      <div class="issue-n">3</div>
+      <div class="issue-body">
+        <div class="issue-title">Promotion 서비스 연결</div>
+        현재는 <code>service_codes</code> JSON 컬럼에 배열로 저장하지만, ERD는 <code>PromotionService</code> 별도 테이블로 관계를 맺을 수 있음. 행 분리 INSERT로 변경 필요할 수 있음.
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ⑨ 환경변수 -->
+<div class="section" id="s9">
+  <div class="sec-label">
+    <div class="sec-num">SECTION 09</div>
+    <div>
+      <div class="sec-title">환경변수 목록</div>
+      <div class="sec-desc">.env 파일 또는 docker-compose.yml environment에 설정</div>
+    </div>
+  </div>
+  <table class="env">
+    <thead><tr><th>변수명</th><th>기본값</th><th>설명</th></tr></thead>
+    <tbody>
+      <tr><td class="ev">GMS_KEY</td><td class="evr">필수</td><td class="evd">SSAFY GMS API 키 — LLM 정규화(Gemini 2.0 Flash)에 사용</td></tr>
+      <tr><td class="ev">DB_HOST</td><td class="evv">localhost</td><td class="evd">MySQL 호스트. docker-compose 환경에서는 컨테이너명 <code>mysql</code> 사용</td></tr>
+      <tr><td class="ev">DB_PORT</td><td class="evv">3306</td><td class="evd">MySQL 포트</td></tr>
+      <tr><td class="ev">DB_NAME</td><td class="evv">aekkeum</td><td class="evd">데이터베이스 이름</td></tr>
+      <tr><td class="ev">DB_USER</td><td class="evv">root</td><td class="evd">MySQL 접속 계정</td></tr>
+      <tr><td class="ev">DB_PASS</td><td class="evv">""</td><td class="evd">MySQL 비밀번호</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div style="text-align:center; color:var(--text3); font-size:12px; font-family:'JetBrains Mono',monospace; padding:40px 0 60px; border-top:1px solid var(--border); max-width:1100px; margin:0 auto;">
+  애낌 AI 파트 · 2026-03-17
+</div>
+
+</body>
+</html>

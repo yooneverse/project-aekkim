@@ -1,0 +1,6 @@
+{
+  "walk": { "frames": 10, "fps": 10, "layout": "manualRects" },
+  "inspect": { "frames": 6, "fps": 8, "columns": 6, "rows": 1 },
+  "glance": { "frames": 4, "fps": 4, "columns": 4, "rows": 1 },
+  "moneyThrow": { "frames": 10, "fps": 12, "layout": "manualRects", "source": "2-11" }
+}
